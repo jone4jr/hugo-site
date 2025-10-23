@@ -1,0 +1,27 @@
+baseURL = 'https://example.com/'
+languageCode = 'en-us'
+title = 'My Blog'
+theme = 'myblog'
+
+[params]
+  description = 'A modern blog about technology, life, and everything in between'
+  author = 'Your Name'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 2
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
