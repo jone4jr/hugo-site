@@ -18,26 +18,54 @@ Develop your manufacturing expertise with comprehensive online training courses 
 
 Browse our complete selection of online training courses, or choose our Annual All-Access Pass for unlimited access to all current and future courses.
 
+### Course Categories
+
+**Quality Systems & Management**
+- IATF 16949 Quality Management System
+- Deming's 14 Principles for Management
+
+**Lean Six Sigma Certifications**
+- Yellow Belt, Green Belt, Black Belt
+
+**Lean Manufacturing**
+- The Toyota Way
+- 5S Training
+- MODAPTS Work Measurement
+
+**Data Analytics & Technology**
+- Microsoft Excel (Basics, Intermediate, Advanced with Power Query)
+- Microsoft Power BI (Beginner, Intermediate, Advanced)
+
 ### Individual Courses
 
 Each course can be purchased individually with lifetime access, or access all courses with our annual subscription.
+
+**Pricing Range:** $299 - $1,999 per course
 
 ### Annual All-Access Pass
 
 **$2,999 per year**
 
 Get unlimited access to ALL training courses, including:
-- All current courses listed below
+- All 15 current courses (valued at $9,000+ individually)
 - New courses added throughout the year
 - Updates and refreshed content
-- Course completion certificates
+- Professional PDF certificates for all courses
 - Access to supplemental materials and templates
+- Priority email support
 
-Perfect for:
+**Perfect for:**
 - Manufacturing professionals seeking comprehensive skill development
-- Companies training multiple team members
+- Companies training multiple team members (massive savings)
 - Career advancement and certification preparation
 - Continuous professional development
+- Building complete skillset from quality to analytics
+
+**Annual Pass Benefits:**
+- Save over $6,000 compared to individual courses
+- Learn at your own pace
+- No limits on course access
+- All certifications included
 
 ---
 
