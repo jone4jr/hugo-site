@@ -1,0 +1,4 @@
+name = "MyBlog"
+license = "MIT"
+description = "A clean and modern blog theme"
+min_version = "0.100.0"

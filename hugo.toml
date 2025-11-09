@@ -1,0 +1,36 @@
+baseURL = 'https://example.com/'
+languageCode = 'en-us'
+title = 'Manufacturing Leadership & Consulting'
+theme = 'myblog'
+
+[params]
+  description = 'Operational Excellence & Quality Systems Consulting for Manufacturing'
+  author = 'Manufacturing Leadership Consulting'
+  tagline = 'Leveraging Deep Operational Expertise for Manufacturing Excellence'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Services'
+    url = '/services/'
+    weight = 2
+  [[menu.main]]
+    name = 'Training'
+    url = '/training/'
+    weight = 3
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 4
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
