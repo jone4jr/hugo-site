@@ -4,6 +4,10 @@ title = 'ZeroFindings – Audit-Proof Manufacturing Training'
 theme = 'blowfish'
 copyright = "© 2025 ZeroFindings"
 
+# Language Configuration
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 enableRobotsTXT = true
 paginate = 20
 summaryLength = 30

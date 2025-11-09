@@ -1,6 +1,4 @@
 # Blowfish Language Configuration
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
 
 [en]
   languageName = "English"
