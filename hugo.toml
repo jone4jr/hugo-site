@@ -1,62 +1,73 @@
-baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
+baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'  # Swap to your Azure URL if domain not live yet
 languageCode = 'en-us'
-title = 'Manufacturing Leadership & Training'
-theme = 'PaperMod'
+title = 'ZeroFindings – Audit-Proof Manufacturing Training'
+theme = 'blowfish'
+
+# No [languages] section needed for single-lang site
 
 [params]
-  description = "Professional manufacturing training and consulting services"
-  author = "Jared Jones"
-  defaultTheme = "light"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
+  description = 'Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams. Professional manufacturing training and consulting services.'
+  author = 'Jared Jones'
+  dateFormat = 'January 2, 2006'
+  favicon = '/favicon.ico'
+  defaultAppearance = 'light'  # 'dark' for industrial steel vibe
+  contentTypeName = 'posts'  # For your blog/posts/
 
-  [params.homeInfoParams]
-    Title = "Transform Your Manufacturing Operations"
-    Content = """
-    Professional training courses and consulting services for manufacturing excellence.
-    Led by a Six Sigma Black Belt with 15+ years of experience managing automotive manufacturing facilities.
-    """
+  [params.header]
+    showTitle = true
+    showLogo = true  # Add logo.png to static/ later
 
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com"
+  [params.sidebar]
+    enable = true
+    showSummary = true
 
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:contact@example.com"
+  [params.footer]
+    enable = true
+    showCopyright = true
+    showPoweredBy = false  # Hides "Powered by Hugo"
 
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+  [params.socialIcons]
+    [[params.socialIcons]]
+      name = 'linkedin'
+      url = 'https://www.linkedin.com/in/your-profile'  # Update!
+    [[params.socialIcons]]
+      name = 'email'
+      url = 'mailto:contact@zerofindings.com'
 
-[[menu.main]]
-  name = "Training Courses"
-  url = "/training/"
-  weight = 2
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Courses'
+    url = '/courses/'
+    weight = 2
+  [[menu.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 3
+  [[menu.main]]
+    name = 'Consulting'
+    url = '/consult/'
+    weight = 4
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 5
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 6
 
-[[menu.main]]
-  name = "Services"
-  url = "/services/"
-  weight = 3
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 4
-
-[[menu.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 5
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
 
 [markup]
   [markup.highlight]
-    style = "monokai"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+    noClasses = false
+
+[author]
+  name = "Jared Jones"
