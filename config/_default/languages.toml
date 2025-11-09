@@ -6,7 +6,7 @@ defaultContentLanguageInSubdir = false
   languageName = "English"
   languageCode = "en"
   weight = 1
-  title = "Manufacturing Leadership & Consulting"
+  title = "ZeroFindings – Audit-Proof Manufacturing Training"
 
   [en.params]
     displayName = "EN"
@@ -16,13 +16,13 @@ defaultContentLanguageInSubdir = false
     logo = ""
     secondaryLogo = ""
     description = "Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams"
-    copyright = "© 2025 Manufacturing Leadership & Consulting. All rights reserved."
+    copyright = "© 2025 ZeroFindings. All rights reserved."
 
   [en.params.author]
     name = "Jared Jones"
     image = ""
-    headline = "Six Sigma Black Belt | Manufacturing Leader"
-    bio = "15+ years managing automotive manufacturing facilities. Specialist in IATF 16949, Lean Six Sigma, and operational turnarounds."
+    headline = "Six Sigma Black Belt | 950+ Teams Trained | Zero Audit Findings Expert"
+    bio = "15+ years managing automotive manufacturing facilities at Adient and Creative Foam. Specialist in IATF 16949, Lean Six Sigma Black Belt, and operational turnarounds. 400+ audits with zero major findings."
     links = [
       { email = "mailto:contact@example.com" },
       { linkedin = "https://linkedin.com" }

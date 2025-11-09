@@ -1,17 +1,17 @@
 ---
-title: "Manufacturing Leadership & Consulting"
-description: "Real-world Lean Six Sigma & IATF tools from a Six Sigma Black Belt who ran 950+ teams"
-layout: "custom"
+title: "ZeroFindings: Turn Audit Nightmares into Zero Findings"
+description: "Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams"
+date: 2025-11-09
 ---
 
 <div class="hero-section">
   <div class="hero-content">
-    <h1>Transform Your Manufacturing Operations</h1>
-    <p class="subtitle">Real-World Expertise You Won't Find in Generic Training</p>
-    <p>World-class training courses and consulting from a Six Sigma Black Belt with 15+ years leading automotive manufacturing facilities. Learn IATF 16949, Lean Six Sigma, and data analytics from someone who's actually done it—managing 950+ team members in Tier 1 automotive operations.</p>
+    <h1>Audit-Proof Your Plant in Weeks, Not Years</h1>
+    <p class="subtitle">950+ Teams Trained | Real Tools from Adient Turnarounds</p>
+    <p>Your 15+ years of plant management isn't theory—it's the firewall between chaos and 100% OTD. Learn from someone who's actually done it: managing 950+ team members in Tier 1 automotive operations.</p>
     <div>
-      <a href="/training/" class="btn-primary">Browse All Courses</a>
-      <a href="/contact/" class="btn-secondary">Get Consultation</a>
+      <a href="/training/" class="btn-primary">Browse Courses</a>
+      <a href="/contact/" class="btn-secondary">Free Consult</a>
     </div>
   </div>
 </div>
@@ -19,15 +19,15 @@ layout: "custom"
 <div class="stats-grid">
   <div class="stat-card">
     <span class="stat-number">15+</span>
-    <span class="stat-label">Years Experience</span>
+    <span class="stat-label">Years in Trenches</span>
   </div>
   <div class="stat-card">
     <span class="stat-number">950+</span>
-    <span class="stat-label">Team Members Managed</span>
+    <span class="stat-label">Leaders Trained</span>
   </div>
   <div class="stat-card">
     <span class="stat-number">15</span>
-    <span class="stat-label">Expert Courses</span>
+    <span class="stat-label">Courses Live</span>
   </div>
   <div class="stat-card">
     <span class="stat-number">100%</span>
@@ -36,31 +36,31 @@ layout: "custom"
 </div>
 
 <div class="content-section">
-  <h2>Why ZeroFindings Training?</h2>
+  <h2>Why ZeroFindings?</h2>
 
   <div class="features-grid">
     <div class="feature-item">
       <span class="feature-icon">🏭</span>
-      <h3>Real-World Experience</h3>
-      <p>Unlike generic online courses, our training comes from actual manufacturing challenges solved in Tier 1 automotive facilities. Every lesson is built from hands-on experience implementing IATF 16949, leading operational turnarounds, and managing complex production environments.</p>
+      <h3>Shop-Floor Proven</h3>
+      <p>Templates from real Tier-1 fixes—no more "it works in theory" BS. Every lesson comes from actual manufacturing challenges solved in automotive facilities. These are the exact tools used to turn around underperforming plants.</p>
     </div>
 
     <div class="feature-item">
-      <span class="feature-icon">🛠️</span>
-      <h3>Practical Implementation</h3>
-      <p>Learn not just the theory, but how to actually implement these systems in your facility. Our courses include templates, checklists, and tools used in real manufacturing operations—ready to download and deploy.</p>
+      <span class="feature-icon">🛡️</span>
+      <h3>Audit Annihilators</h3>
+      <p>400+ zero-major audits. Your PPAP gets approved in 48 hours. Learn the strategies that pass IATF 16949 audits on the first try with no findings. Real audit examples included.</p>
     </div>
 
     <div class="feature-item">
-      <span class="feature-icon">🎓</span>
-      <h3>Expert Instruction</h3>
-      <p>Taught by a certified Six Sigma Black Belt with Plant Manager experience at companies like Adient and Creative Foam. This isn't academic theory—it's proven practice from someone who's led multi-million dollar operations.</p>
+      <span class="feature-icon">📊</span>
+      <h3>Time-Savers</h3>
+      <p>Excel dashboards that cut reporting by 20 hrs/week. Power Query automation, OEE tracking, and manufacturing-specific Power BI dashboards that actually make sense for plant managers.</p>
     </div>
 
     <div class="feature-item">
       <span class="feature-icon">📜</span>
       <h3>Professional Certification</h3>
-      <p>Every course includes a comprehensive exam and professional PDF certificate emailed upon completion. Build your credentials with certifications recognized in the manufacturing industry.</p>
+      <p>Every course includes comprehensive exams and professional PDF certificates. Build credentials recognized in the manufacturing industry from a certified Six Sigma Black Belt.</p>
     </div>
   </div>
 </div>
@@ -94,10 +94,10 @@ layout: "custom"
       <div class="course-card-body">
         <div class="course-price">$799</div>
         <ul class="course-features">
-          <li>Complete QMS implementation</li>
-          <li>Audit preparation strategies</li>
+          <li>Full QMS guide + audit prep</li>
           <li>Customer-specific requirements</li>
           <li>Real audit examples & failures</li>
+          <li>PPAP approval strategies</li>
           <li>20 hours + PDF certificate</li>
         </ul>
         <a href="/training/iatf-16949/" class="btn-primary">Learn More</a>
@@ -111,10 +111,10 @@ layout: "custom"
       <div class="course-card-body">
         <div class="course-price">$1,999</div>
         <ul class="course-features">
-          <li>Complete DMAIC methodology</li>
+          <li>DMAIC mastery + cert prep</li>
           <li>Advanced statistical tools</li>
           <li>Real manufacturing projects</li>
-          <li>Certification exam prep</li>
+          <li>Leadership strategies</li>
           <li>60 hours + PDF certificate</li>
         </ul>
         <a href="/training/lean-six-sigma-black-belt/" class="btn-primary">Learn More</a>
@@ -123,18 +123,18 @@ layout: "custom"
 
     <div class="course-card">
       <div class="course-card-header">
-        <h3 class="course-card-title">Power BI Advanced</h3>
+        <h3 class="course-card-title">Excel for Manufacturing</h3>
       </div>
       <div class="course-card-body">
-        <div class="course-price">$899</div>
+        <div class="course-price">$599</div>
         <ul class="course-features">
-          <li>DAX mastery for manufacturing</li>
-          <li>Real-time production dashboards</li>
-          <li>OEE & scrap analysis</li>
-          <li>Advanced data modeling</li>
-          <li>24 hours + PDF certificate</li>
+          <li>Power Query + OEE dashboards</li>
+          <li>Manufacturing-specific formulas</li>
+          <li>Automated reporting templates</li>
+          <li>Data transformation mastery</li>
+          <li>18 hours + PDF certificate</li>
         </ul>
-        <a href="/training/power-bi-advanced/" class="btn-primary">Learn More</a>
+        <a href="/training/excel-advanced/" class="btn-primary">Learn More</a>
       </div>
     </div>
   </div>
@@ -148,12 +148,12 @@ layout: "custom"
   <h2>What Students Say</h2>
 
   <div class="testimonial">
-    <p class="testimonial-text">"The IATF 16949 course was exactly what we needed. Jared's real-world experience made complex requirements actually understandable. We passed our certification audit on the first try—no findings."</p>
+    <p class="testimonial-text">"Passed our IATF audit first try—zero majors. Jared's templates are gold. The course saved us months of preparation and gave us confidence going into the audit."</p>
     <p class="testimonial-author">Sarah M., Quality Manager, Automotive Tier 2 Supplier</p>
   </div>
 
   <div class="testimonial">
-    <p class="testimonial-text">"Finally, Excel training that actually applies to manufacturing! The Power Query section alone saved us 20 hours per week in reporting time. The investment paid for itself in the first month."</p>
+    <p class="testimonial-text">"Excel course saved 20 hrs/week. Finally, manufacturing-specific! The Power Query section alone was worth the investment. Our reporting is now automated."</p>
     <p class="testimonial-author">Mike R., Plant Manager, Injection Molding Facility</p>
   </div>
 
@@ -165,9 +165,9 @@ layout: "custom"
 
 <div class="cta-banner">
   <h2>Ready to Transform Your Manufacturing Skills?</h2>
-  <p>Join manufacturing professionals learning real-world quality systems, Lean Six Sigma, and data analytics from a certified Black Belt with 15+ years of plant leadership experience.</p>
+  <p>Join manufacturing professionals learning real-world quality systems, Lean Six Sigma, and data analytics from a certified Black Belt with 15+ years of plant leadership experience. Stop learning theory—start implementing solutions that work.</p>
   <div>
     <a href="/training/" class="btn-primary">Browse Courses</a>
-    <a href="/contact/" class="btn-secondary">Schedule Consultation</a>
+    <a href="/contact/" class="btn-secondary">Schedule Free Consult</a>
   </div>
 </div>

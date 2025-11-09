@@ -1,8 +1,8 @@
 baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
 languageCode = 'en-us'
-title = 'Manufacturing Leadership & Consulting'
+title = 'ZeroFindings – Audit-Proof Manufacturing Training'
 theme = 'blowfish'
-copyright = "© 2025 Manufacturing Leadership & Consulting"
+copyright = "© 2025 ZeroFindings"
 
 enableRobotsTXT = true
 paginate = 20
