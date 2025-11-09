@@ -1,62 +1,108 @@
 baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
 languageCode = 'en-us'
-title = 'Manufacturing Leadership & Training'
-theme = 'PaperMod'
+title = 'Manufacturing Leadership & Consulting'
+theme = 'blowfish'
+copyright = "© 2025 Manufacturing Leadership & Consulting"
+
+enableRobotsTXT = true
+paginate = 20
+summaryLength = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 [params]
-  description = "Professional manufacturing training and consulting services"
+  description = "Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams"
   author = "Jared Jones"
-  defaultTheme = "light"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
 
-  [params.homeInfoParams]
-    Title = "Transform Your Manufacturing Operations"
-    Content = """
-    Professional training courses and consulting services for manufacturing excellence.
-    Led by a Six Sigma Black Belt with 15+ years of experience managing automotive manufacturing facilities.
-    """
+  # Appearance
+  colorScheme = "blowfish"
+  defaultAppearance = "light"
+  autoSwitchAppearance = true
 
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com"
+  # Main
+  mainSections = ["posts", "training"]
+  robots = ""
 
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:contact@example.com"
+  # Header & Footer
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+  # Homepage
+  homepage.layout = "custom"
+  homepage.showRecent = true
+  homepage.recentLimit = 6
 
-[[menu.main]]
-  name = "Training Courses"
-  url = "/training/"
-  weight = 2
+  # Article
+  article.showDate = true
+  article.showDateUpdated = false
+  article.showAuthor = true
+  article.showBreadcrumbs = true
+  article.showDraftLabel = true
+  article.showEdit = false
+  article.editURL = ""
+  article.editAppendPath = true
+  article.showHeadingAnchors = true
+  article.showPagination = true
+  article.invertPagination = false
+  article.showReadingTime = true
+  article.showWordCount = true
+  article.showComments = false
+  article.sharingLinks = ["linkedin", "twitter", "email"]
 
-[[menu.main]]
-  name = "Services"
-  url = "/services/"
-  weight = 3
+  # List
+  list.showBreadcrumbs = true
+  list.showSummary = true
+  list.showTableOfContents = false
+  list.groupByYear = false
 
-[[menu.main]]
+  # SEO
+  [params.verification]
+    google = ""
+    bing = ""
+
+[[menus.main]]
+  name = "Courses"
+  pageRef = "training"
+  weight = 10
+
+[[menus.main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 20
+
+[[menus.main]]
+  name = "Consulting"
+  pageRef = "services"
+  weight = 30
+
+[[menus.main]]
   name = "About"
-  url = "/about/"
-  weight = 4
+  pageRef = "about"
+  weight = 40
 
-[[menu.main]]
+[[menus.main]]
   name = "Contact"
-  url = "/contact/"
-  weight = 5
+  pageRef = "contact"
+  weight = 50
 
 [markup]
   [markup.highlight]
-    style = "monokai"
+    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
