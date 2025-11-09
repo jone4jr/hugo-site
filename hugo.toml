@@ -1,11 +1,12 @@
 baseURL = 'https://example.com/'
 languageCode = 'en-us'
-title = 'My Blog'
+title = 'Manufacturing Leadership & Consulting'
 theme = 'myblog'
 
 [params]
-  description = 'A modern blog about technology, life, and everything in between'
-  author = 'Your Name'
+  description = 'Operational Excellence & Quality Systems Consulting for Manufacturing'
+  author = 'Manufacturing Leadership Consulting'
+  tagline = 'Leveraging Deep Operational Expertise for Manufacturing Excellence'
 
 [menu]
   [[menu.main]]
@@ -13,13 +14,17 @@ theme = 'myblog'
     url = '/'
     weight = 1
   [[menu.main]]
-    name = 'Blog'
-    url = '/posts/'
+    name = 'Services'
+    url = '/services/'
     weight = 2
   [[menu.main]]
     name = 'About'
     url = '/about/'
     weight = 3
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 4
 
 [markup]
   [markup.goldmark]
