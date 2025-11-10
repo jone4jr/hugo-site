@@ -1,64 +1,13 @@
 baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
 languageCode = 'en-us'
-title = 'ZeroFindings – Audit-Proof Manufacturing Training'
-theme = 'blowfish'
-copyright = "© 2025 ZeroFindings"
+title = 'Leadership Lessons from the Shop Floor'
+paginate = 6
 
-# Language Configuration
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-
-enableRobotsTXT = true
-paginate = 20
-summaryLength = 30
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  series = "series"
-
-[sitemap]
-  changefreq = 'daily'
-  filename = 'sitemap.xml'
-  priority = 0.5
-
-# Note: Most theme params are in config/_default/params.toml
-
-[[menus.main]]
-  name = "Courses"
-  pageRef = "training"
-  weight = 10
-
-[[menus.main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 20
-
-[[menus.main]]
-  name = "Consulting"
-  pageRef = "services"
-  weight = 30
-
-[[menus.main]]
-  name = "About"
-  pageRef = "about"
-  weight = 40
-
-[[menus.main]]
-  name = "Contact"
-  pageRef = "contact"
-  weight = 50
+[params]
+  description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
+  author = "Jared Jones"
 
 [markup]
-  [markup.highlight]
-    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false
-    startLevel = 2
