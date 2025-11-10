@@ -1,6 +1,6 @@
 # Blowfish Theme Parameters
 
-colorScheme = "custom"
+colorScheme = "blowfish"
 defaultAppearance = "light"
 autoSwitchAppearance = false
 
@@ -22,7 +22,7 @@ robots = ""
   showScrollToTop = true
 
 [homepage]
-  layout = "custom"
+  layout = "page"
   showRecent = true
   recentLimit = 6
 

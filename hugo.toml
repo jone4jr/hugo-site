@@ -25,55 +25,7 @@ summaryLength = 30
   filename = 'sitemap.xml'
   priority = 0.5
 
-[params]
-  description = "Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams"
-  author = "Jared Jones"
-
-  # Appearance
-  colorScheme = "blowfish"
-  defaultAppearance = "light"
-  autoSwitchAppearance = true
-
-  # Main
-  mainSections = ["posts", "training"]
-  robots = ""
-
-  # Header & Footer
-  showAppearanceSwitcher = true
-  showScrollToTop = true
-
-  # Homepage
-  homepage.layout = "custom"
-  homepage.showRecent = true
-  homepage.recentLimit = 6
-
-  # Article
-  article.showDate = true
-  article.showDateUpdated = false
-  article.showAuthor = true
-  article.showBreadcrumbs = true
-  article.showDraftLabel = true
-  article.showEdit = false
-  article.editURL = ""
-  article.editAppendPath = true
-  article.showHeadingAnchors = true
-  article.showPagination = true
-  article.invertPagination = false
-  article.showReadingTime = true
-  article.showWordCount = true
-  article.showComments = false
-  article.sharingLinks = ["linkedin", "twitter", "email"]
-
-  # List
-  list.showBreadcrumbs = true
-  list.showSummary = true
-  list.showTableOfContents = false
-  list.groupByYear = false
-
-  # SEO
-  [params.verification]
-    google = ""
-    bing = ""
+# Note: Most theme params are in config/_default/params.toml
 
 [[menus.main]]
   name = "Courses"
