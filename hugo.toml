@@ -1,10 +1,12 @@
 baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
 languageCode = 'en-us'
 title = 'Leadership Lessons from the Shop Floor'
-paginate = 6
 
 enableRobotsTXT = true
 disableKinds = []
+
+[pagination]
+  pagerSize = 6
 
 [params]
   description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
