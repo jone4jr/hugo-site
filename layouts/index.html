@@ -10,7 +10,7 @@
     <div class="container">
         <h2 class="section-title">Latest Posts</h2>
         <div class="posts-grid">
-            {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+            {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
             <article class="post-card">
                 {{ if .Params.image }}
                 <div class="post-image">

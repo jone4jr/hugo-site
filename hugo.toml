@@ -3,9 +3,16 @@ languageCode = 'en-us'
 title = 'Leadership Lessons from the Shop Floor'
 paginate = 6
 
+enableRobotsTXT = true
+disableKinds = []
+
 [params]
   description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
   author = "Jared Jones"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [markup]
   [markup.goldmark]
