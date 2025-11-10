@@ -2,8 +2,8 @@
 <section class="page-header">
     <div class="container">
         <h1>{{ .Title }}</h1>
-        {{ if .Description }}
-        <p>{{ .Description }}</p>
+        {{ with .Params.description }}
+        <p>{{ . }}</p>
         {{ end }}
     </div>
 </section>

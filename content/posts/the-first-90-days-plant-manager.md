@@ -1,6 +1,6 @@
 ---
 title: "The First 90 Days as Plant Manager: What I Wish I'd Known"
-date: 2025-01-10
+date: 2025-01-10T10:00:00-05:00
 category: "Leadership"
 image: ""
 ---
