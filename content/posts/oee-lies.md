@@ -1,6 +1,6 @@
 ---
 title: "When OEE Lies to You (And What to Do About It)"
-date: 2025-01-05
+date: 2025-01-05T10:00:00-05:00
 category: "Operational Excellence"
 image: ""
 ---

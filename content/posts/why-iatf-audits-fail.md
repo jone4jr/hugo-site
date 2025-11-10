@@ -1,6 +1,6 @@
 ---
 title: "Why IATF 16949 Audits Fail (And How to Pass)"
-date: 2025-01-15
+date: 2025-01-15T10:00:00-05:00
 category: "Quality Systems"
 image: ""
 ---
