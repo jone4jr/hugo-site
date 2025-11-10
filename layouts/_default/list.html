@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{ if .Description }}
+        <p>{{ .Description }}</p>
+        {{ end }}
+    </div>
+</section>
+
+<section class="posts-list">
+    <div class="container">
+        <div class="posts-grid">
+            {{ range .Pages }}
+            <article class="post-card">
+                {{ if .Params.image }}
+                <div class="post-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    </a>
+                </div>
+                {{ end }}
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                        {{ if .Params.category }}
+                        <span class="post-category">{{ .Params.category }}</span>
+                        {{ end }}
+                    </div>
+                    <h3 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p class="post-excerpt">{{ .Summary }}</p>
+                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

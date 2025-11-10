@@ -1,112 +1,13 @@
 baseURL = 'https://icy-water-01d205610.6.azurestaticapps.net/'
 languageCode = 'en-us'
-title = 'ZeroFindings – Audit-Proof Manufacturing Training'
-theme = 'blowfish'
-copyright = "© 2025 ZeroFindings"
-
-# Language Configuration
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-
-enableRobotsTXT = true
-paginate = 20
-summaryLength = 30
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  series = "series"
-
-[sitemap]
-  changefreq = 'daily'
-  filename = 'sitemap.xml'
-  priority = 0.5
+title = 'Leadership Lessons from the Shop Floor'
+paginate = 6
 
 [params]
-  description = "Real-world Lean Six Sigma & IATF tools from a Black Belt who ran 950+ teams"
+  description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
   author = "Jared Jones"
 
-  # Appearance
-  colorScheme = "blowfish"
-  defaultAppearance = "light"
-  autoSwitchAppearance = true
-
-  # Main
-  mainSections = ["posts", "training"]
-  robots = ""
-
-  # Header & Footer
-  showAppearanceSwitcher = true
-  showScrollToTop = true
-
-  # Homepage
-  homepage.layout = "custom"
-  homepage.showRecent = true
-  homepage.recentLimit = 6
-
-  # Article
-  article.showDate = true
-  article.showDateUpdated = false
-  article.showAuthor = true
-  article.showBreadcrumbs = true
-  article.showDraftLabel = true
-  article.showEdit = false
-  article.editURL = ""
-  article.editAppendPath = true
-  article.showHeadingAnchors = true
-  article.showPagination = true
-  article.invertPagination = false
-  article.showReadingTime = true
-  article.showWordCount = true
-  article.showComments = false
-  article.sharingLinks = ["linkedin", "twitter", "email"]
-
-  # List
-  list.showBreadcrumbs = true
-  list.showSummary = true
-  list.showTableOfContents = false
-  list.groupByYear = false
-
-  # SEO
-  [params.verification]
-    google = ""
-    bing = ""
-
-[[menus.main]]
-  name = "Courses"
-  pageRef = "training"
-  weight = 10
-
-[[menus.main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 20
-
-[[menus.main]]
-  name = "Consulting"
-  pageRef = "services"
-  weight = 30
-
-[[menus.main]]
-  name = "About"
-  pageRef = "about"
-  weight = 40
-
-[[menus.main]]
-  name = "Contact"
-  pageRef = "contact"
-  weight = 50
-
 [markup]
-  [markup.highlight]
-    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false
-    startLevel = 2

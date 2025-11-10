@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="post-single">
+    <header class="post-header">
+        <div class="container-narrow">
+            <div class="post-meta">
+                <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                {{ if .Params.category }}
+                <span class="post-category">{{ .Params.category }}</span>
+                {{ end }}
+            </div>
+            <h1 class="post-title">{{ .Title }}</h1>
+            {{ if .Params.subtitle }}
+            <p class="post-subtitle">{{ .Params.subtitle }}</p>
+            {{ end }}
+        </div>
+    </header>
+
+    {{ if .Params.image }}
+    <div class="post-featured-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    </div>
+    {{ end }}
+
+    <div class="post-body">
+        <div class="container-narrow">
+            {{ .Content }}
+        </div>
+    </div>
+
+    <footer class="post-footer">
+        <div class="container-narrow">
+            <div class="post-navigation">
+                {{ if .NextInSection }}
+                <a href="{{ .NextInSection.Permalink }}" class="nav-prev">
+                    ← {{ .NextInSection.Title }}
+                </a>
+                {{ end }}
+                {{ if .PrevInSection }}
+                <a href="{{ .PrevInSection.Permalink }}" class="nav-next">
+                    {{ .PrevInSection.Title }} →
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </footer>
+</article>
+{{ end }}

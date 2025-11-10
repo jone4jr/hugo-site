@@ -1,125 +1,105 @@
 ---
-title: "Your OEE Number Is Lying to You"
-date: 2024-02-01T10:00:00-00:00
-draft: false
-tags: ["oee", "productivity", "metrics"]
+title: "When OEE Lies to You (And What to Do About It)"
+date: 2025-01-05
+category: "Operational Excellence"
+image: ""
 ---
 
-Overall Equipment Effectiveness (OEE) is supposed to be the ultimate metric for production performance. But after analyzing OEE across 17+ production lines, I've learned that the number itself often obscures more than it reveals.
+OEE is supposed to tell you the truth about your equipment performance. But sometimes, it lies.
 
-## The OEE Formula Seems Simple
+## The 85% Lie
 
-OEE = Availability × Performance × Quality
+I walked into a facility where every line was running at 85% OEE. Management was proud. "We're world class!"
 
-Sounds straightforward. But the devil is in the definitions.
+Except we were bleeding money, missing deliveries, and running constant overtime.
 
-## Where OEE Lies
+How could we have 85% OEE and still be failing?
 
-### Lie #1: "We're Running at 85% OEE"
+The answer: We were measuring the wrong things.
 
-**The Reality:**
-- What's your denominator? Calendar time? Scheduled time? Available time?
-- Are you excluding "planned" downtime that's actually just poor scheduling?
-- What about setup and changeover time?
+## How OEE Lies
 
-I've seen identical production lines report 65% and 85% OEE - the only difference was how they calculated available time.
+### Lie #1: Availability Includes Breaks
 
-**The Truth:**
-OEE means nothing without understanding the calculation methodology. The number is only useful for comparing periods on the SAME line with the SAME calculation method.
+One facility counted breaks as "available time." Their 90% availability looked great until you realized they were only running 70% of the scheduled shift.
 
-### Lie #2: "We Track OEE So We Know Where to Improve"
+**The Fix**: Measure planned production time, not scheduled shift time. If the line should run 7 hours of an 8-hour shift, your baseline is 7 hours.
 
-**The Reality:**
-OEE gives you one number. It doesn't tell you:
-- WHERE the losses are occurring
-- WHICH losses to address first
-- WHAT to do about them
+### Lie #2: Performance Assumes Perfect Conditions
 
-**The Truth:**
-OEE is a scoreboard, not a diagnostic tool. You need to decompose it into specific loss categories:
+Standard cycle time: 60 seconds. Actual average: 65 seconds. Performance: 92%.
 
-- **Availability Losses**: Breakdowns, changeovers, adjustments
-- **Performance Losses**: Minor stops, slow cycles, startup losses
-- **Quality Losses**: Scrap, rework, startup defects
+Sounds good, right? Wrong.
 
-Then Pareto the losses and attack the biggest buckets.
+That 92% assumes the cycle time is achievable. But what if the cycle time was set when the equipment was new, materials were better, and the product was simpler?
 
-### Lie #3: "Our OEE Goal Is 85%"
+**The Fix**: Validate your ideal cycle time regularly. If you can't achieve it even when everything is perfect, it's not the right target.
 
-**The Reality:**
-Generic OEE targets are meaningless. The "world class" benchmark of 85% came from specific contexts:
+### Lie #3: Quality Only Counts First-Pass
 
-- High-volume, low-mix operations
-- Mature, optimized processes
-- Minimal changeover requirements
+Some facilities only count first-pass yield. Scrap a part at operation 1? Rework it? Doesn't impact OEE.
 
-If you're running 50+ part numbers on a line with frequent changeovers, 85% might be physically impossible - or economically nonsensical to pursue.
+This hides massive waste. I've seen 95% OEE lines producing 30% scrap at certain operations—but it all got reworked "downstream," so it didn't count.
 
-**The Truth:**
-Set OEE targets based on:
-- Your specific constraints
-- Economic optimization (not maximum utilization)
-- Customer demand patterns
-- Changeover frequency
+**The Fix**: Track true first-pass yield from raw material to ship. Include rework time in your availability calculations.
 
-## What To Do Instead
+## What Actually Matters
 
-### 1. Understand Your True Constraint
+OEE is a tool, not the goal. The goal is making money by delivering quality products on time.
 
-OEE only matters on your bottleneck resource. Optimizing OEE on non-constraints can actually HURT overall system performance (see Theory of Constraints).
+I learned this when I stopped celebrating OEE and started asking different questions:
 
-**Real Example:**
-I helped a facility stop obsessing over OEE on their fastest machine and instead focus on their constraint process. Overall throughput increased 20% even though the "OEE" on several lines went DOWN.
+- **Are we making money?** (Not just running equipment)
+- **Are we delivering on time?** (Not just hitting throughput)
+- **Are we producing quality?** (Not just passing inspection)
 
-### 2. Decompose the Losses
+Sometimes the answer was improving OEE. Sometimes it was slowing down to improve quality. Sometimes it was running less to match customer demand.
 
-Create a loss tree that breaks OEE into specific, actionable categories:
+## The OEE Conversation I Have Now
 
-- Unplanned downtime by reason code
-- Planned downtime by type
-- Speed losses by cause
-- Quality losses by defect type
+When I review OEE with teams, I ask:
 
-Now you have something you can actually improve.
+1. **"What's stopping us from running?"** (Availability)
+2. **"Why aren't we running at speed?"** (Performance)
+3. **"Why are we making bad parts?"** (Quality)
 
-### 3. Focus on Time Studies, Not Just OEE
+Then we dig into root causes:
 
-Sometimes the rated speed is wrong. Sometimes your changeover estimates are fantasy.
+- If availability is low: Is it changeovers? Breakdowns? Material availability?
+- If performance is low: Is it tooling? Operator skill? Equipment condition?
+- If quality is low: Is it process capability? Training? Materials?
 
-**Example:**
-Found a line reporting 72% performance efficiency. Dug into cycle times and discovered the "ideal cycle time" was based on a time study from 5 years ago with different tooling. Actual achievable cycle time made the real performance 88%.
+OEE tells us *what* is wrong. We need to figure out *why* and fix it.
 
-Were they underperforming, or was the baseline wrong?
+## When OEE Doesn't Matter
 
-### 4. Match Metrics to Business Goals
+Sometimes, OEE literally doesn't matter.
 
-What actually matters to your business?
+If you're a bottleneck operation, maximize OEE. You're constraining the entire facility.
 
-- On-time delivery?
-- First pass yield?
-- Cost per piece?
-- Customer satisfaction?
+If you're not the bottleneck? Running faster just creates inventory. Focus on flexibility and quality instead.
 
-OEE is a proxy for these things, but it's not always a good one. I've seen facilities with excellent OEE and terrible delivery performance because they optimized for utilization over flexibility.
+I once had a line running at 65% OEE. Management wanted it at 85%. I asked: "Why? We already have 3 days of inventory downstream. If we run faster, we just build more inventory."
 
-## The Right Way to Use OEE
+We left it at 65% and used the time for cross-training, improvement projects, and quality initiatives. Better use of time than chasing a meaningless metric.
 
-OEE is valuable when:
+## The Real Metric
 
-1. **Consistently calculated** across time periods
-2. **Decomposed into actionable losses**
-3. **Used comparatively**, not absolutely
-4. **Balanced with other metrics** (cost, quality, delivery)
-5. **Applied strategically** (constraints, not everywhere)
+Want to know if your operations are healthy? Track this:
+
+**Throughput Dollar Days** = (Order Value) × (Days Late)
+
+This metric combines what actually matters: making money and delivering on time.
+
+A facility with 95% OEE but 20% late deliveries? Failing.
+A facility with 75% OEE but 100% on-time delivery? Winning.
 
 ## The Bottom Line
 
-Don't chase an OEE number. Understand your losses, prioritize the biggest opportunities, and improve systematically.
+OEE is a useful diagnostic tool. But it's not the goal.
 
-The goal isn't a high OEE - it's meeting customer demand profitably with minimal waste.
+The goal is running a profitable operation that delivers quality products on time.
 
-Sometimes those align. Often they don't.
+Use OEE to identify problems, not to prove you're world-class.
 
----
-
-*Need help identifying real bottlenecks and improvement opportunities in your operations? [Let's talk](/contact/) about bringing experienced operational analysis to your facility.*
+What's your experience with OEE? What other metrics do you find more useful?

@@ -1,83 +1,36 @@
 ---
 title: "About"
-date: 2024-01-01T10:00:00-00:00
-draft: false
 ---
 
-## About Manufacturing Leadership & Consulting
+# Hi, I'm Jared
 
-In an era of increasing automation and AI, manufacturing still fundamentally depends on human expertise - especially in areas requiring physical presence, relationship management, and operational judgment that machines cannot replicate.
+I've spent over 15 years in manufacturing leadership, from supervising production lines to serving as Plant Manager for facilities with nearly 1,000 employees. Along the way, I've learned that leadership isn't something you find in a textbook—it's forged through real experiences on the shop floor.
 
-## Who I Am
+## My Background
 
-I'm a manufacturing operations leader with 15+ years of hands-on experience managing high-volume production environments in the automotive supply chain. My background combines:
+- **Current Role**: Plant Manager at Creative Foam, Dayton, OH
+- **Previous Experience**: Manufacturing leadership at Adient managing facilities with 950+ employees
+- **Certifications**: Six Sigma Black Belt, IATF 16949 Lead Auditor, Quality One Lean Manufacturing
+- **Education**: Master of Finance (in progress), University of Cincinnati
 
-- **Operational Leadership**: Direct management of 17+ production lines
-- **Quality Systems**: IATF 16949 and ISO 9001 implementation and maintenance
-- **Technical Excellence**: Six Sigma Black Belt certification
-- **Data Analytics**: Advanced Excel, Power Query, and operational reporting
-- **Union & Non-Union Environments**: Experience with diverse workforce dynamics
+## Why This Blog?
 
-## What Makes This Different
+This blog exists because I wished someone had shared these lessons with me when I was starting out. Leadership in manufacturing comes with unique challenges—managing diverse teams, navigating union dynamics, implementing quality systems, driving continuous improvement, and making tough decisions under pressure.
 
-Most consultants offer one of two extremes:
+Every post here comes from real experience. The successes, the failures, and everything in between. My goal is simple: help other leaders navigate the challenges I've faced and share what actually works in the real world of manufacturing operations.
 
-1. **High-level strategy** with limited implementation support
-2. **Technical expertise** without operational leadership experience
+## What You'll Find Here
 
-I bring both. I've done the work - managed shifts, implemented quality systems, prepared for customer audits, optimized production lines, and built reporting systems that operations actually use.
+- **Leadership Lessons**: Real stories from managing teams and operations
+- **Operational Excellence**: Practical approaches to Lean, Six Sigma, and continuous improvement
+- **Quality Systems**: Insights from implementing IATF 16949 and managing audits
+- **Problem Solving**: How to tackle the tough challenges that come with manufacturing leadership
+- **Career Growth**: Navigating your path in manufacturing management
 
-## My Approach
+## Let's Connect
 
-**Hands-On Implementation**
-I don't just make recommendations and leave. I work alongside your team to implement changes, troubleshoot problems, and ensure sustainability.
+Have questions or want to discuss a leadership challenge? Reach out—I'm always happy to connect with fellow leaders in manufacturing.
 
-**Relationship-Driven**
-Manufacturing is fundamentally about people and relationships - with customers, suppliers, operators, and stakeholders. Success requires building trust and managing change effectively.
+Thanks for reading!
 
-**Practical Reality**
-I understand the gap between theoretical best practices and what actually works in a real production environment with real constraints, real people, and real customers.
-
-**Data-Informed Decisions**
-My Six Sigma training and technical skills mean every recommendation is backed by data analysis, but always balanced with operational judgment and feasibility.
-
-## Why This Matters Now
-
-As AI and automation advance, manufacturers face a critical question: What remains uniquely valuable about human expertise?
-
-The answer is clear:
-
-- **Physical World Understanding**: AI can't walk your shop floor and identify subtle process instabilities
-- **Relationship Management**: Customers, suppliers, and teams require human connection and trust
-- **Change Leadership**: Implementing improvements requires managing people through uncertainty
-- **Contextual Judgment**: Every facility is different - cookie-cutter solutions rarely work
-- **Accountability**: Regulatory and quality work requires human responsibility
-
-## My Philosophy
-
-**Operational Excellence Is Built, Not Bought**
-Technology and tools help, but sustainable improvement requires building capability in your people and processes.
-
-**Experience Matters**
-There's no substitute for having lived through customer audits, production crises, quality issues, and operational transformations.
-
-**Teaching Over Doing**
-The goal is to make myself unnecessary by building your team's capability to sustain and continue improvements.
-
-**Honesty Over Optimism**
-I'll tell you what's realistic, not just what you want to hear. Trust is built on honest assessment and realistic commitments.
-
-## Credentials
-
-- **Six Sigma Black Belt Certification**
-- **15+ Years Manufacturing Operations Management**
-- **IATF 16949 Implementation & Maintenance**
-- **17+ Production Lines Managed**
-- **Automotive Supply Chain Expertise**
-- **Advanced Technical Skills** (Excel, Power Query, Data Analysis)
-
-## Let's Work Together
-
-If your organization needs experienced operational leadership - whether for a turnaround, certification, capacity optimization, or capability building - let's talk about how I can help.
-
-Contact me to discuss your specific challenges and how my expertise might address them.
+— Jared

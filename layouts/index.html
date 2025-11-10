@@ -1,0 +1,54 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">Leadership Lessons from the Shop Floor</h1>
+        <p class="hero-subtitle">Real experiences and insights from 15+ years managing manufacturing operations. Learn from successes, failures, and everything in between.</p>
+    </div>
+</section>
+
+<section class="featured-posts">
+    <div class="container">
+        <h2 class="section-title">Latest Posts</h2>
+        <div class="posts-grid">
+            {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+            <article class="post-card">
+                {{ if .Params.image }}
+                <div class="post-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    </a>
+                </div>
+                {{ end }}
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                        {{ if .Params.category }}
+                        <span class="post-category">{{ .Params.category }}</span>
+                        {{ end }}
+                    </div>
+                    <h3 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <p class="post-excerpt">{{ .Summary }}</p>
+                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        <div class="view-all">
+            <a href="/posts/" class="btn-primary">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+<section class="about-preview">
+    <div class="container">
+        <div class="about-content">
+            <h2>About This Blog</h2>
+            <p>Welcome! I'm Jared, and I've spent over 15 years in manufacturing leadership roles, from managing production lines to serving as Plant Manager for facilities with hundreds of employees. This blog is where I share real leadership lessons—the wins, the losses, and the lessons learned along the way.</p>
+            <p>Whether you're a new supervisor, an experienced manager, or aspiring to leadership, you'll find practical insights drawn from the realities of manufacturing operations.</p>
+            <a href="/about/" class="btn-secondary">Learn More About Me</a>
+        </div>
+    </div>
+</section>
+{{ end }}
