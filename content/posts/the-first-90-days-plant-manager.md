@@ -1,102 +1,74 @@
 ---
-title: "The First 90 Days as Plant Manager: What I Wish I'd Known"
-date: 2025-01-10T10:00:00-05:00
-category: "Leadership"
-image: ""
+title: "The First 90 Days as a Plant Manager"
+date: 2026-05-28T08:00:00-04:00
+category: "Leadership Foundations"
+tags: ["new leaders", "trust", "plant leadership"]
+summary: "The first 90 days are not about showing how smart you are. They are about building trust, setting standards, and proving you will follow through."
+subtitle: "The job is not to impress the building. The job is to stabilize it."
 ---
 
-Taking over as Plant Manager was the most exciting and terrifying moment of my career. Here's what I learned in those crucial first 90 days.
+The first 90 days in plant leadership can fool people.
 
-## Day 1: Listen More Than You Talk
+You arrive with fresh eyes, people expect decisions, and the pressure to prove yourself can make speed feel like strength. In reality, the first 90 days are about credibility. If you spend them reacting, overpromising, or trying to look decisive in every conversation, the building will feel that too.
 
-My first instinct was to prove myself by making changes quickly. Wrong move.
+## First, earn the right to change things
 
-The best advice I got was from a mentor: "Spend your first 30 days listening." So I did:
+The smartest move early is not silence. It is disciplined curiosity.
 
-- Walked the floor every day
-- Asked operators what frustrated them
-- Sat in on production meetings without talking
-- Reviewed data without jumping to conclusions
+Walk the floor. Listen to the supervisors. Ask operators where the shift breaks down. Review the same metrics everyone else sees, but pair them with the stories behind them. You are not just collecting facts. You are learning where the building trusts leadership and where it has stopped believing.
 
-What I discovered: The team knew the problems. They'd been telling the previous manager for months. They didn't need me to identify issues—they needed someone who would actually listen and act.
+The temptation is to make your mark with a big initiative. Resist that. People do not trust your strategy until they trust your judgment.
 
-## Week 2: Your Team is Testing You
+## Your first calls set the tone
 
-About two weeks in, a supervisor asked me to override a quality hold on a shipment. Customer was screaming, we'd miss the truck, "we've shipped worse before."
+The team watches closely for your first hard decisions.
 
-This was a test.
+Do you protect standards when delivery pressure rises?
+Do you support the people who raise real problems?
+Do you punish bad news, or do you act on it?
 
-I walked to the floor, looked at the parts, and asked quality why they held them. Dimensions were out of spec. Would fail at customer. Could create a field issue.
+One quality hold. One staffing call. One meeting where the truth gets uncomfortable. That is often enough for a building to decide what kind of leader you are.
 
-I supported quality. We didn't ship. Customer was upset, but we overnighted conforming parts the next day.
+If you want a stable culture later, act with integrity early.
 
-Word spread fast. Quality knew I had their back. Production knew shortcuts wouldn't fly. That one decision set the tone for everything that followed.
+## Pick one visible priority
 
-## Month 1: Pick Your First Battle Carefully
+New leaders often launch too many things at once. That creates noise, not momentum.
 
-You can't fix everything at once. Your first major initiative will define you.
+Choose one priority that touches the whole operation and proves you are serious. Safety works. Schedule discipline works. Handoff quality works. On-time delivery can work if the root causes are already visible.
 
-I chose safety. Not because everything else was fine (it wasn't), but because:
-1. Everyone agrees safety matters
-2. It touches every department
-3. Success is measurable
-4. It builds trust
+The key is not the topic. The key is that the team sees a full loop:
 
-We implemented daily safety walks with leadership. Found and fixed hazards immediately. Celebrated teams with no incidents. Within 60 days, our incident rate dropped 40%.
+1. leadership notices the issue
+2. leadership names the standard
+3. leadership removes obstacles
+4. leadership checks progress
+5. leadership follows through
 
-More importantly, the team saw that I followed through. When I said we'd do something, we did it.
+When people experience that loop, they begin to believe change might actually stick.
 
-## Month 2: Start Building Your Leadership Team
+## Build around your strongest lieutenants
 
-By day 30, I knew who my players were:
+By day 30, you usually know who helps the building move and who slows it down.
 
-- **The Builders**: Ready to improve, open to change
-- **The Skeptics**: Good at their jobs, need proof before buying in
-- **The Resisters**: Comfortable with status quo, fight every change
+Look for the leaders who tell the truth, own their area, and pull others upward. Invest there first. Give them more visibility. Give them harder assignments. Let the rest of the organization see what good leadership looks like in motion.
 
-I spent month 2 investing in the Builders. Give them projects, authority, visibility. Show the Skeptics that change works. The Resisters either came around or found themselves increasingly irrelevant.
+You do not build momentum by trying to win every skeptic immediately. You build it by strengthening the people who are already leaning in.
 
-Hard truth: I had to move two people out of leadership roles. It was painful but necessary. The team's performance improved immediately.
+## Deliver one clean win
 
-## Month 3: Deliver a Win
+By the end of the first 90 days, people need proof.
 
-By day 90, you need a visible win. Not something small—something the whole facility can see and celebrate.
+Not a speech. Not a deck. Proof.
 
-For us, it was on-time delivery. We'd been at 78%, customers were threatening to pull business. We:
+That might be a cleaner startup process, a safer floor, better shift handoffs, fewer missed shipments, or a weekly rhythm that finally makes cross-functional follow-through real. The specific win matters less than the clarity of it.
 
-- Created a daily shipment meeting
-- Built a visible scoreboard
-- Removed bottlenecks
-- Got production and quality working together
+The team needs to be able to say, "Things are different now."
 
-Within 90 days, we hit 95% on-time delivery. Customers noticed. The team was proud. We had momentum.
+## What matters most
 
-## What I Wish I'd Known
+The first 90 days are not a leadership performance. They are a trust-building window.
 
-**1. Culture Beats Strategy**
-You can have the best plans, but if the culture doesn't support execution, you'll fail. Focus on culture first.
+If you spend that window listening well, protecting standards, choosing one visible priority, and delivering one meaningful win, you create the base for everything that comes next.
 
-**2. Overcommunicate Everything**
-What feels like repetition to you is the first time most people are hearing it. Say it seven times in seven different ways.
-
-**3. Visibility Matters**
-Be on the floor. Be in meetings. Be visible. Your presence sets the tone.
-
-**4. Quick Decisions Beat Perfect Decisions**
-Make decisions quickly with 70% of the info. You can adjust later. Indecision kills momentum.
-
-**5. Celebrate Small Wins**
-People need to see progress. Celebrate every win, no matter how small.
-
-## The Real Test
-
-The first 90 days aren't about massive transformation. They're about:
-
-- Building trust
-- Setting direction
-- Proving you'll follow through
-- Creating momentum
-
-Do those four things well, and you'll have the foundation to tackle the big challenges ahead.
-
-What was your experience taking on a new leadership role? What would you add to this list?
+If you waste it trying to look like the answer, the building will remember that too.

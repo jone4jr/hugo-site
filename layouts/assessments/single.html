@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <section class="page-hero page-hero--assessment">
+    <div class="shell assessment-hero">
+      <div class="reveal">
+        <p class="eyebrow">Free leadership assessment</p>
+        <div class="article-meta">
+          <span class="pill">Subscriber unlock</span>
+          {{ with .Params.minutes }}<span>{{ . }}</span>{{ end }}
+        </div>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="assessment-hero__aside reveal">
+        <div class="sidebar-card">
+          <p class="eyebrow">What to expect</p>
+          <ul class="plain-list">
+            <li>Short reflective questions</li>
+            <li>Immediate scoring and interpretation</li>
+            <li>Strengths, watch-outs, and next-step guidance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="shell assessment-layout">
+      <div class="assessment-shell reveal">
+        <div class="assessment-app js-assessment" data-assessment="{{ .Params.assessment_key }}" data-title="{{ .Title }}"></div>
+      </div>
+      <aside class="assessment-sidebar reveal">
+        <div class="sidebar-card">
+          <p class="eyebrow">Important note</p>
+          <p>These tools are meant for leadership reflection and development. They are not clinical assessments or licensed replacement instruments.</p>
+        </div>
+        <div class="sidebar-card">
+          <p class="eyebrow">Recommended next move</p>
+          <a class="text-link" href="{{ "/posts/" | relURL }}">Read the article library after you finish</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell prose reveal">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}

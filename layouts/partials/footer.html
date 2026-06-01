@@ -1,25 +1,32 @@
 <footer class="site-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>{{ .Site.Title }}</h3>
-                <p>{{ .Site.Params.description }}</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/posts/">All Posts</a></li>
-                    <li><a href="/about/">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <p>Sharing real leadership experiences from manufacturing operations.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
-        </div>
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <p class="eyebrow">5AM Shift</p>
+      <h2>Leadership development that respects the realities of the work.</h2>
+      <p>Built for frontline, plant, and operational leaders who need clear thinking, stronger communication, and practical tools they can use right away.</p>
     </div>
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/posts/" | relURL }}">Articles</a></li>
+        <li><a href="{{ "/assessments/" | relURL }}">Assessments</a></li>
+        <li><a href="{{ "/leadership-development/" | relURL }}">Leadership Development</a></li>
+        <li><a href="{{ "/about/" | relURL }}">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-signup">
+      {{ partial "newsletter-form.html" (dict
+        "heading" .Site.Params.newsletter.heading
+        "copy" .Site.Params.newsletter.blurb
+        "button" "Subscribe"
+        "source" "footer"
+        "class" "newsletter-form--dark"
+        "success" .Site.Params.newsletter.success
+      ) }}
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <p>&copy; {{ now.Year }} {{ .Site.Title }}. Leadership development from the floor to the front office.</p>
+  </div>
 </footer>

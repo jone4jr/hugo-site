@@ -1,54 +1,185 @@
 {{ define "main" }}
-<section class="hero">
-    <div class="container">
-        <h1 class="hero-title">Leadership Lessons from the Shop Floor</h1>
-        <p class="hero-subtitle">Real experiences and insights from 15+ years managing manufacturing operations. Learn from successes, failures, and everything in between.</p>
-    </div>
-</section>
+  {{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
+  {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
+  {{ $latest := first 6 $posts }}
 
-<section class="featured-posts">
-    <div class="container">
-        <h2 class="section-title">Latest Posts</h2>
-        <div class="posts-grid">
-            {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
-            <article class="post-card">
-                {{ if .Params.image }}
-                <div class="post-image">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                    </a>
-                </div>
-                {{ end }}
-                <div class="post-content">
-                    <div class="post-meta">
-                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                        {{ if .Params.category }}
-                        <span class="post-category">{{ .Params.category }}</span>
-                        {{ end }}
-                    </div>
-                    <h3 class="post-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h3>
-                    <p class="post-excerpt">{{ .Summary }}</p>
-                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
-                </div>
-            </article>
-            {{ end }}
+  <section class="hero-section">
+    <div class="shell hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Leadership development for high-accountability environments</p>
+        <h1>{{ .Params.hero_title }}</h1>
+        <p class="hero-lead">{{ .Params.hero_subtitle }}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="{{ "/posts/" | relURL }}">Explore articles</a>
+          <a class="button button-secondary" href="{{ "/assessments/disc-profile/" | relURL }}">Unlock free DISC profile</a>
         </div>
-        <div class="view-all">
-            <a href="/posts/" class="btn-primary">View All Posts</a>
+        <div class="hero-proof">
+          <div>
+            <strong>15+ years</strong>
+            <span>leading in manufacturing and operations</span>
+          </div>
+          <div>
+            <strong>950+ employees</strong>
+            <span>inside large, multi-layer leadership environments</span>
+          </div>
+          <div>
+            <strong>Weekly growth loop</strong>
+            <span>articles, assessments, and practical development tools</span>
+          </div>
         </div>
+      </div>
+      <div class="hero-panel reveal">
+        {{ partial "newsletter-form.html" (dict
+          "heading" "Subscribe and unlock the assessment library"
+          "copy" "Start with the free DISC-style leadership profile, then use the diagnostics to sharpen delegation, communication, and change leadership."
+          "button" .Site.Params.newsletter.button
+          "source" "hero"
+          "class" "newsletter-form--hero"
+          "success" .Site.Params.newsletter.success
+        ) }}
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="about-preview">
-    <div class="container">
-        <div class="about-content">
-            <h2>About This Blog</h2>
-            <p>Welcome! I'm Jared, and I've spent over 15 years in manufacturing leadership roles, from managing production lines to serving as Plant Manager for facilities with hundreds of employees. This blog is where I share real leadership lessons—the wins, the losses, and the lessons learned along the way.</p>
-            <p>Whether you're a new supervisor, an experienced manager, or aspiring to leadership, you'll find practical insights drawn from the realities of manufacturing operations.</p>
-            <a href="/about/" class="btn-secondary">Learn More About Me</a>
-        </div>
+  <section class="signal-bar">
+    <div class="shell signal-grid">
+      <div class="signal-card reveal">
+        <p class="eyebrow">Built for real leaders</p>
+        <h2>Not leadership theater.</h2>
+        <p>This site is for people who need clear standards, honest feedback, better meetings, stronger supervisors, and a team that can perform under pressure.</p>
+      </div>
+      <div class="signal-card reveal">
+        <p class="eyebrow">Start here</p>
+        <h3>Read the writing, take the assessments, build the habit.</h3>
+        <p>The structure is simple on purpose: insight, reflection, and repetition.</p>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Start here</p>
+        <h2>Three entry points for growth</h2>
+        <p>Whether you are stepping into leadership, trying to level up your current team, or building a broader platform, the site gives you a clear first move.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card reveal">
+          <span class="path-card__index">01</span>
+          <h3>New leaders</h3>
+          <p>Build trust, communicate clearly, and learn how to set standards without sounding scripted or severe.</p>
+        </article>
+        <article class="path-card reveal">
+          <span class="path-card__index">02</span>
+          <h3>Plant and operations leaders</h3>
+          <p>Strengthen operating rhythm, leadership bench strength, accountability, and culture across shifts and functions.</p>
+        </article>
+        <article class="path-card reveal">
+          <span class="path-card__index">03</span>
+          <h3>Leaders building a long game</h3>
+          <p>Use the article library and assessment hub to create a serious development platform that can support workshops, coaching, and team growth later.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell feature-band">
+      <div class="feature-band__copy reveal">
+        <p class="eyebrow">Leadership development</p>
+        <h2>A site architecture built to grow with your platform.</h2>
+        <p>This rebuild positions the brand as more than a blog. It is now a leadership hub with durable pillars: long-form writing, free assessments, and a development story that can expand into programs, workshops, or advisory offers.</p>
+        <a class="button button-secondary" href="{{ "/leadership-development/" | relURL }}">See the development model</a>
+      </div>
+      <div class="feature-band__panel reveal">
+        <div class="metric-stack">
+          <div>
+            <strong>Blog engine</strong>
+            <span>Designed for a growing library of leadership articles</span>
+          </div>
+          <div>
+            <strong>Assessment hub</strong>
+            <span>Subscriber-gated tools that create return visits</span>
+          </div>
+          <div>
+            <strong>Future-ready</strong>
+            <span>Flexible enough for cohorts, workshops, and coaching later</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Assessment hub</p>
+        <h2>Free tools readers can use right away</h2>
+        <p>The assessment library creates a more premium subscriber experience and gives visitors a reason to move from casual reading into active development.</p>
+      </div>
+      <div class="assessment-grid">
+        {{ range $assessments }}
+          {{ partial "assessment-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{ if gt (len $posts) 0 }}
+    {{ $featured := index $posts 0 }}
+    <section class="section section-dark">
+      <div class="shell story-feature">
+        <div class="story-feature__meta reveal">
+          <p class="eyebrow">Featured article</p>
+          <span class="pill">{{ $featured.Params.category }}</span>
+          <h2>{{ $featured.Title }}</h2>
+          <p>{{ $featured.Params.summary }}</p>
+          <a class="button button-primary" href="{{ $featured.RelPermalink }}">Read the article</a>
+        </div>
+        <div class="story-feature__insight reveal">
+          <p class="quote-block">"{{ $featured.Params.subtitle }}"</p>
+          <p>Use the article library to build a publishing rhythm around practical leadership, communication, accountability, change, and growth.</p>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Latest articles</p>
+        <h2>Writing designed to keep leaders coming back</h2>
+        <p>The article experience is built to feel premium, readable, and easy to expand as you publish more leadership content.</p>
+      </div>
+      <div class="articles-grid">
+        {{ range $latest }}
+          {{ partial "article-card.html" . }}
+        {{ end }}
+      </div>
+      <div class="section-cta">
+        <a class="button button-secondary" href="{{ "/posts/" | relURL }}">Browse the full library</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell offers-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Ways this brand can serve people</p>
+        <h2>More than content. A real development ecosystem.</h2>
+      </div>
+      <article class="offer-card reveal">
+        <h3>Weekly leadership note</h3>
+        <p>Short, sharp writing that keeps readers in a consistent development rhythm.</p>
+      </article>
+      <article class="offer-card reveal">
+        <h3>Assessment-driven self-awareness</h3>
+        <p>Tools that move readers from passive consumption into reflection and action.</p>
+      </article>
+      <article class="offer-card reveal">
+        <h3>Future coaching or workshops</h3>
+        <p>The page structure already supports stronger offers when you decide to add them.</p>
+      </article>
+    </div>
+  </section>
 {{ end }}

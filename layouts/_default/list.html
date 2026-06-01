@@ -1,41 +1,67 @@
 {{ define "main" }}
-<section class="page-header">
-    <div class="container">
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.description }}
-        <p>{{ . }}</p>
-        {{ end }}
-    </div>
-</section>
-
-<section class="posts-list">
-    <div class="container">
-        <div class="posts-grid">
-            {{ range .Pages }}
-            <article class="post-card">
-                {{ if .Params.image }}
-                <div class="post-image">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                    </a>
-                </div>
-                {{ end }}
-                <div class="post-content">
-                    <div class="post-meta">
-                        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                        {{ if .Params.category }}
-                        <span class="post-category">{{ .Params.category }}</span>
-                        {{ end }}
-                    </div>
-                    <h3 class="post-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h3>
-                    <p class="post-excerpt">{{ .Summary }}</p>
-                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
-                </div>
-            </article>
-            {{ end }}
+  {{ if eq .Section "posts" }}
+    {{ $posts := sort .Pages "Date" "desc" }}
+    <section class="page-hero page-hero--articles">
+      <div class="shell page-hero__grid">
+        <div class="reveal">
+          <p class="eyebrow">Leadership article library</p>
+          <h1>{{ .Title }}</h1>
+          <p>{{ .Description }}</p>
         </div>
-    </div>
-</section>
+        <div class="page-hero__panel reveal">
+          <p class="eyebrow">Popular themes</p>
+          <div class="filter-bar js-filter-bar" data-target=".article-card">
+            <button class="is-active" type="button" data-filter="all">All</button>
+            <button type="button" data-filter="leadership-foundations">Leadership Foundations</button>
+            <button type="button" data-filter="team-performance">Team Performance</button>
+            <button type="button" data-filter="coaching">Coaching</button>
+            <button type="button" data-filter="communication">Communication</button>
+            <button type="button" data-filter="growth">Growth</button>
+            <button type="button" data-filter="operational-leadership">Operational Leadership</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ if gt (len $posts) 0 }}
+      {{ $lead := index $posts 0 }}
+      <section class="section">
+        <div class="shell feature-article reveal">
+          <div class="feature-article__copy">
+            <p class="eyebrow">Newest article</p>
+            <h2><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
+            <p>{{ $lead.Params.summary }}</p>
+            <div class="feature-article__meta">
+              <span>{{ $lead.Params.category }}</span>
+              <span>{{ $lead.ReadingTime }} min read</span>
+              <span>{{ $lead.Date.Format "January 2, 2006" }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="section section-tight">
+      <div class="shell">
+        <div class="articles-grid">
+          {{ range $posts }}
+            {{ partial "article-card.html" . }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ else }}
+    <section class="page-hero">
+      <div class="shell reveal">
+        <p class="eyebrow">Resource page</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </section>
+    <section class="section">
+      <div class="shell prose reveal">
+        {{ .Content }}
+      </div>
+    </section>
+  {{ end }}
 {{ end }}

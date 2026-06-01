@@ -1,47 +1,81 @@
 {{ define "main" }}
-<article class="post-single">
-    <header class="post-header">
-        <div class="container-narrow">
-            <div class="post-meta">
-                <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-                {{ if .Params.category }}
-                <span class="post-category">{{ .Params.category }}</span>
-                {{ end }}
+  {{ if eq .Section "posts" }}
+    <article class="article-layout">
+      <section class="page-hero page-hero--article">
+        <div class="shell article-hero">
+          <div class="article-hero__copy reveal">
+            <div class="article-meta">
+              <span class="pill">{{ .Params.category }}</span>
+              <span>{{ .ReadingTime }} min read</span>
+              <span>{{ .Date.Format "January 2, 2006" }}</span>
             </div>
-            <h1 class="post-title">{{ .Title }}</h1>
-            {{ if .Params.subtitle }}
-            <p class="post-subtitle">{{ .Params.subtitle }}</p>
-            {{ end }}
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.subtitle }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+            <p>{{ .Params.summary }}</p>
+          </div>
+          <aside class="article-hero__aside reveal">
+            {{ partial "newsletter-form.html" (dict
+              "heading" "Keep growing weekly"
+              "copy" "Subscribe for practical leadership writing and unlock the assessment hub."
+              "button" "Subscribe"
+              "source" "article"
+              "success" .Site.Params.newsletter.success
+            ) }}
+          </aside>
         </div>
-    </header>
+      </section>
 
-    {{ if .Params.image }}
-    <div class="post-featured-image">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-    </div>
-    {{ end }}
-
-    <div class="post-body">
-        <div class="container-narrow">
+      <section class="section section-tight">
+        <div class="shell article-body">
+          <div class="prose reveal">
             {{ .Content }}
-        </div>
-    </div>
-
-    <footer class="post-footer">
-        <div class="container-narrow">
-            <div class="post-navigation">
-                {{ if .NextInSection }}
-                <a href="{{ .NextInSection.Permalink }}" class="nav-prev">
-                    ← {{ .NextInSection.Title }}
-                </a>
-                {{ end }}
-                {{ if .PrevInSection }}
-                <a href="{{ .PrevInSection.Permalink }}" class="nav-next">
-                    {{ .PrevInSection.Title }} →
-                </a>
-                {{ end }}
+          </div>
+          <aside class="article-sidebar reveal">
+            {{ with .TableOfContents }}
+              <div class="sidebar-card">
+                <p class="eyebrow">On this page</p>
+                <div class="toc">{{ . }}</div>
+              </div>
+            {{ end }}
+            <div class="sidebar-card">
+              <p class="eyebrow">Next step</p>
+              <h3>Take a leadership assessment</h3>
+              <p>Move from reading to self-awareness with the free DISC-style profile and other diagnostics.</p>
+              <a class="text-link" href="{{ "/assessments/" | relURL }}">Visit the assessment hub</a>
             </div>
+          </aside>
         </div>
-    </footer>
-</article>
+      </section>
+    </article>
+  {{ else }}
+    <section class="page-hero">
+      <div class="shell reveal">
+        <p class="eyebrow">Leadership resource</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </section>
+    <section class="section">
+      <div class="shell prose reveal">
+        {{ .Content }}
+      </div>
+    </section>
+    <section class="section section-contrast">
+      <div class="shell cta-band reveal">
+        <div>
+          <p class="eyebrow">Stay in the loop</p>
+          <h2>Subscribe and keep the development rhythm going.</h2>
+        </div>
+        <div class="cta-band__form">
+          {{ partial "newsletter-form.html" (dict
+            "heading" ""
+            "copy" ""
+            "button" "Subscribe"
+            "source" "page"
+            "success" .Site.Params.newsletter.success
+          ) }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
 {{ end }}
