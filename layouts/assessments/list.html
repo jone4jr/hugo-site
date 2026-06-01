@@ -1,0 +1,49 @@
+{{ define "main" }}
+  {{ $assessments := sort .Pages "Title" "asc" }}
+  <section class="page-hero page-hero--assessments">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        <p class="eyebrow">Assessment hub</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="page-hero__panel reveal">
+        <p class="eyebrow">How it works</p>
+        <ol class="steps-list">
+          <li>Subscribe to the weekly leadership note.</li>
+          <li>Unlock the free assessment library.</li>
+          <li>Use your results to guide what you read and practice next.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="assessment-grid">
+        {{ range $assessments }}
+          {{ partial "assessment-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell cta-band reveal">
+      <div>
+        <p class="eyebrow">Subscriber experience</p>
+        <h2>The assessments make the site feel valuable on day one.</h2>
+        <p>They also create a natural path into future email sequences, workshops, and development offers.</p>
+      </div>
+      <div class="cta-band__form">
+        {{ partial "newsletter-form.html" (dict
+          "heading" "Subscribe"
+          "copy" "Unlock all free assessments."
+          "button" "Subscribe"
+          "source" "assessments"
+          "success" .Site.Params.newsletter.success
+        ) }}
+      </div>
+    </div>
+  </section>
+{{ end }}

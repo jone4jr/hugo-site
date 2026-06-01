@@ -1,105 +1,76 @@
 ---
-title: "When OEE Lies to You (And What to Do About It)"
-date: 2025-01-05T10:00:00-05:00
-category: "Operational Excellence"
-image: ""
+title: "When OEE Lies to You"
+date: 2026-04-24T08:00:00-04:00
+category: "Operational Leadership"
+tags: ["metrics", "operations", "continuous improvement"]
+summary: "OEE can be useful, but it becomes dangerous when leaders confuse a diagnostic metric with the actual definition of performance."
+subtitle: "A clean number can still hide a weak operation."
 ---
 
-OEE is supposed to tell you the truth about your equipment performance. But sometimes, it lies.
+OEE is one of the easiest metrics to admire from a distance.
 
-## The 85% Lie
+It looks precise. It sounds objective. It gives leaders a fast way to talk about availability, performance, and quality in one frame.
 
-I walked into a facility where every line was running at 85% OEE. Management was proud. "We're world class!"
+The problem is not OEE itself. The problem is what leaders start believing when they stop questioning it.
 
-Except we were bleeding money, missing deliveries, and running constant overtime.
+## Metrics can become emotional shelter
 
-How could we have 85% OEE and still be failing?
+Sometimes teams cling to a strong OEE number because it provides relief.
 
-The answer: We were measuring the wrong things.
+If customer delivery is unstable, overtime is climbing, or quality escapes keep appearing, a good-looking number feels like proof that the operation is still healthy. The metric becomes a shield from harder conversations.
 
-## How OEE Lies
+That is when leadership has to step back and ask a better question:
 
-### Lie #1: Availability Includes Breaks
+Is this metric helping us see reality, or helping us avoid it?
 
-One facility counted breaks as "available time." Their 90% availability looked great until you realized they were only running 70% of the scheduled shift.
+## The common ways OEE gets distorted
 
-**The Fix**: Measure planned production time, not scheduled shift time. If the line should run 7 hours of an 8-hour shift, your baseline is 7 hours.
+OEE gets misleading fast when:
 
-### Lie #2: Performance Assumes Perfect Conditions
+- planned downtime is treated inconsistently
+- ideal cycle time no longer reflects reality
+- rework is hidden downstream
+- changeovers are normalized instead of improved
+- leaders chase speed while the real bottleneck sits somewhere else
 
-Standard cycle time: 60 seconds. Actual average: 65 seconds. Performance: 92%.
+A number can be mathematically correct and still operationally misleading.
 
-Sounds good, right? Wrong.
+## What strong leaders do differently
 
-That 92% assumes the cycle time is achievable. But what if the cycle time was set when the equipment was new, materials were better, and the product was simpler?
+Strong operational leaders use OEE as an entry point, not a verdict.
 
-**The Fix**: Validate your ideal cycle time regularly. If you can't achieve it even when everything is perfect, it's not the right target.
+They ask:
 
-### Lie #3: Quality Only Counts First-Pass
+- what is the process actually preventing us from delivering?
+- where is the money really leaking?
+- what does the team experience on the floor that the number does not show?
+- is this line the real constraint, or are we optimizing noise?
 
-Some facilities only count first-pass yield. Scrap a part at operation 1? Rework it? Doesn't impact OEE.
+Those questions reconnect the metric to decision-making.
 
-This hides massive waste. I've seen 95% OEE lines producing 30% scrap at certain operations—but it all got reworked "downstream," so it didn't count.
+## Metrics should drive behavior, not vanity
 
-**The Fix**: Track true first-pass yield from raw material to ship. Include rework time in your availability calculations.
+A metric is useful when it leads to better action.
 
-## What Actually Matters
+If the team responds to OEE by hiding stops, pushing questionable output, or running work the customer does not need yet, the number is no longer serving the business. It is serving the scoreboard.
 
-OEE is a tool, not the goal. The goal is making money by delivering quality products on time.
+That is a leadership issue, not a math issue.
 
-I learned this when I stopped celebrating OEE and started asking different questions:
+## Better framing
 
-- **Are we making money?** (Not just running equipment)
-- **Are we delivering on time?** (Not just hitting throughput)
-- **Are we producing quality?** (Not just passing inspection)
+Try treating OEE as one sentence in a larger story:
 
-Sometimes the answer was improving OEE. Sometimes it was slowing down to improve quality. Sometimes it was running less to match customer demand.
+- OEE tells us where efficiency is being lost.
+- customer delivery tells us whether the system is meeting demand.
+- quality tells us whether the output is trustworthy.
+- cost tells us whether the process is economically healthy.
 
-## The OEE Conversation I Have Now
+When leaders keep all four in view, the conversation gets smarter quickly.
 
-When I review OEE with teams, I ask:
+## Bottom line
 
-1. **"What's stopping us from running?"** (Availability)
-2. **"Why aren't we running at speed?"** (Performance)
-3. **"Why are we making bad parts?"** (Quality)
+OEE is valuable when it stays in its lane.
 
-Then we dig into root causes:
+Use it to diagnose friction. Use it to focus improvement. But do not let a strong-looking number convince you that a weak system is performing well.
 
-- If availability is low: Is it changeovers? Breakdowns? Material availability?
-- If performance is low: Is it tooling? Operator skill? Equipment condition?
-- If quality is low: Is it process capability? Training? Materials?
-
-OEE tells us *what* is wrong. We need to figure out *why* and fix it.
-
-## When OEE Doesn't Matter
-
-Sometimes, OEE literally doesn't matter.
-
-If you're a bottleneck operation, maximize OEE. You're constraining the entire facility.
-
-If you're not the bottleneck? Running faster just creates inventory. Focus on flexibility and quality instead.
-
-I once had a line running at 65% OEE. Management wanted it at 85%. I asked: "Why? We already have 3 days of inventory downstream. If we run faster, we just build more inventory."
-
-We left it at 65% and used the time for cross-training, improvement projects, and quality initiatives. Better use of time than chasing a meaningless metric.
-
-## The Real Metric
-
-Want to know if your operations are healthy? Track this:
-
-**Throughput Dollar Days** = (Order Value) × (Days Late)
-
-This metric combines what actually matters: making money and delivering on time.
-
-A facility with 95% OEE but 20% late deliveries? Failing.
-A facility with 75% OEE but 100% on-time delivery? Winning.
-
-## The Bottom Line
-
-OEE is a useful diagnostic tool. But it's not the goal.
-
-The goal is running a profitable operation that delivers quality products on time.
-
-Use OEE to identify problems, not to prove you're world-class.
-
-What's your experience with OEE? What other metrics do you find more useful?
+Leadership gets better the moment the team learns that metrics are there to reveal truth, not decorate it.

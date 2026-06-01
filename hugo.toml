@@ -1,16 +1,11 @@
-baseURL = 'https://5amshift.com/'
-languageCode = 'en-us'
-title = 'Leadership Lessons from the Shop Floor'
-
+baseURL = "https://5amshift.com/"
+languageCode = "en-us"
+title = "5AM Shift"
 enableRobotsTXT = true
-disableKinds = []
+summaryLength = 28
 
 [pagination]
-  pagerSize = 6
-
-[params]
-  description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
-  author = "Jared Jones"
+  pagerSize = 9
 
 [taxonomies]
   category = "categories"
@@ -20,3 +15,51 @@ disableKinds = []
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[params]
+  author = "Jared Jones"
+  description = "Leadership development for frontline, plant, and operational leaders who want practical frameworks, honest writing, and assessment-driven growth."
+  tagline = "Leadership development from the floor to the front office."
+  city = "Dayton, OH"
+
+  [params.newsletter]
+    heading = "Get the Sunday leadership note"
+    blurb = "One sharp leadership lesson each week, plus access to the assessment library."
+    button = "Subscribe and unlock the DISC profile"
+    action = ""
+    success = "You are in. Your assessment library is now unlocked on this device."
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Articles"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  name = "Assessments"
+  url = "/assessments/"
+  weight = 30
+
+[[menu.main]]
+  name = "Leadership Development"
+  url = "/leadership-development/"
+  weight = 40
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 50

@@ -1,36 +1,45 @@
 ---
-title: "About"
+title: "About Jared"
+description: "A grounded leadership perspective built in manufacturing, quality, and high-accountability operations."
 ---
 
-# Hi, I'm Jared
+## Why this site exists
 
-I've spent over 15 years in manufacturing leadership, from supervising production lines to serving as Plant Manager for facilities with nearly 1,000 employees. Along the way, I've learned that leadership isn't something you find in a textbook—it's forged through real experiences on the shop floor.
+Most leadership advice sounds polished in a conference room and falls apart by Monday morning.
 
-## My Background
+I built 5AM Shift for leaders who have to earn trust in real time. The kind of leaders who walk into difficult handoffs, customer pressure, staffing gaps, quality risk, and a team that can tell in five minutes whether the person in charge is serious or not.
 
-- **Current Role**: Plant Manager at Creative Foam, Dayton, OH
-- **Previous Experience**: Manufacturing leadership at Adient managing facilities with 950+ employees
-- **Certifications**: Six Sigma Black Belt, IATF 16949 Lead Auditor, Quality One Lean Manufacturing
-- **Education**: Master of Finance (in progress), University of Cincinnati
+My background is in manufacturing leadership. Over more than 15 years, I have led in three-shift environments, supported large teams, worked inside high-accountability systems, and learned what leadership looks like when results are visible every day.
 
-## Why This Blog?
+## What shaped my perspective
 
-This blog exists because I wished someone had shared these lessons with me when I was starting out. Leadership in manufacturing comes with unique challenges—managing diverse teams, navigating union dynamics, implementing quality systems, driving continuous improvement, and making tough decisions under pressure.
+- Plant leadership in facilities where quality, safety, delivery, and morale had to improve at the same time
+- Experience managing in environments with hundreds of employees and multiple layers of leadership
+- Lean, Six Sigma, and quality-system work that taught me metrics matter, but people interpret every metric through leadership behavior
+- A career built on shop-floor credibility, not borrowed language
 
-Every post here comes from real experience. The successes, the failures, and everything in between. My goal is simple: help other leaders navigate the challenges I've faced and share what actually works in the real world of manufacturing operations.
+## What you will get here
 
-## What You'll Find Here
+5AM Shift is designed to help leaders grow in three ways:
 
-- **Leadership Lessons**: Real stories from managing teams and operations
-- **Operational Excellence**: Practical approaches to Lean, Six Sigma, and continuous improvement
-- **Quality Systems**: Insights from implementing IATF 16949 and managing audits
-- **Problem Solving**: How to tackle the tough challenges that come with manufacturing leadership
-- **Career Growth**: Navigating your path in manufacturing management
+- **Think clearly under pressure.** The site focuses on judgment, prioritization, communication, accountability, and execution.
+- **Lead people better.** You will find tools for feedback, coaching, delegation, difficult conversations, and trust.
+- **Build a durable leadership operating system.** The blog, assessments, and development pages work together so readers can move from insight to action.
 
-## Let's Connect
+## My point of view
 
-Have questions or want to discuss a leadership challenge? Reach out—I'm always happy to connect with fellow leaders in manufacturing.
+Leadership is not charisma. It is consistency.
 
-Thanks for reading!
+Your people learn who you are from what you reinforce, what you ignore, how you show up in meetings, how you handle bad news, and whether you can stay clear when pressure rises.
 
-— Jared
+That is why this site is practical on purpose. I care about frameworks, but only if they help someone lead a better shift, a better meeting, a better team, or a better plant.
+
+## How to use this site
+
+If you are new here, start in three places:
+
+1. Read the featured articles in the blog.
+2. Take the DISC-style leadership profile and one of the other diagnostics.
+3. Subscribe to the weekly note so you build momentum over time instead of reading one article and moving on.
+
+If that sounds like your kind of leadership development, you are in the right place.

@@ -1,0 +1,9 @@
+<article class="assessment-card reveal">
+  <div class="assessment-card__top">
+    <span class="pill">Free assessment</span>
+    {{ with .Params.minutes }}<span class="assessment-card__time">{{ . }}</span>{{ end }}
+  </div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Params.summary | default .Description }}</p>
+  <a class="text-link" href="{{ .RelPermalink }}">Open assessment</a>
+</article>

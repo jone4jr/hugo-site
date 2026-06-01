@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{ partial "head.html" . }}
+  {{ partial "head.html" . }}
 </head>
-<body>
-    {{ partial "header.html" . }}
-
-    <main>
-        {{ block "main" . }}{{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
+<body class="site-body {{ if .IsHome }}is-home{{ else }}section-{{ .Section }} kind-{{ .Kind }}{{ end }}" data-newsletter-action="{{ .Site.Params.newsletter.action }}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/site.js" | relURL }}" defer></script>
+  <script src="{{ "js/assessments.js" | relURL }}" defer></script>
 </body>
 </html>
