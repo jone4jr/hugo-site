@@ -1,0 +1,8 @@
+.topic-grid,
+.path-grid,
+.assessment-grid,
+.articles-grid,
+.offers-grid {
+  display: grid;
+  gap: 1.2rem;
+}
