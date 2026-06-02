@@ -7,6 +7,10 @@ tags: ["lead measures", "lag measures", "goal alignment", "daily management"]
 description: "Strategy only becomes real when someone on the floor owns a lead measure they can influence today. Why lag measures alone do not create execution."
 summary: "A plant goal becomes real only when it turns into a visible lead measure at the point of work."
 subtitle: "If the operator cannot tell you the number for the shift, the strategy is still just a poster."
+image: "https://images.pexels.com/photos/6803517/pexels-photo-6803517.jpeg?cs=srgb&dl=pexels-cottonbro-6803517.jpg&fm=jpg"
+image_alt: "Team members sketching a performance chart on a whiteboard during a meeting."
+image_credit_name: "cottonbro studio"
+image_credit_url: "https://www.pexels.com/photo/men-writing-on-a-whiteboard-at-a-meeting-in-an-office-6803517/"
 ---
 
 There is a number on the wall of most conference rooms. A target for the year, framed nicely, agreed on by leadership, repeated in every all-hands. Everyone above a certain level can recite it.
