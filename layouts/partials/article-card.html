@@ -1,6 +1,12 @@
+{{ $page := . }}
 {{ $category := .Params.category | default "Leadership" }}
 {{ $summary := .Params.summary | default .Summary }}
 <article class="article-card reveal" data-category="{{ urlize $category }}">
+  {{ with .Params.image }}
+    <a class="article-card__media" href="{{ $page.RelPermalink }}">
+      <img src="{{ . }}" alt="{{ $page.Params.image_alt | default $page.Title }}" loading="lazy" decoding="async">
+    </a>
+  {{ end }}
   <div class="article-card__meta">
     <span>{{ $category }}</span>
     <span>{{ .ReadingTime }} min read</span>
