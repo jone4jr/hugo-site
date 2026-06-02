@@ -5,6 +5,10 @@ category: "Operational Leadership"
 tags: ["metrics", "operations", "continuous improvement"]
 summary: "OEE can be useful, but it becomes dangerous when leaders confuse a diagnostic metric with the actual definition of performance."
 subtitle: "A clean number can still hide a weak operation."
+image: "https://images.pexels.com/photos/2995864/pexels-photo-2995864.jpeg?cs=srgb&dl=pexels-kateryna-babaieva-1423213-2995864.jpg&fm=jpg"
+image_alt: "A plant worker checking a large industrial machine during production."
+image_credit_name: "Kateryna Babaieva"
+image_credit_url: "https://www.pexels.com/photo/a-man-checking-machinery-at-an-industrial-plant-2995864/"
 ---
 
 OEE is one of the easiest metrics to admire from a distance.
