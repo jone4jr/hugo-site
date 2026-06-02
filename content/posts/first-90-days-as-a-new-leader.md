@@ -19,6 +19,10 @@ faq:
     answer: "The biggest mistake is acting before they understand the organization. Leaders often import the old playbook into a new environment before learning what conditions actually exist there."
   - question: "How do you build trust as a new leader?"
     answer: "You build trust by listening well, asking better questions than answers, staying composed under pressure, and proving through your first moves that you understood the place before trying to change it."
+image: "https://images.pexels.com/photos/9301243/pexels-photo-9301243.jpeg?cs=srgb&dl=pexels-mikhail-nilov-9301243.jpg&fm=jpg"
+image_alt: "A leader presenting at a whiteboard while colleagues listen and take in the plan."
+image_credit_name: "Mikhail Nilov"
+image_credit_url: "https://www.pexels.com/photo/people-having-a-meeting-9301243/"
 ---
 
 [Michael Watkins' work on the first 90 days](https://hbr.org/books/watkins) remains popular for a reason: transitions magnify leadership mistakes.
