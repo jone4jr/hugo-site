@@ -26,11 +26,34 @@ summaryLength = 28
   taxonomy = ["HTML"]
   term = ["HTML"]
 
+[sitemap]
+  changeFreq = "weekly"
+  priority = 0.8
+  filename = "sitemap.xml"
+
+[related]
+  threshold = 20
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "category"
+    weight = 80
+  [[related.indices]]
+    name = "title"
+    weight = 30
+
 [params]
   author = "Jared Jones"
-  description = "Leadership development for frontline, plant, and operational leaders who want practical frameworks, honest writing, and assessment-driven growth."
+  description = "Leadership development, practical leadership articles, and free assessments for plant leaders, supervisors, and ambitious operators building stronger teams."
   tagline = "Leadership development from the floor to the front office."
   city = "Dayton, OH"
+  defaultImage = "/images/og-default.svg"
+  mainTopic = "Leadership Development"
+  siteTopics = ["leadership development", "plant leadership", "supervisor training", "operational leadership", "manufacturing leadership blog"]
+  contactEmail = "hello@5amshift.com"
 
   [params.newsletter]
     heading = "Get the Sunday leadership note"
