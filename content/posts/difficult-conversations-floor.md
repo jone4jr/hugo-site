@@ -5,6 +5,10 @@ category: "Coaching"
 tags: ["feedback", "coaching", "communication"]
 summary: "Most difficult conversations become harder because leaders wait, soften, or circle around the issue too long."
 subtitle: "Delay adds emotion. Clarity lowers it."
+image: "https://images.pexels.com/photos/8124406/pexels-photo-8124406.jpeg?cs=srgb&dl=pexels-rdne-8124406.jpg&fm=jpg"
+image_alt: "Coworkers having a direct conversation across a conference table."
+image_credit_name: "RDNE Stock project"
+image_credit_url: "https://www.pexels.com/photo/colleagues-talking-in-an-office-8124406/"
 ---
 
 Many leaders do not struggle with feedback because they are careless. They struggle because they care.
