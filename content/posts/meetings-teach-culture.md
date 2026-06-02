@@ -5,6 +5,10 @@ category: "Communication"
 tags: ["meetings", "clarity", "culture"]
 summary: "Meetings are not neutral. They teach the team what leadership values, what gets ignored, and how safe it is to tell the truth."
 subtitle: "The meeting is the culture, in miniature."
+image: "https://images.pexels.com/photos/8554066/pexels-photo-8554066.jpeg?cs=srgb&dl=pexels-edmond-dantes-8554066.jpg&fm=jpg"
+image_alt: "Colleagues talking with work materials in a bright office hallway."
+image_credit_name: "Edmond Dantes"
+image_credit_url: "https://www.pexels.com/photo/people-talking-in-the-office-8554066/"
 ---
 
 Leaders often underestimate how much culture is taught in routine meetings.

@@ -7,6 +7,10 @@ tags: ["accountability", "responsibility", "systems thinking", "cross-functional
 description: "Blame loops across quality, maintenance, process, and production usually reveal a system-design problem, not a character problem."
 summary: "When interfaces are undefined, committed people rationally defend their own box and recurring failures keep coming back."
 subtitle: "The people were never the problem. The space between them was."
+image: "https://images.pexels.com/photos/3913021/pexels-photo-3913021.jpeg?cs=srgb&dl=pexels-thisisengineering-3913021.jpg&fm=jpg"
+image_alt: "A cross-functional team debating data at a whiteboard without clear ownership yet."
+image_credit_name: "ThisIsEngineering"
+image_credit_url: "https://www.pexels.com/photo/engineers-in-meeting-3913021/"
 ---
 
 A press goes down in the middle of a run. Within an hour, the story has been told four times, and every version is different.

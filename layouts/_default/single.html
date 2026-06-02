@@ -27,6 +27,29 @@
         </div>
       </section>
 
+      {{ with .Params.image }}
+        <section class="section section-tight article-cover-section">
+          <div class="shell">
+            <figure class="article-cover reveal">
+              <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="eager" decoding="async">
+              {{ if or $.Params.image_credit_name $.Params.image_credit_url }}
+                <figcaption>
+                  Photo by
+                  {{ with $.Params.image_credit_url }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                      {{ $.Params.image_credit_name | default "Pexels contributor" }}
+                    </a>
+                  {{ else }}
+                    {{ $.Params.image_credit_name }}
+                  {{ end }}
+                  on Pexels
+                </figcaption>
+              {{ end }}
+            </figure>
+          </div>
+        </section>
+      {{ end }}
+
       <section class="section section-tight">
         <div class="shell article-body">
           <div class="prose reveal">

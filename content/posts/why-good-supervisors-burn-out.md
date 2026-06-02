@@ -5,6 +5,10 @@ category: "Growth"
 tags: ["supervisors", "burnout", "leadership growth"]
 summary: "Many supervisors burn out not because they are weak, but because they stay trapped between ownership and overload."
 subtitle: "Responsibility without leverage is one of the fastest paths to burnout."
+image: "https://images.pexels.com/photos/10376027/pexels-photo-10376027.jpeg?cs=srgb&dl=pexels-rdne-10376027.jpg&fm=jpg"
+image_alt: "An overworked supervisor sitting at a desk with head in hand."
+image_credit_name: "RDNE Stock project"
+image_credit_url: "https://www.pexels.com/photo/man-working-at-desk-with-computers-in-office-10376027/"
 ---
 
 The supervisors who burn out are often the ones leadership likes the most.

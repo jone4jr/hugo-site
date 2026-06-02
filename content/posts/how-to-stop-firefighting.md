@@ -19,6 +19,10 @@ faq:
     answer: "Usually because prevention is nobody's protected primary job and because the culture rewards visible heroics more than invisible preparation. When that happens, the same root causes keep coming back."
   - question: "Why is firefighting bad for an organization?"
     answer: "It crowds out preventive work, burns people out, hides recurring waste, and compounds over time because reaction consumes the same time you would need to build a more stable system."
+image: "https://images.pexels.com/photos/32407077/pexels-photo-32407077.jpeg?cs=srgb&dl=pexels-dsengul77-32407077.jpg&fm=jpg"
+image_alt: "A factory worker responding to a machine issue on the production floor."
+image_credit_name: "Deniz Sengul"
+image_credit_url: "https://www.pexels.com/photo/worker-operating-machinery-in-industrial-factory-32407077/"
 ---
 
 Every leader knows the feeling. You arrive with a plan for the day, and within an hour the plan is gone, replaced by a string of urgent problems you did not expect.

@@ -7,6 +7,10 @@ tags: ["labor cost", "supervisor development", "continuous improvement", "leader
 description: "How leadership development, not spreadsheet pressure, helped drive a plant from more than 18 percent labor cost to just over 15 percent."
 summary: "Sustainable cost improvement came from building better floor leaders, not squeezing headcount or chasing one-quarter wins."
 subtitle: "The number held because the people got better before the spreadsheet did."
+image: "https://images.pexels.com/photos/11765539/pexels-photo-11765539.jpeg?cs=srgb&dl=pexels-tkirkgoz-11765539.jpg&fm=jpg"
+image_alt: "Multiple operators working across machines on a busy shop floor."
+image_credit_name: "Mehmet Turgut Kirkgoz"
+image_credit_url: "https://www.pexels.com/photo/people-working-on-a-factory-11765539/"
 ---
 
 Years ago I ran a plant that brought labor cost down from a little over eighteen percent of sales to just over fifteen. In a tight-margin business, three points is the difference between a plant that gets investment and a plant that gets a phone call from someone deciding its future.

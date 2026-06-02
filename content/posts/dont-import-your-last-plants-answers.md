@@ -7,6 +7,10 @@ tags: ["new role", "organizational maturity", "change leadership", "diagnosis"]
 description: "Why strong leaders fail in new roles when they copy the last plant's playbook instead of diagnosing the organization in front of them."
 summary: "The organization you join has a maturity level of its own. Sophisticated systems fail when they are installed on top of a foundation that does not exist yet."
 subtitle: "Meet the organization where it is, not where your last one was."
+image: "https://images.pexels.com/photos/3913021/pexels-photo-3913021.jpeg?cs=srgb&dl=pexels-thisisengineering-3913021.jpg&fm=jpg"
+image_alt: "Engineers discussing diagrams on a whiteboard before deciding next steps."
+image_credit_name: "ThisIsEngineering"
+image_credit_url: "https://www.pexels.com/photo/engineers-in-meeting-3913021/"
 ---
 
 The fastest way to fail in a new leadership role is to walk in on the first week with the playbook that worked at the last place and start deploying it.

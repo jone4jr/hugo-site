@@ -5,6 +5,10 @@ category: "Leadership Foundations"
 tags: ["new leaders", "trust", "plant leadership"]
 summary: "The first 90 days are not about showing how smart you are. They are about building trust, setting standards, and proving you will follow through."
 subtitle: "The job is not to impress the building. The job is to stabilize it."
+image: "https://images.pexels.com/photos/2995864/pexels-photo-2995864.jpeg?cs=srgb&dl=pexels-kateryna-babaieva-1423213-2995864.jpg&fm=jpg"
+image_alt: "A plant manager studying equipment closely before making early decisions."
+image_credit_name: "Kateryna Babaieva"
+image_credit_url: "https://www.pexels.com/photo/a-man-checking-machinery-at-an-industrial-plant-2995864/"
 ---
 
 The first 90 days in plant leadership can fool people.

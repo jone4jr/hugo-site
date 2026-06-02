@@ -19,6 +19,10 @@ faq:
     answer: "Usually because roles are unclear, standards are invisible, or people are being held responsible for outcomes they do not truly control. Most accountability problems start as design problems."
   - question: "How do you build a culture of accountability?"
     answer: "Make ownership explicit, track visible standards at the point of work, create a regular follow-up rhythm, and address gaps directly and fairly so people can learn instead of hide."
+image: "https://images.pexels.com/photos/5439461/pexels-photo-5439461.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5439461.jpg&fm=jpg"
+image_alt: "A manager and team members in a focused accountability conversation around a table."
+image_credit_name: "Tima Miroshnichenko"
+image_credit_url: "https://www.pexels.com/photo/employees-having-a-conversation-inside-the-office-5439461/"
 ---
 
 Accountability is one of the most overused words in leadership.

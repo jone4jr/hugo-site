@@ -7,6 +7,10 @@ tags: ["leadership habits", "decision making", "proactive leadership", "plant le
 description: "The best leadership hour is the one that protects clear thinking before the day turns reactive. Why proactive leaders decide the other three shifts before they begin."
 summary: "A reactive floor usually traces back to reactive mornings. Leaders who protect a quiet hour build the composure and clarity the rest of the day depends on."
 subtitle: "The hour is not about waking up earlier. It is about protecting the part of the day nobody else owns yet."
+image: "https://images.pexels.com/photos/33565868/pexels-photo-33565868.jpeg?cs=srgb&dl=pexels-esra-afsar-123882149-33565868.jpg&fm=jpg"
+image_alt: "A morning desk with coffee, notebook, and laptop ready before the day begins."
+image_credit_name: "Esra Afsar"
+image_credit_url: "https://www.pexels.com/photo/morning-coffee-and-notebook-workspace-scene-33565868/"
 ---
 
 The plant I ran moved product around the clock. Three shifts, no gaps, the lights never off. But the shift that decided how the other three went was not on any schedule. It started before all of them, alone, in the dark, with a cup of coffee and a closed door.

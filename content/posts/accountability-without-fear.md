@@ -5,6 +5,10 @@ category: "Team Performance"
 tags: ["accountability", "culture", "team performance"]
 summary: "Strong accountability feels clear, fair, and consistent. Weak accountability feels emotional, selective, or late."
 subtitle: "If people only hear from leadership when something goes wrong, accountability will always feel personal."
+image: "https://images.pexels.com/photos/17724731/pexels-photo-17724731.jpeg?cs=srgb&dl=pexels-walls-io-440716388-17724731.jpg&fm=jpg"
+image_alt: "Two colleagues reviewing ideas and priorities on a whiteboard together."
+image_credit_name: "Walls.io"
+image_credit_url: "https://www.pexels.com/photo/colleagues-standing-by-whiteboard-17724731/"
 ---
 
 Leaders say they want accountability. What many teams hear is threat.

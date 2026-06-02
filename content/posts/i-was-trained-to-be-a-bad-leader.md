@@ -7,6 +7,10 @@ tags: ["leadership growth", "management by fear", "personal leadership story", "
 description: "A personal story about inheriting a broken leadership model, unlearning fear-based management, and rebuilding leadership from books, research, and hard practice."
 summary: "I was not lazy or indifferent. I was intense, committed, and deeply wrong about what leadership actually was."
 subtitle: "Leaving the system that trained me badly gave me the chance to learn leadership from scratch."
+image: "https://images.pexels.com/photos/938641/pexels-photo-938641.jpeg?cs=srgb&dl=pexels-ravi-k-301762-938641.jpg&fm=jpg"
+image_alt: "A thoughtful man looking out an office window in reflection."
+image_credit_name: "ravi k"
+image_credit_url: "https://www.pexels.com/photo/man-looking-through-window-938641/"
 ---
 
 For the first long stretch of my career, I was a bad leader, and I was certain I was a good one.
