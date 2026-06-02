@@ -6,3 +6,31 @@
   display: grid;
   gap: 1.2rem;
 }
+
+.page-hero--article h1 {
+  max-width: 16ch;
+  font-size: clamp(2.7rem, 4.6vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.page-hero--article .page-hero__lead {
+  max-width: 38rem;
+  font-size: 1.02rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-hero__copy > p:last-child {
+  max-width: 42rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 820px) {
+  .page-hero--article h1 {
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 10vw, 3.85rem);
+    line-height: 1;
+  }
+}
