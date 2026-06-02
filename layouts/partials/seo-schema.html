@@ -1,0 +1,81 @@
+{{ $pageDescription := .Site.Params.description }}
+{{ with .Description }}
+  {{ $pageDescription = . }}
+{{ else }}
+  {{ with .Params.description }}
+    {{ $pageDescription = . }}
+  {{ else }}
+    {{ with .Params.summary }}
+      {{ $pageDescription = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $image := .Site.Params.defaultImage | absURL }}
+{{ with .Params.image }}
+  {{ $image = . | absURL }}
+{{ end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "inLanguage": "en-US"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ .Site.Params.author | jsonify }},
+  "jobTitle": "Plant Leader and Leadership Writer",
+  "homeLocation": {
+    "@type": "Place",
+    "name": {{ .Site.Params.city | jsonify }}
+  },
+  "url": {{ .Site.BaseURL | jsonify }}
+}
+</script>
+{{ $keywords := "" }}
+{{ with .Params.tags }}
+  {{ $keywords = delimit . ", " }}
+{{ end }}
+{{ if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $pageDescription | jsonify }},
+  "image": [{{ $image | jsonify }}],
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "mainEntityOfPage": {{ .Permalink | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ $image | jsonify }}
+    }
+  },
+  "keywords": {{ $keywords | jsonify }},
+  "articleSection": {{ .Params.category | default "Leadership Development" | jsonify }}
+}
+</script>
+{{ else if or .IsHome (eq .Section "assessments") (eq .Section "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ .Title | default .Site.Title | jsonify }},
+  "description": {{ $pageDescription | jsonify }},
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+{{ end }}

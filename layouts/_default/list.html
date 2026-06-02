@@ -4,6 +4,7 @@
     <section class="page-hero page-hero--articles">
       <div class="shell page-hero__grid">
         <div class="reveal">
+          {{ partial "breadcrumbs.html" . }}
           <p class="eyebrow">Leadership article library</p>
           <h1>{{ .Title }}</h1>
           <p>{{ .Description }}</p>
@@ -12,12 +13,9 @@
           <p class="eyebrow">Popular themes</p>
           <div class="filter-bar js-filter-bar" data-target=".article-card">
             <button class="is-active" type="button" data-filter="all">All</button>
-            <button type="button" data-filter="leadership-foundations">Leadership Foundations</button>
-            <button type="button" data-filter="team-performance">Team Performance</button>
-            <button type="button" data-filter="coaching">Coaching</button>
-            <button type="button" data-filter="communication">Communication</button>
-            <button type="button" data-filter="growth">Growth</button>
-            <button type="button" data-filter="operational-leadership">Operational Leadership</button>
+            {{ range .Site.Taxonomies.categories.Alphabetical }}
+              <button type="button" data-filter="{{ .Page.Title | urlize }}">{{ .Page.Title }}</button>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -53,6 +51,7 @@
   {{ else }}
     <section class="page-hero">
       <div class="shell reveal">
+        {{ partial "breadcrumbs.html" . }}
         <p class="eyebrow">Resource page</p>
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}

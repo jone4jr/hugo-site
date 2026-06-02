@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">5AM Shift</title>
+  <desc id="desc">Leadership development from the floor to the front office.</desc>
+  <rect width="1200" height="630" fill="#081624"/>
+  <circle cx="1040" cy="112" r="220" fill="#D1A768" fill-opacity="0.18"/>
+  <circle cx="930" cy="520" r="260" fill="#254865" fill-opacity="0.22"/>
+  <rect x="68" y="78" width="1064" height="474" rx="28" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <text x="124" y="206" fill="#D7AF73" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">5AM SHIFT</text>
+  <text x="124" y="312" fill="#F7F2E8" font-family="Georgia, serif" font-size="74" font-weight="700">Leadership Development</text>
+  <text x="124" y="390" fill="#F7F2E8" font-family="Georgia, serif" font-size="74" font-weight="700">For People Who Carry</text>
+  <text x="124" y="468" fill="#F7F2E8" font-family="Georgia, serif" font-size="74" font-weight="700">Real Responsibility</text>
+  <text x="124" y="530" fill="#B8C3CC" font-family="Arial, sans-serif" font-size="28">Practical articles, leadership assessments, and operating-system thinking for plant and frontline leaders.</text>
+  <defs>
+    <linearGradient id="panel" x1="72" y1="92" x2="1092" y2="552" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102334"/>
+      <stop offset="1" stop-color="#17344A"/>
+    </linearGradient>
+  </defs>
+</svg>

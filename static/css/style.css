@@ -1,23 +1,23 @@
 :root {
-  --ink-950: #0f1916;
-  --ink-900: #13261f;
-  --ink-800: #1d352b;
-  --ink-700: #2a4739;
-  --sand-50: #f7f2e8;
-  --sand-100: #efe6d6;
-  --sand-200: #e5d8c1;
-  --sage-100: #dbe6df;
-  --sage-200: #c3d2c9;
-  --sage-400: #7d9486;
-  --clay-400: #ba6c45;
-  --clay-500: #9e5433;
-  --gold-300: #d3b476;
+  --ink-950: #081624;
+  --ink-900: #0d2236;
+  --ink-800: #173851;
+  --ink-700: #28516f;
+  --sand-50: #faf6ef;
+  --sand-100: #f1e8d8;
+  --sand-200: #e4d4b8;
+  --sage-100: #d7e0e6;
+  --sage-200: #c2cfd7;
+  --sage-400: #6f8798;
+  --clay-400: #c96b3f;
+  --clay-500: #a65431;
+  --gold-300: #d7af73;
   --white: #ffffff;
-  --text: #27342e;
-  --text-soft: #5c6c64;
-  --border: rgba(18, 35, 29, 0.12);
-  --shadow-soft: 0 18px 50px rgba(18, 35, 29, 0.08);
-  --shadow-strong: 0 28px 90px rgba(12, 24, 20, 0.16);
+  --text: #203141;
+  --text-soft: #5b6d7c;
+  --border: rgba(14, 34, 54, 0.12);
+  --shadow-soft: 0 18px 50px rgba(8, 22, 36, 0.08);
+  --shadow-strong: 0 28px 90px rgba(8, 22, 36, 0.16);
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
@@ -40,9 +40,9 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(211, 180, 118, 0.12), transparent 28%),
-    radial-gradient(circle at right 20%, rgba(125, 148, 134, 0.12), transparent 32%),
-    linear-gradient(180deg, #fbf7f1 0%, #f7f2e8 100%);
+    radial-gradient(circle at top left, rgba(215, 175, 115, 0.16), transparent 30%),
+    radial-gradient(circle at right 10%, rgba(40, 81, 111, 0.12), transparent 34%),
+    linear-gradient(180deg, #fffaf1 0%, #f7f1e6 100%);
   line-height: 1.65;
 }
 
@@ -103,13 +103,13 @@ select {
 }
 
 .section-contrast {
-  background: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.48));
   backdrop-filter: blur(6px);
 }
 
 .section-dark {
   background:
-    linear-gradient(135deg, rgba(15, 25, 22, 0.96), rgba(19, 38, 31, 0.92)),
+    linear-gradient(135deg, rgba(8, 22, 36, 0.98), rgba(13, 34, 54, 0.96)),
     linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
   color: var(--sand-50);
 }
@@ -178,14 +178,14 @@ li {
 }
 
 .button-primary {
-  background: var(--ink-900);
+  background: linear-gradient(135deg, var(--ink-900), var(--ink-700));
   color: var(--white);
   box-shadow: var(--shadow-soft);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: var(--ink-800);
+  background: linear-gradient(135deg, var(--ink-800), var(--ink-700));
 }
 
 .button-secondary,
@@ -235,8 +235,8 @@ li {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(19, 38, 31, 0.08);
-  background: rgba(251, 247, 241, 0.8);
+  border-bottom: 1px solid rgba(13, 34, 54, 0.08);
+  background: rgba(255, 250, 241, 0.86);
   backdrop-filter: blur(16px);
 }
 
@@ -338,9 +338,20 @@ li {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(19, 38, 31, 0.92), rgba(29, 53, 43, 0.76)),
-    radial-gradient(circle at top left, rgba(211, 180, 118, 0.2), transparent 30%);
+    linear-gradient(135deg, rgba(8, 22, 36, 0.96), rgba(13, 34, 54, 0.82)),
+    radial-gradient(circle at top left, rgba(215, 175, 115, 0.18), transparent 30%);
   clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  right: -8rem;
+  top: -6rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(215, 175, 115, 0.2), rgba(215, 175, 115, 0));
 }
 
 .hero-grid {
@@ -417,6 +428,7 @@ li {
 
 .hero-panel,
 .signal-card,
+.topic-card,
 .feature-band__panel,
 .assessment-card,
 .article-card,
@@ -429,7 +441,7 @@ li {
 .cta-band,
 .story-feature__insight {
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.86);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-soft);
 }
@@ -523,12 +535,55 @@ li {
   margin-bottom: 2rem;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: var(--ink-900);
+}
+
+.topic-grid,
 .path-grid,
 .assessment-grid,
 .articles-grid,
 .offers-grid {
   display: grid;
   gap: 1.2rem;
+}
+
+.topic-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.topic-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1.4rem;
+  border-radius: var(--radius-lg);
+}
+
+.topic-card__count {
+  color: var(--clay-500);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topic-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.topic-card:hover,
+.topic-card:focus-visible {
+  transform: translateY(-3px);
 }
 
 .path-grid {
@@ -621,7 +676,7 @@ li {
 .feature-article__meta span {
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
-  background: rgba(19, 38, 31, 0.05);
+  background: rgba(13, 34, 54, 0.06);
 }
 
 .assessment-card h3,
@@ -768,7 +823,7 @@ li {
 .article-hero__aside {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.7));
   border: 1px solid var(--border);
 }
 
@@ -805,6 +860,31 @@ li {
   border-left: 3px solid var(--clay-400);
   background: rgba(255, 255, 255, 0.54);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.15rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(13, 34, 54, 0.06);
+  border: 1px solid rgba(13, 34, 54, 0.08);
+  color: var(--ink-900);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.tag-chip:hover,
+.tag-chip:focus-visible {
+  background: rgba(13, 34, 54, 0.1);
 }
 
 .article-sidebar,
