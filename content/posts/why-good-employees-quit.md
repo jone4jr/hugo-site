@@ -19,6 +19,10 @@ faq:
     answer: "Common signs include disengagement from work they used to care about, less candor in meetings, fewer improvement ideas, reduced energy, and a shift toward doing only what is required."
   - question: "How do you retain good employees?"
     answer: "Develop them, trust them with meaningful ownership, fix the dysfunction they have to work inside, address poor performance fairly, and lead in a way that makes strong people want to stay."
+image: "https://images.pexels.com/photos/8554066/pexels-photo-8554066.jpeg?cs=srgb&dl=pexels-edmond-dantes-8554066.jpg&fm=jpg"
+image_alt: "Coworkers in conversation holding work materials in a modern office."
+image_credit_name: "Edmond Dantes"
+image_credit_url: "https://www.pexels.com/photo/people-talking-in-the-office-8554066/"
 ---
 
 Every leader has experienced it. One of your best people, someone capable, committed, and hard to replace, walks in and resigns. And almost always, the leader is surprised.
