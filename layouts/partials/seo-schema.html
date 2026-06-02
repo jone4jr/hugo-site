@@ -37,7 +37,11 @@
   "url": {{ .Site.BaseURL | jsonify }}
 }
 </script>
-{{ if eq .Section "posts" }}
+{{ $keywords := "" }}
+{{ with .Params.tags }}
+  {{ $keywords = delimit . ", " }}
+{{ end }}
+{{ if and .IsPage (eq .Section "posts") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,11 +64,11 @@
       "url": {{ $image | jsonify }}
     }
   },
-  "keywords": {{ delimit .Params.tags ", " | jsonify }},
+  "keywords": {{ $keywords | jsonify }},
   "articleSection": {{ .Params.category | default "Leadership Development" | jsonify }}
 }
 </script>
-{{ else if or .IsHome (eq .Section "assessments") }}
+{{ else if or .IsHome (eq .Section "assessments") (eq .Section "posts") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
