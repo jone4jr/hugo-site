@@ -14,6 +14,7 @@
 {{ with .Params.image }}
   {{ $image = . | absURL }}
 {{ end }}
+{{ $isPostPage := and .IsPage (eq .Section "posts") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +42,7 @@
 {{ with .Params.tags }}
   {{ $keywords = delimit . ", " }}
 {{ end }}
-{{ if and .IsPage (eq .Section "posts") }}
+{{ if $isPostPage }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -78,4 +79,27 @@
   "url": {{ .Permalink | jsonify }}
 }
 </script>
+{{ end }}
+{{ with .Params.faq }}
+  {{ if $isPostPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $index, $item := . -}}
+      {{- if gt $index 0 }},{{ end }}
+      {
+        "@type": "Question",
+        "name": {{ $item.question | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ $item.answer | jsonify }}
+        }
+      }
+    {{- end -}}
+  ]
+}
+</script>
+  {{ end }}
 {{ end }}
