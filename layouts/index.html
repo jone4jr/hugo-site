@@ -2,6 +2,7 @@
   {{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
   {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
   {{ $latest := first 6 $posts }}
+  {{ $categoryTerms := .Site.Taxonomies.categories.Alphabetical }}
 
   <section class="hero-section">
     <div class="shell hero-grid">
@@ -40,6 +41,27 @@
       </div>
     </div>
   </section>
+
+  {{ if gt (len $categoryTerms) 0 }}
+    <section class="section section-tight">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Topic clusters</p>
+          <h2>Built for topical authority, not random posting.</h2>
+          <p>The site now groups leadership writing into focused themes so readers and search engines can navigate the expertise clearly.</p>
+        </div>
+        <div class="topic-grid">
+          {{ range $categoryTerms }}
+            <a class="topic-card reveal" href="{{ .Page.RelPermalink }}">
+              <span class="topic-card__count">{{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}</span>
+              <h3>{{ .Page.Title }}</h3>
+              <p>Explore writing connected to {{ lower .Page.Title }}.</p>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
 
   <section class="signal-bar">
     <div class="shell signal-grid">
@@ -149,7 +171,7 @@
       <div class="section-heading reveal">
         <p class="eyebrow">Latest articles</p>
         <h2>Writing designed to keep leaders coming back</h2>
-        <p>The article experience is built to feel premium, readable, and easy to expand as you publish more leadership content.</p>
+        <p>The article experience is built to feel premium, readable, and easy to expand as you publish more leadership content across leadership development, operational leadership, systems thinking, and culture.</p>
       </div>
       <div class="articles-grid">
         {{ range $latest }}
