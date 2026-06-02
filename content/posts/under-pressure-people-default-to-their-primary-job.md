@@ -7,6 +7,10 @@ tags: ["staffing", "preventive maintenance", "role design", "oee"]
 description: "Under pressure, people collapse toward the work they are most accountable for. Why proactive responsibilities disappear when they only exist as someone's second hat."
 summary: "If proactive work only gets attention when nothing is on fire, it is not staffed. It is hoped for."
 subtitle: "Pressure will always choose the primary job. Leaders have to choose that primary job on purpose."
+image: "https://images.pexels.com/photos/32845681/pexels-photo-32845681.jpeg?cs=srgb&dl=pexels-sergey-sergeev-2153675005-32845681.jpg&fm=jpg"
+image_alt: "Industrial workers focused on machine controls while pressure is high on the floor."
+image_credit_name: "Sergey Sergeev"
+image_credit_url: "https://www.pexels.com/photo/industrial-workers-operating-machinery-indoors-32845681/"
 ---
 
 Give one person three responsibilities, then turn up the heat on the floor. Watch what happens.
