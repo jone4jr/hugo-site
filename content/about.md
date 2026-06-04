@@ -41,6 +41,6 @@ If you are new here, start in three places:
 
 1. Read the featured articles in the blog.
 2. Take the DISC-style leadership profile and one of the other diagnostics.
-3. Subscribe to the weekly note if you want a steadier leadership habit over time.
+3. Join the leadership list if you want practical updates and a steadier leadership habit over time.
 
 If that sounds like your kind of leadership development, you are in the right place.

@@ -516,12 +516,12 @@
       "<div class='assessment-gate__card'>" +
       "<p class='eyebrow'>Subscriber unlock</p>" +
       "<h2>Subscribe to open " + title + "</h2>" +
-      "<p>The free assessment library is unlocked after you subscribe to the weekly leadership note. Once you do, your access stays open on this device.</p>" +
+      "<p>The free assessment library opens after you join the leadership list. Once you do, your access stays open on this device.</p>" +
       "<form class='newsletter-form js-newsletter-form' data-source='assessment-gate' data-success='Assessment unlocked. You can start now.'>" +
       "<label class='sr-only' for='assessment-gate-email'>Email address</label>" +
       "<input id='assessment-gate-email' name='email' type='email' placeholder='Enter your email' autocomplete='email' required>" +
       "<button class='button button-primary' type='submit'>Subscribe and unlock</button>" +
-      "<p class='newsletter-note'>You will also get the weekly leadership note.</p>" +
+      "<p class='newsletter-note'>Join the leadership list for practical updates and new resources.</p>" +
       "<p class='form-message js-form-message' aria-live='polite'></p>" +
       "</form>" +
       "</div>" +

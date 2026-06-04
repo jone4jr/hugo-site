@@ -1,5 +1,6 @@
 (function () {
   var STORAGE_KEY = "fiveamshift_subscriber_v1";
+  var PENDING_KEY = "fiveamshift_pending_subscriber_v1";
 
   function safeParse(value) {
     try {
@@ -16,6 +17,27 @@
     return safeParse(window.localStorage.getItem(STORAGE_KEY));
   }
 
+  function getPendingSubscriber() {
+    if (!window.sessionStorage) {
+      return null;
+    }
+    return safeParse(window.sessionStorage.getItem(PENDING_KEY));
+  }
+
+  function setPendingSubscriber(payload) {
+    if (!window.sessionStorage) {
+      return;
+    }
+    window.sessionStorage.setItem(PENDING_KEY, JSON.stringify(payload));
+  }
+
+  function clearPendingSubscriber() {
+    if (!window.sessionStorage) {
+      return;
+    }
+    window.sessionStorage.removeItem(PENDING_KEY);
+  }
+
   function setSubscriber(payload) {
     if (!window.localStorage) {
       return;
@@ -28,6 +50,9 @@
   function syncSubscriberUi(scope) {
     var root = scope || document;
     var subscriber = getSubscriber();
+    if (subscriber) {
+      document.documentElement.setAttribute("data-subscriber", "true");
+    }
     var forms = root.querySelectorAll(".js-newsletter-form");
     forms.forEach(function (form) {
       if (!subscriber) {
@@ -44,8 +69,66 @@
       }
       if (button) {
         button.textContent = "Unlocked";
+        button.disabled = true;
+      }
+      if (input) {
+        input.readOnly = true;
       }
     });
+  }
+
+  function buildNewsletterEndpoint(form) {
+    var action = form.getAttribute("action") || document.body.getAttribute("data-newsletter-action");
+    if (action) {
+      return action;
+    }
+
+    var provider = form.getAttribute("data-newsletter-provider") || document.body.getAttribute("data-newsletter-provider");
+    var recipient = document.body.getAttribute("data-newsletter-recipient");
+    if (provider === "formsubmit" && recipient) {
+      return "https://formsubmit.co/" + recipient;
+    }
+
+    return "";
+  }
+
+  function upsertHiddenField(form, name, value) {
+    var field = form.querySelector("input[name='" + name + "']");
+    if (!field) {
+      field = document.createElement("input");
+      field.type = "hidden";
+      field.name = name;
+      form.appendChild(field);
+    }
+    field.value = value;
+  }
+
+  function buildReturnUrl() {
+    var url = new URL(window.location.href);
+    url.searchParams.set("newsletter", "success");
+    return url.toString();
+  }
+
+  function hydrateSubscriberFromReturn() {
+    var url = new URL(window.location.href);
+    if (url.searchParams.get("newsletter") !== "success") {
+      return;
+    }
+
+    var pending = getPendingSubscriber();
+    if (pending && pending.email) {
+      setSubscriber({
+        email: pending.email,
+        source: pending.source || "unknown",
+        subscribedAt: pending.subscribedAt || new Date().toISOString()
+      });
+    }
+
+    clearPendingSubscriber();
+    url.searchParams.delete("newsletter");
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, document.title, url.toString());
+    }
   }
 
   function bindNewsletterForms(scope) {
@@ -57,6 +140,7 @@
         event.preventDefault();
         var input = form.querySelector("input[type='email']");
         var message = form.querySelector(".js-form-message");
+        var button = form.querySelector("button");
         var email = input ? input.value.trim() : "";
         if (!email || email.indexOf("@") === -1) {
           if (message) {
@@ -65,15 +149,34 @@
           return;
         }
 
-        setSubscriber({
+        var endpoint = buildNewsletterEndpoint(form);
+        if (!endpoint) {
+          if (message) {
+            message.textContent = "Signup is not connected yet. Please try again soon.";
+          }
+          return;
+        }
+
+        form.setAttribute("action", endpoint);
+        upsertHiddenField(form, "_next", buildReturnUrl());
+        upsertHiddenField(form, "source", form.getAttribute("data-source") || "unknown");
+        upsertHiddenField(form, "page", window.location.pathname + window.location.search);
+        upsertHiddenField(form, "page_title", document.title);
+        upsertHiddenField(form, "submitted_at", new Date().toISOString());
+        setPendingSubscriber({
           email: email,
           source: form.getAttribute("data-source") || "unknown",
           subscribedAt: new Date().toISOString()
         });
-
         if (message) {
-          message.textContent = form.getAttribute("data-success") || "You are subscribed.";
+          message.textContent = "Sending you through now...";
         }
+        if (button) {
+          button.disabled = true;
+          button.textContent = "Submitting...";
+        }
+
+        form.submit();
       });
     });
   }
@@ -160,6 +263,7 @@
     syncSubscriberUi: syncSubscriberUi
   };
 
+  hydrateSubscriberFromReturn();
   bindNewsletterForms(document);
   syncSubscriberUi(document);
   initNav();
