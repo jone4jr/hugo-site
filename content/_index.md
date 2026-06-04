@@ -1,6 +1,7 @@
 ---
 title: "5AM Shift"
-description: "Leadership development blog, practical articles, and free assessments for plant leaders, supervisors, and operators stepping into bigger responsibility."
-hero_title: "Professional leadership development for people who carry real responsibility."
-hero_subtitle: "A premium leadership blog and assessment hub for plant leaders, supervisors, and ambitious operators building stronger teams."
+seo_title: "Manufacturing Leadership Blog for Plant Managers and Supervisors"
+description: "Manufacturing leadership blog with practical advice for plant managers, supervisors, and operations leaders on accountability, employee retention, communication, and stronger teams."
+hero_title: "Practical leadership advice for plant managers, supervisors, and operations leaders."
+hero_subtitle: "Articles, free leadership assessments, and field-tested ideas for accountability, employee retention, communication, supervisor development, and running calmer operations."
 ---
