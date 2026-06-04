@@ -1,12 +1,27 @@
 {{ $class := .class | default "" }}
+{{ $newsletter := site.Params.newsletter }}
+{{ $provider := $newsletter.provider | default "" }}
+{{ $recipient := $newsletter.recipient | default site.Params.contactEmail }}
+{{ $action := $newsletter.action }}
+{{ if and (eq $provider "formsubmit") (eq $action "") $recipient }}
+  {{ $action = printf "https://formsubmit.co/%s" $recipient }}
+{{ end }}
 <div class="newsletter-panel {{ $class }}">
   {{ with .heading }}<h3>{{ . }}</h3>{{ end }}
   {{ with .copy }}<p>{{ . }}</p>{{ end }}
-  <form class="newsletter-form js-newsletter-form" data-source="{{ .source }}" data-success="{{ .success }}">
+  <form class="newsletter-form js-newsletter-form" action="{{ $action }}" method="post" data-source="{{ .source }}" data-success="{{ .success }}" data-newsletter-provider="{{ $provider }}">
     <label class="sr-only" for="email-{{ .source }}">Email address</label>
     <input id="email-{{ .source }}" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+    <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="_subject" value="{{ $newsletter.subject | default "New 5AM Shift subscriber" }}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="">
+    <input type="hidden" name="source" value="{{ .source }}">
+    <input type="hidden" name="page" value="">
+    <input type="hidden" name="page_title" value="">
+    <input type="hidden" name="submitted_at" value="">
     <button class="button button-primary" type="submit">{{ .button }}</button>
-    <p class="newsletter-note">Free weekly note. No spam. Assessments unlock after signup.</p>
+    <p class="newsletter-note">Join the leadership list. Assessments unlock after signup.</p>
     <p class="form-message js-form-message" aria-live="polite"></p>
   </form>
 </div>
