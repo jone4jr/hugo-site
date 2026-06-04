@@ -4,16 +4,16 @@
     <div class="shell page-hero__grid">
       <div class="reveal">
         {{ partial "breadcrumbs.html" . }}
-        <p class="eyebrow">Assessment hub</p>
+        <p class="eyebrow">Leadership assessments</p>
         <h1>{{ .Title }}</h1>
         <p>{{ .Description }}</p>
       </div>
       <div class="page-hero__panel reveal">
-        <p class="eyebrow">How it works</p>
+        <p class="eyebrow">How to use the tools</p>
         <ol class="steps-list">
-          <li>Subscribe to the weekly leadership note.</li>
-          <li>Unlock the free assessment library.</li>
-          <li>Use your results to guide what you read and practice next.</li>
+          <li>Open the assessment that matches your biggest leadership challenge.</li>
+          <li>Answer quickly and honestly instead of overthinking every choice.</li>
+          <li>Use the result to pick one habit to practice and one article to read next.</li>
         </ol>
       </div>
     </div>
@@ -32,15 +32,15 @@
   <section class="section section-contrast">
     <div class="shell cta-band reveal">
       <div>
-        <p class="eyebrow">Subscriber experience</p>
-        <h2>The assessments make the site feel valuable on day one.</h2>
-        <p>They also create a natural path into future email sequences, workshops, and development offers.</p>
+        <p class="eyebrow">Use the results well</p>
+        <h2>Self-awareness only matters if it changes what you do next.</h2>
+        <p>Take one assessment, read the linked article, and test one behavior on your next shift, meeting, or coaching conversation.</p>
       </div>
       <div class="cta-band__form">
         {{ partial "newsletter-form.html" (dict
-          "heading" "Subscribe"
-          "copy" "Unlock all free assessments."
-          "button" "Subscribe"
+          "heading" "Unlock the free assessments"
+          "copy" "Enter your email once to access the tools and keep them handy."
+          "button" "Unlock assessments"
           "source" "assessments"
           "success" .Site.Params.newsletter.success
         ) }}

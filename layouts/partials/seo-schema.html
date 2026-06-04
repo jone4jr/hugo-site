@@ -15,6 +15,16 @@
   {{ $image = . | absURL }}
 {{ end }}
 {{ $isPostPage := and .IsPage (eq .Section "posts") }}
+{{ $pageType := "WebPage" }}
+{{ if and (not .IsPage) (or (eq .Section "posts") (eq .Section "assessments")) }}
+  {{ $pageType = "CollectionPage" }}
+{{ else }}
+  {{ with .File }}
+    {{ if eq .BaseFileName "about" }}
+      {{ $pageType = "AboutPage" }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +40,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": {{ .Site.Params.author | jsonify }},
-  "jobTitle": "Plant Leader and Leadership Writer",
+  "jobTitle": "Plant Leader and Manufacturing Leadership Writer",
   "homeLocation": {
     "@type": "Place",
     "name": {{ .Site.Params.city | jsonify }}
@@ -69,14 +79,53 @@
   "articleSection": {{ .Params.category | default "Leadership Development" | jsonify }}
 }
 </script>
-{{ else if or .IsHome (eq .Section "assessments") (eq .Section "posts") }}
+{{ else }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": {{ $pageType | jsonify }},
   "name": {{ .Title | default .Site.Title | jsonify }},
   "description": {{ $pageDescription | jsonify }},
-  "url": {{ .Permalink | jsonify }}
+  "url": {{ .Permalink | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  }
+}
+</script>
+{{ end }}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ .Site.BaseURL | jsonify }}
+    }{{ if .Section }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ humanize .Section | jsonify }},
+      "item": {{ (printf "/%s/" .Section | absURL) | jsonify }}
+    }{{ if .IsPage }},
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }{{ end }}{{ else if .Title }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }{{ end }}
+  ]
 }
 </script>
 {{ end }}

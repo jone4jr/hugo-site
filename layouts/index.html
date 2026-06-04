@@ -12,7 +12,7 @@
         <p class="hero-lead">{{ .Params.hero_subtitle }}</p>
         <div class="hero-actions">
           <a class="button button-primary" href="{{ "/posts/" | relURL }}">Explore articles</a>
-          <a class="button button-secondary" href="{{ "/assessments/disc-profile/" | relURL }}">Unlock free DISC profile</a>
+          <a class="button button-secondary" href="{{ "/assessments/disc-profile/" | relURL }}">Take the free DISC leadership profile</a>
         </div>
         <div class="hero-proof">
           <div>
@@ -46,9 +46,9 @@
     <section class="section section-tight">
       <div class="shell">
         <div class="section-heading reveal">
-          <p class="eyebrow">Topic clusters</p>
-          <h2>Built for topical authority, not random posting.</h2>
-          <p>The site now groups leadership writing into focused themes so readers and search engines can navigate the expertise clearly.</p>
+          <p class="eyebrow">Browse by problem</p>
+          <h2>Leadership topics plant leaders actually deal with.</h2>
+          <p>Start with the issue in front of you: accountability, communication, employee retention, supervisor development, plant leadership, or systems thinking.</p>
         </div>
         <div class="topic-grid">
           {{ range $categoryTerms }}
@@ -72,8 +72,8 @@
       </div>
       <div class="signal-card reveal">
         <p class="eyebrow">Start here</p>
-        <h3>Read the writing, take the assessments, build the habit.</h3>
-        <p>The structure is simple on purpose: insight, reflection, and repetition.</p>
+        <h3>Read one article, take one assessment, practice one change.</h3>
+        <p>The goal is not more content. The goal is a better shift, a better meeting, and a better decision the next time pressure rises.</p>
       </div>
     </div>
   </section>
@@ -82,24 +82,24 @@
     <div class="shell">
       <div class="section-heading reveal">
         <p class="eyebrow">Start here</p>
-        <h2>Three entry points for growth</h2>
-        <p>Whether you are stepping into leadership, trying to level up your current team, or building a broader platform, the site gives you a clear first move.</p>
+        <h2>Where to start based on your role</h2>
+        <p>If you are new to leadership, running a plant or department, or carrying results across shifts and functions, start with the lane that matches your day-to-day reality.</p>
       </div>
       <div class="path-grid">
         <article class="path-card reveal">
           <span class="path-card__index">01</span>
-          <h3>New leaders</h3>
-          <p>Build trust, communicate clearly, and learn how to set standards without sounding scripted or severe.</p>
+          <h3>New supervisors</h3>
+          <p>Build trust, communicate clearly, delegate better, and learn how to hold standards without sounding scripted or severe.</p>
         </article>
         <article class="path-card reveal">
           <span class="path-card__index">02</span>
-          <h3>Plant and operations leaders</h3>
-          <p>Strengthen operating rhythm, leadership bench strength, accountability, and culture across shifts and functions.</p>
+          <h3>Plant managers and operations leaders</h3>
+          <p>Strengthen operating rhythm, supervisor bench strength, accountability, retention, and calmer execution across shifts and functions.</p>
         </article>
         <article class="path-card reveal">
           <span class="path-card__index">03</span>
-          <h3>Leaders building a long game</h3>
-          <p>Use the article library and assessment hub to create a serious development platform that can support workshops, coaching, and team growth later.</p>
+          <h3>Emerging leaders</h3>
+          <p>Build people skills before the title gets bigger: feedback, delegation, meetings, difficult conversations, and leading under pressure.</p>
         </article>
       </div>
     </div>
@@ -109,23 +109,23 @@
     <div class="shell feature-band">
       <div class="feature-band__copy reveal">
         <p class="eyebrow">Leadership development</p>
-        <h2>A site architecture built to grow with your platform.</h2>
-        <p>This rebuild positions the brand as more than a blog. It is now a leadership hub with durable pillars: long-form writing, free assessments, and a development story that can expand into programs, workshops, or advisory offers.</p>
-        <a class="button button-secondary" href="{{ "/leadership-development/" | relURL }}">See the development model</a>
+        <h2>Practical leadership development for real operating environments.</h2>
+        <p>Come here for practical leadership articles, useful reflection tools, and a steady development rhythm you can use in the middle of real work.</p>
+        <a class="button button-secondary" href="{{ "/leadership-development/" | relURL }}">Explore leadership development</a>
       </div>
       <div class="feature-band__panel reveal">
         <div class="metric-stack">
           <div>
-            <strong>Blog engine</strong>
-            <span>Designed for a growing library of leadership articles</span>
+            <strong>Practical articles</strong>
+            <span>Clear writing on accountability, culture, communication, and operations</span>
           </div>
           <div>
-            <strong>Assessment hub</strong>
-            <span>Subscriber-gated tools that create return visits</span>
+            <strong>Free assessments</strong>
+            <span>Tools that help you reflect on your style, blind spots, and next step</span>
           </div>
           <div>
-            <strong>Future-ready</strong>
-            <span>Flexible enough for cohorts, workshops, and coaching later</span>
+            <strong>Ongoing growth</strong>
+            <span>A simple way to keep learning between shifts, meetings, and hard decisions</span>
           </div>
         </div>
       </div>
@@ -135,9 +135,9 @@
   <section class="section">
     <div class="shell">
       <div class="section-heading reveal">
-        <p class="eyebrow">Assessment hub</p>
-        <h2>Free tools readers can use right away</h2>
-        <p>The assessment library creates a more premium subscriber experience and gives visitors a reason to move from casual reading into active development.</p>
+        <p class="eyebrow">Leadership assessments</p>
+        <h2>Free assessments to sharpen how you lead</h2>
+        <p>Start with the DISC-style profile, then use the other tools to think more clearly about delegation, communication, and leading change.</p>
       </div>
       <div class="assessment-grid">
         {{ range $assessments }}
@@ -160,7 +160,7 @@
         </div>
         <div class="story-feature__insight reveal">
           <p class="quote-block">"{{ $featured.Params.subtitle }}"</p>
-          <p>Use the article library to build a publishing rhythm around practical leadership, communication, accountability, change, and growth.</p>
+          <p>Start here if you want a quick feel for the tone of the site: direct, practical, and built for leaders who need ideas they can use this week.</p>
         </div>
       </div>
     </section>
@@ -170,8 +170,8 @@
     <div class="shell">
       <div class="section-heading reveal">
         <p class="eyebrow">Latest articles</p>
-        <h2>Writing designed to keep leaders coming back</h2>
-        <p>The article experience is built to feel premium, readable, and easy to expand as you publish more leadership content across leadership development, operational leadership, systems thinking, and culture.</p>
+        <h2>Leadership articles you can use on your next shift, meeting, or coaching conversation</h2>
+        <p>Browse practical writing on plant leadership, supervisor development, accountability, employee retention, communication, change, and operating rhythm.</p>
       </div>
       <div class="articles-grid">
         {{ range $latest }}
@@ -187,20 +187,20 @@
   <section class="section section-contrast">
     <div class="shell offers-grid">
       <div class="section-heading reveal">
-        <p class="eyebrow">Ways this brand can serve people</p>
-        <h2>More than content. A real development ecosystem.</h2>
+        <p class="eyebrow">Keep growing</p>
+        <h2>Use the site the way working leaders actually do.</h2>
       </div>
       <article class="offer-card reveal">
         <h3>Weekly leadership note</h3>
-        <p>Short, sharp writing that keeps readers in a consistent development rhythm.</p>
+        <p>One practical leadership lesson each week for plant managers, supervisors, and operations leaders.</p>
       </article>
       <article class="offer-card reveal">
-        <h3>Assessment-driven self-awareness</h3>
-        <p>Tools that move readers from passive consumption into reflection and action.</p>
+        <h3>Free leadership assessments</h3>
+        <p>Use DISC, delegation, and change tools to spot blind spots before the next hard conversation.</p>
       </article>
       <article class="offer-card reveal">
-        <h3>Future coaching or workshops</h3>
-        <p>The page structure already supports stronger offers when you decide to add them.</p>
+        <h3>Article library for real problems</h3>
+        <p>Searchable writing on accountability, employee retention, meetings, communication, supervisor development, and calmer operations.</p>
       </article>
     </div>
   </section>

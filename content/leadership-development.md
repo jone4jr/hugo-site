@@ -1,63 +1,81 @@
 ---
 title: "Leadership Development"
-description: "A practical development path for emerging leaders, experienced managers, and plant leadership teams."
+seo_title: "Leadership Development for Plant Managers and Supervisors"
+description: "Leadership development for plant managers, supervisors, and operations leaders who want stronger accountability, communication, judgment, and bench strength."
 ---
 
-## Leadership development built for real operating environments
+## Leadership development for people who lead where results are visible
 
-This site is not built around generic motivation. It is built around the leadership moves that actually change performance:
+Leadership development means something different when the work is happening on a floor, across shifts, inside customer pressure, or in a team where weak follow-through shows up fast.
 
-- setting direction when the team is uncertain
-- building trust without losing standards
-- coaching supervisors who are stretched too thin
-- making accountability feel clear instead of punitive
-- helping teams lead through change without drift
+That is the audience here.
 
-## The development model
+This site is built for plant managers, supervisors, operations leaders, and emerging leaders who need practical help with:
 
-5AM Shift is structured around four layers of growth:
+- accountability without micromanaging
+- communication that stays clear under pressure
+- employee retention and supervisor development
+- meetings, handoffs, and better operating rhythm
+- leading change without losing trust
 
-### 1. Self-awareness
+## What leadership development means here
 
-Leaders need language for how they naturally show up under pressure. That is why the assessment hub starts with a DISC-style behavioral profile and expands into delegation, change leadership, and other practical diagnostics.
+The goal is not abstract inspiration. The goal is better judgment and more consistent behavior.
 
-### 2. Leadership judgment
+### 1. Self-awareness under pressure
 
-Good leaders do not just know what to do. They know what matters most right now. The article library is designed to sharpen that judgment with field-tested thinking, not abstract theory.
+Good leaders need language for how they naturally show up when the day gets noisy. That is why the assessment library starts with a DISC-style profile and expands into delegation, change leadership, and other practical tools.
 
-### 3. Team capability
+### 2. Better leadership judgment
 
-Leadership development becomes real when the team feels it. Coaching, feedback, meeting quality, handoffs, accountability, and clarity all show up in the way a team performs.
+Strong leaders do not just know what to do. They know what matters most right now. The [article library](/posts/) is meant to sharpen that judgment with field-tested thinking instead of generic motivational language.
 
-### 4. Operating rhythm
+### 3. Stronger teams and supervisors
 
-Strong leaders build systems that make good behavior repeatable. Daily management, weekly cadence, escalation habits, and visible standards create stability when the environment gets noisy.
+Leadership development becomes real when the team feels it. Coaching, feedback, meetings, difficult conversations, delegation, and clearer standards all show up in how a team performs.
+
+### 4. Calmer operating rhythm
+
+Strong leaders build systems that make good behavior repeatable. Daily management, weekly follow-through, escalation habits, and visible standards create stability when the environment gets noisy.
 
 ## Who this is for
 
-This site is especially useful for:
+This approach is especially useful for:
 
-- first-time supervisors who need a clear way to lead people
-- middle managers who carry results from both sides
-- plant leaders who need stronger alignment across shifts and functions
-- high-potential operators or engineers preparing for leadership
+- first-time supervisors who need a clearer way to lead people
+- middle managers who carry pressure from both sides
+- plant managers and operations leaders who need stronger bench strength
+- high-potential operators, engineers, or leads preparing for bigger responsibility
 
-## How the site supports growth
+## How to use the site well
 
-### The blog
+### Start with the problem in front of you
 
-The article library is the engine of the site. It is where readers should keep coming back. Posts are organized to help you build a serious leadership habit, not just browse.
+If you are trying to fix accountability, improve retention, run better meetings, coach a struggling supervisor, or calm a reactive operation, start with the article that matches that problem.
 
-### The assessments
+### Use assessments to find the blind spot
 
-Each assessment is designed to create reflection and a concrete next step. They are not clinical instruments. They are practical leadership tools that help people name patterns and act on them.
+The [leadership assessments](/assessments/) are there to help you name the pattern before you try to fix it. That makes the next article, conversation, or change more useful.
 
-### Subscriber journey
+### Practice one change at a time
 
-New subscribers get access to the assessment hub, then move into a weekly rhythm of practical leadership insight. That combination of reflection plus repetition is where growth compounds.
+The best leadership development does not happen by reading ten articles in one sitting. It happens when one idea changes one meeting, one shift, one coaching conversation, or one decision this week.
 
-## Where this can go next
+## Topics you will find here
 
-The structure also supports future expansion into workshops, team sessions, small-group cohorts, or coaching offers without needing to rebuild the site again.
+The site is especially focused on:
 
-That was intentional. The brand should be able to grow with your platform.
+- manufacturing leadership and plant leadership
+- supervisor training and leadership development
+- employee retention and engagement
+- accountability, delegation, and communication
+- difficult conversations, meetings, and feedback
+- systems thinking and calmer operations
+
+## A good place to start
+
+If you are new here, start with:
+
+1. [Leadership Articles](/posts/)
+2. [Leadership Assessments](/assessments/)
+3. [About Jared](/about/)
