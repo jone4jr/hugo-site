@@ -1,0 +1,36 @@
+{{ define "main" }}
+  {{ $tools := sort .Pages "Weight" "asc" }}
+  <section class="page-hero">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Leadership tools</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="page-hero__panel reveal">
+        <p class="eyebrow">Built for real use</p>
+        <ul class="plain-list">
+          <li>Short enough to use this week</li>
+          <li>Specific enough to reduce drift and confusion</li>
+          <li>Designed to support real conversations and handoffs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Templates and checklists</p>
+        <h2>Download a tool you can use right away.</h2>
+        <p>These tools are meant to move a real leadership moment forward: a one-on-one, a hard conversation, a shift handoff, or a change message.</p>
+      </div>
+      <div class="tool-grid">
+        {{ range $tools }}
+          {{ partial "tool-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

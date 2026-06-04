@@ -1,0 +1,48 @@
+{{ define "main" }}
+  {{ $guides := sort .Pages "Weight" "asc" }}
+  <section class="page-hero">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Start here</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="page-hero__panel reveal">
+        <p class="eyebrow">How to use this section</p>
+        <ul class="plain-list">
+          <li>Choose the problem that feels closest to your day right now.</li>
+          <li>Read one guide instead of ten scattered articles.</li>
+          <li>Use the linked assessment and tool to turn the insight into action.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Problem-based guides</p>
+        <h2>Start with the leadership problem in front of you.</h2>
+        <p>These guides are built for working leaders who need a smarter next move on accountability, retention, reactive operations, and supervisor development.</p>
+      </div>
+      <div class="guide-grid">
+        {{ range $guides }}
+          {{ partial "guide-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell cta-band reveal">
+      <div>
+        <p class="eyebrow">Need a practical tool too?</p>
+        <h2>Pair the guide with a template or checklist.</h2>
+      </div>
+      <div class="cta-band__form">
+        <a class="button button-primary" href="{{ "/tools/" | relURL }}">Browse the free tools</a>
+      </div>
+    </div>
+  </section>
+{{ end }}

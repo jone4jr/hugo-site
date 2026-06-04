@@ -2,9 +2,136 @@
 .path-grid,
 .assessment-grid,
 .articles-grid,
-.offers-grid {
+.offers-grid,
+.guide-grid,
+.tool-grid,
+.resource-stack,
+.result-links {
   display: grid;
   gap: 1.2rem;
+}
+
+.guide-grid,
+.tool-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.resource-stack,
+.result-links {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.guide-card,
+.tool-card,
+.resource-card,
+.resource-panel,
+.recommendation-panel,
+.download-panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-lg);
+}
+
+.guide-card,
+.tool-card,
+.resource-card,
+.resource-panel,
+.download-panel {
+  padding: 1.5rem;
+}
+
+.guide-card h3,
+.tool-card h3,
+.resource-card h3 {
+  max-width: 18ch;
+}
+
+.guide-card__top,
+.tool-card__top,
+.tool-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.tool-card__actions {
+  margin-top: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.guide-main,
+.guide-sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.plain-list--spaced {
+  gap: 0.9rem;
+}
+
+.resource-panel .plain-list,
+.sidebar-card .plain-list {
+  margin: 0;
+}
+
+.result-link {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.result-link strong,
+.result-link__eyebrow {
+  color: var(--ink-950);
+}
+
+.result-link span:last-child {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.result-link__eyebrow {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay-500);
+}
+
+.recommendation-panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.recommendation-panel h3 {
+  margin-bottom: 0.6rem;
+}
+
+.download-panel {
+  margin-top: 0.4rem;
+}
+
+.page-hero h1 {
+  max-width: 15ch;
+}
+
+.page-hero__panel .button {
+  margin-top: 0.8rem;
 }
 
 .article-card {
@@ -83,6 +210,10 @@
     font-size: clamp(2.35rem, 10vw, 3.85rem);
     line-height: 1;
   }
+
+  .guide-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -92,5 +223,12 @@
 
   .article-cover img {
     aspect-ratio: 4 / 3;
+  }
+
+  .guide-grid,
+  .tool-grid,
+  .resource-stack,
+  .result-links {
+    grid-template-columns: 1fr;
   }
 }

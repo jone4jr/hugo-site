@@ -1,0 +1,8 @@
+<article class="guide-card reveal">
+  <div class="guide-card__top">
+    <span class="pill">{{ .Params.problem | default "Leadership guide" }}</span>
+  </div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Params.summary | default .Description }}</p>
+  <a class="text-link" href="{{ .RelPermalink }}">Open guide</a>
+</article>
