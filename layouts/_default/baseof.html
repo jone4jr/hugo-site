@@ -3,7 +3,14 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="site-body {{ if .IsHome }}is-home{{ else }}section-{{ .Section }} kind-{{ .Kind }}{{ end }}" data-newsletter-action="{{ .Site.Params.newsletter.action }}">
+{{ $newsletterRecipient := .Site.Params.newsletter.recipient | default .Site.Params.contactEmail }}
+<body
+  class="site-body {{ if .IsHome }}is-home{{ else }}section-{{ .Section }} kind-{{ .Kind }}{{ end }}"
+  data-newsletter-provider="{{ .Site.Params.newsletter.provider }}"
+  data-newsletter-action="{{ .Site.Params.newsletter.action }}"
+  data-newsletter-recipient="{{ $newsletterRecipient }}"
+  data-newsletter-subject="{{ .Site.Params.newsletter.subject }}"
+>
   <a class="skip-link" href="#main-content">Skip to content</a>
   {{ partial "header.html" . }}
   <main id="main-content">
