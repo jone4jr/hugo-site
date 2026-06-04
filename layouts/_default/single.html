@@ -18,7 +18,7 @@
           <aside class="article-hero__aside reveal">
             {{ partial "newsletter-form.html" (dict
               "heading" "Keep growing weekly"
-              "copy" "Subscribe for practical leadership writing and unlock the assessment hub."
+              "copy" "Subscribe for practical leadership writing and unlock the free leadership assessments."
               "button" "Subscribe"
               "source" "article"
               "success" .Site.Params.newsletter.success
@@ -73,7 +73,7 @@
               <p class="eyebrow">Next step</p>
               <h3>Take a leadership assessment</h3>
               <p>Move from reading to self-awareness with the free DISC-style profile and other diagnostics.</p>
-              <a class="text-link" href="{{ "/assessments/" | relURL }}">Visit the assessment hub</a>
+              <a class="text-link" href="{{ "/assessments/" | relURL }}">Browse the free assessments</a>
             </div>
             <div class="sidebar-card">
               <p class="eyebrow">Author</p>
@@ -117,8 +117,8 @@
     <section class="section section-contrast">
       <div class="shell cta-band reveal">
         <div>
-          <p class="eyebrow">Stay in the loop</p>
-          <h2>Subscribe and keep the development rhythm going.</h2>
+          <p class="eyebrow">Keep learning</p>
+          <h2>Get one practical leadership note each week.</h2>
         </div>
         <div class="cta-band__form">
           {{ partial "newsletter-form.html" (dict
