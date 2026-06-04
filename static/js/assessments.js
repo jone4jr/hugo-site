@@ -111,6 +111,146 @@
     }
   };
 
+  var resources = {
+    guides: {
+      accountability: {
+        kind: "Start here guide",
+        title: "How to Improve Accountability Without Micromanaging",
+        url: "/start-here/improve-accountability-without-micromanaging/",
+        description: "Build clearer ownership, steadier follow-through, and less hovering."
+      },
+      retention: {
+        kind: "Start here guide",
+        title: "How to Retain Good Employees",
+        url: "/start-here/retain-good-employees/",
+        description: "Keep strong people by improving the environment they work inside."
+      },
+      firefighting: {
+        kind: "Start here guide",
+        title: "How to Stop Firefighting in Operations",
+        url: "/start-here/stop-firefighting-in-operations/",
+        description: "Reduce reactive work and build calmer execution across shifts."
+      },
+      supervisors: {
+        kind: "Start here guide",
+        title: "How to Develop Stronger Supervisors",
+        url: "/start-here/develop-stronger-supervisors/",
+        description: "Coach supervisors on feedback, delegation, and leadership under pressure."
+      }
+    },
+    tools: {
+      oneOnOne: {
+        kind: "Free tool",
+        title: "Supervisor 1:1 Template",
+        url: "/tools/supervisor-1-on-1-template/",
+        description: "Use a better rhythm for coaching, clarity, and follow-through."
+      },
+      conversation: {
+        kind: "Free tool",
+        title: "Difficult Conversation Prep Sheet",
+        url: "/tools/difficult-conversation-prep-sheet/",
+        description: "Prepare for a hard conversation without delaying or overcomplicating it."
+      },
+      handoff: {
+        kind: "Free tool",
+        title: "Shift Handoff Checklist",
+        url: "/tools/shift-handoff-checklist/",
+        description: "Tighten shift-to-shift communication and reduce avoidable surprises."
+      },
+      changeMessage: {
+        kind: "Free tool",
+        title: "Change Message Checklist",
+        url: "/tools/change-message-checklist/",
+        description: "Communicate what is changing, why it matters, and what happens next."
+      }
+    },
+    articles: {
+      accountability: {
+        kind: "Article",
+        title: "How to Hold Your Team Accountable Without Micromanaging",
+        url: "/how-to-hold-your-team-accountable/",
+        description: "The core article for clear ownership without turning into a checker."
+      },
+      poster: {
+        kind: "Article",
+        title: "A Goal Nobody Owns at the Floor Is Just a Poster",
+        url: "/a-goal-nobody-owns-at-the-floor-is-just-a-poster/",
+        description: "Turn big goals into lead measures someone can actually move."
+      },
+      whyQuit: {
+        kind: "Article",
+        title: "Why Good Employees Quit",
+        url: "/why-good-employees-quit/",
+        description: "See the real reasons capable people leave before they finally do."
+      },
+      meetings: {
+        kind: "Article",
+        title: "What Your Team Learns From Your Meetings",
+        url: "/posts/meetings-teach-culture/",
+        description: "Meetings teach culture every week, whether you mean them to or not."
+      },
+      firefighting: {
+        kind: "Article",
+        title: "How to Stop Firefighting and Build a Proactive Culture",
+        url: "/how-to-stop-firefighting/",
+        description: "The clearest starting point for replacing reaction with prevention."
+      },
+      underPressure: {
+        kind: "Article",
+        title: "Under Pressure, People Default to Their Primary Job. Plan For It.",
+        url: "/under-pressure-people-default-to-their-primary-job/",
+        description: "See why preventive work disappears under pressure and how to protect it."
+      },
+      first90: {
+        kind: "Article",
+        title: "The First 90 Days as a New Leader: A Proven Playbook",
+        url: "/first-90-days-as-a-new-leader/",
+        description: "A strong starting point for supervisors or leaders stepping into a new role."
+      },
+      difficult: {
+        kind: "Article",
+        title: "Difficult Conversations on the Floor Get Easier When You Stop Delaying Them",
+        url: "/posts/difficult-conversations-floor/",
+        description: "Address the issue while it is still workable instead of letting it harden."
+      },
+      badLeader: {
+        kind: "Article",
+        title: "I Was Trained to Be a Bad Leader. Leaving Was the Best Thing That Ever Happened to Me.",
+        url: "/i-was-trained-to-be-a-bad-leader/",
+        description: "A first-hand story about unlearning blame, control, and hero leadership."
+      },
+      oee: {
+        kind: "Article",
+        title: "When OEE Lies to You",
+        url: "/posts/oee-lies/",
+        description: "A sharper look at what the number is hiding and how leaders should respond."
+      }
+    }
+  };
+
+  var discRecommendations = {
+    D: {
+      title: "Best next move for a high-drive style",
+      intro: "Use your pace to create clarity, not just urgency.",
+      items: [resources.guides.accountability, resources.tools.conversation, resources.articles.accountability]
+    },
+    I: {
+      title: "Best next move for a high-influence style",
+      intro: "Turn your energy into a steadier coaching rhythm people can keep using after the meeting ends.",
+      items: [resources.guides.supervisors, resources.tools.oneOnOne, resources.articles.meetings]
+    },
+    S: {
+      title: "Best next move for a steady style",
+      intro: "Protect the trust you create by addressing disengagement and growth needs before strong people go quiet.",
+      items: [resources.guides.retention, resources.tools.oneOnOne, resources.articles.whyQuit]
+    },
+    C: {
+      title: "Best next move for a precision style",
+      intro: "Use your rigor to build stronger systems, not just better analysis.",
+      items: [resources.guides.firefighting, resources.tools.handoff, resources.articles.oee]
+    }
+  };
+
   function scoreDimensions(config, answers) {
     var scores = {};
     var maxScores = {};
@@ -143,11 +283,11 @@
 
   function renderScoreCards(scores, labels) {
     return (
-      '<div class="score-grid">' +
+      "<div class='score-grid'>" +
       sortedEntries(scores)
         .map(function (entry) {
           return (
-            '<div class="score-card">' +
+            "<div class='score-card'>" +
             "<strong>" + labels[entry.key] + "</strong>" +
             "<div class='score-bar'><span style='width:" + entry.value + "%'></span></div>" +
             "<p>" + entry.value + "%</p>" +
@@ -159,6 +299,95 @@
     );
   }
 
+  function renderRecommendationLinks(items) {
+    return (
+      "<div class='result-links'>" +
+      items
+        .map(function (item) {
+          return (
+            "<a class='result-link' href='" + item.url + "'>" +
+            "<span class='result-link__eyebrow'>" + item.kind + "</span>" +
+            "<strong>" + item.title + "</strong>" +
+            "<span>" + item.description + "</span>" +
+            "</a>"
+          );
+        })
+        .join("") +
+      "</div>"
+    );
+  }
+
+  function renderRecommendationPanel(title, intro, items) {
+    return (
+      "<div class='recommendation-panel'>" +
+      "<div class='recommendation-panel__copy'>" +
+      "<p class='eyebrow'>Recommended next steps</p>" +
+      "<h3>" + title + "</h3>" +
+      "<p>" + intro + "</p>" +
+      "</div>" +
+      renderRecommendationLinks(items) +
+      "</div>"
+    );
+  }
+
+  function getDelegationRecommendation(lowestKey) {
+    if (lowestKey === "clarity") {
+      return {
+        title: "Tighten clarity before you tighten pressure",
+        intro: "When delegation feels messy, the first fix is usually clearer ownership, clearer standards, and a clearer finish line.",
+        items: [resources.guides.accountability, resources.tools.oneOnOne, resources.articles.poster]
+      };
+    }
+    if (lowestKey === "trust") {
+      return {
+        title: "Build trust so you do not become the bottleneck",
+        intro: "If you keep retaking the work, development slows and dependence grows.",
+        items: [resources.guides.supervisors, resources.tools.conversation, resources.articles.badLeader]
+      };
+    }
+    if (lowestKey === "coaching") {
+      return {
+        title: "Turn delegation into development",
+        intro: "The work should build the person, not just get completed this once.",
+        items: [resources.guides.supervisors, resources.tools.oneOnOne, resources.articles.difficult]
+      };
+    }
+    return {
+      title: "Protect follow-through with visible rhythm",
+      intro: "A lot of delegated work fails because the next checkpoint never becomes real enough to hold.",
+      items: [resources.guides.accountability, resources.tools.oneOnOne, resources.articles.underPressure]
+    };
+  }
+
+  function getChangeRecommendation(weakestKey) {
+    if (weakestKey === "clarity") {
+      return {
+        title: "Sharpen the message before you push harder",
+        intro: "When people are unclear, more urgency usually creates more confusion, not more movement.",
+        items: [resources.guides.firefighting, resources.tools.changeMessage, resources.articles.meetings]
+      };
+    }
+    if (weakestKey === "cadence") {
+      return {
+        title: "Give the change a steadier rhythm",
+        intro: "Teams need repetition, checkpoints, and follow-through or the message disappears into the week.",
+        items: [resources.guides.firefighting, resources.tools.handoff, resources.articles.firefighting]
+      };
+    }
+    if (weakestKey === "empathy") {
+      return {
+        title: "Make more room for what the team is carrying",
+        intro: "People accept hard changes faster when they feel seen, coached, and respected in the middle of them.",
+        items: [resources.guides.retention, resources.tools.oneOnOne, resources.articles.whyQuit]
+      };
+    }
+    return {
+      title: "Make ownership impossible to miss",
+      intro: "Change drifts when people hear the message but cannot name what they own next.",
+      items: [resources.guides.accountability, resources.tools.changeMessage, resources.articles.accountability]
+    };
+  }
+
   function renderDiscResults(scores) {
     var entries = sortedEntries(scores);
     var primary = entries[0];
@@ -166,6 +395,7 @@
     var primaryProfile = assessments.disc.profiles[primary.key];
     var blendKey = primary.key + secondary.key;
     var blend = assessments.disc.blends[blendKey] || "A blended style that shifts depending on context.";
+    var recommendation = discRecommendations[primary.key];
 
     return (
       "<div class='assessment-results'>" +
@@ -185,8 +415,9 @@
       "<div class='result-card'><strong>Strengths your team may feel</strong><p>" + primaryProfile.strengths.join(", ") + ".</p></div>" +
       "<div class='result-card'><strong>Watch-outs to manage</strong><p>" + primaryProfile.watchouts.join(", ") + ".</p></div>" +
       "<div class='result-card'><strong>Leadership move</strong><p>Ask one trusted person where your style creates clarity and where it creates friction. Use that answer to adjust how you communicate this week.</p></div>" +
-      "<div class='result-card'><strong>Best next step</strong><p>Read an article on communication or accountability while your results are fresh so the reflection turns into action.</p></div>" +
+      "<div class='result-card'><strong>Use this well</strong><p>Your style is not the problem. The work is to keep its strengths while reducing the friction it can create under pressure.</p></div>" +
       "</div>" +
+      renderRecommendationPanel(recommendation.title, recommendation.intro, recommendation.items) +
       "</div>"
     );
   }
@@ -199,6 +430,7 @@
     var label = average >= 82 ? "Ownership Builder" : average >= 65 ? "Capable but uneven" : "Bottleneck risk";
     var lowest = entries[entries.length - 1];
     var labels = assessments.delegation.labels;
+    var recommendation = getDelegationRecommendation(lowest.key);
 
     return (
       "<div class='assessment-results'>" +
@@ -212,8 +444,9 @@
       "<div class='result-card'><strong>Your biggest gap</strong><p>" + labels[lowest.key] + " is the lowest-scoring area. That is the first place to simplify and improve.</p></div>" +
       "<div class='result-card'><strong>Leadership move</strong><p>Choose one task you usually keep too close. Delegate it this week with a success definition, a checkpoint, and a clear owner.</p></div>" +
       "<div class='result-card'><strong>If your score felt low</strong><p>That usually means the system around delegation is unclear, not that you lack work ethic. Fix the process before you judge yourself.</p></div>" +
-      "<div class='result-card'><strong>What to read next</strong><p>Look for articles on supervisor growth, accountability, and coaching to strengthen the habits behind strong delegation.</p></div>" +
+      "<div class='result-card'><strong>What changes results</strong><p>Delegation gets stronger when the other person can see the outcome, the owner, and the next checkpoint without needing you to rescue it.</p></div>" +
       "</div>" +
+      renderRecommendationPanel(recommendation.title, recommendation.intro, recommendation.items) +
       "</div>"
     );
   }
@@ -227,6 +460,7 @@
     var strongest = entries[0];
     var weakest = entries[entries.length - 1];
     var labels = assessments.change.labels;
+    var recommendation = getChangeRecommendation(weakest.key);
 
     return (
       "<div class='assessment-results'>" +
@@ -240,8 +474,9 @@
       "<div class='result-card'><strong>What to protect</strong><p>" + labels[strongest.key] + " is helping you create movement. Keep that visible as change continues.</p></div>" +
       "<div class='result-card'><strong>What to tighten</strong><p>" + labels[weakest.key] + " is the best place to improve next. That is often where quiet resistance begins.</p></div>" +
       "<div class='result-card'><strong>Leadership move</strong><p>Restate the change in plain language, name the owner, and confirm the next checkpoint with the team this week.</p></div>" +
-      "<div class='result-card'><strong>What to read next</strong><p>Use the article library to reinforce communication, meeting quality, and accountability during transition periods.</p></div>" +
+      "<div class='result-card'><strong>What changes results</strong><p>Change gets easier when the team can repeat back what is happening, what stays the same, and what they own next.</p></div>" +
       "</div>" +
+      renderRecommendationPanel(recommendation.title, recommendation.intro, recommendation.items) +
       "</div>"
     );
   }
@@ -327,7 +562,7 @@
           renderResults(key, scores) +
           "<div class='result-actions'>" +
           "<button type='button' class='button button-secondary js-retake'>Retake assessment</button>" +
-          "<a class='button button-primary' href='/posts/'>Read related articles</a>" +
+          "<a class='button button-primary' href='/start-here/'>Browse start-here guides</a>" +
           "</div>";
 
         var retake = root.querySelector(".js-retake");

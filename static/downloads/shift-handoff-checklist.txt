@@ -1,0 +1,28 @@
+SHIFT HANDOFF CHECKLIST
+
+Use at the end of a shift or before a team transition.
+
+1. Current status
+- What is running normally?
+- What is down, unstable, or waiting?
+
+2. Open issues
+- What problem is still unresolved?
+- What troubleshooting has already been tried?
+- What should the next shift avoid repeating?
+
+3. Quality and customer risk
+- Any parts, checks, or shipments that need extra attention?
+- Any issue that could create scrap, rework, or delay?
+
+4. Staffing and coverage
+- Any gaps, call-offs, training needs, or role changes?
+
+5. Materials and equipment
+- Any shortages, tooling concerns, or maintenance items that matter next shift?
+
+6. Priority for the next team
+- What matters most in the first hour?
+- Who owns the first follow-up?
+
+Good handoffs reduce surprises before they turn into firefighting.

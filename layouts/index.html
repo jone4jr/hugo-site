@@ -1,6 +1,8 @@
 {{ define "main" }}
   {{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
   {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
+  {{ $startPages := sort (where .Site.RegularPages "Section" "start-here") "Weight" "asc" }}
+  {{ $tools := sort (where .Site.RegularPages "Section" "tools") "Weight" "asc" }}
   {{ $latest := first 6 $posts }}
   {{ $categoryTerms := .Site.Taxonomies.categories.Alphabetical }}
 
@@ -82,25 +84,16 @@
     <div class="shell">
       <div class="section-heading reveal">
         <p class="eyebrow">Start here</p>
-        <h2>Where to start based on your role</h2>
-        <p>If you are new to leadership, running a plant or department, or carrying results across shifts and functions, start with the lane that matches your day-to-day reality.</p>
+        <h2>Choose the leadership problem in front of you.</h2>
+        <p>These guides are built for plant managers, supervisors, and operations leaders who want one clear next step on accountability, retention, firefighting, and supervisor development.</p>
       </div>
-      <div class="path-grid">
-        <article class="path-card reveal">
-          <span class="path-card__index">01</span>
-          <h3>New supervisors</h3>
-          <p>Build trust, communicate clearly, delegate better, and learn how to hold standards without sounding scripted or severe.</p>
-        </article>
-        <article class="path-card reveal">
-          <span class="path-card__index">02</span>
-          <h3>Plant managers and operations leaders</h3>
-          <p>Strengthen operating rhythm, supervisor bench strength, accountability, retention, and calmer execution across shifts and functions.</p>
-        </article>
-        <article class="path-card reveal">
-          <span class="path-card__index">03</span>
-          <h3>Emerging leaders</h3>
-          <p>Build people skills before the title gets bigger: feedback, delegation, meetings, difficult conversations, and leading under pressure.</p>
-        </article>
+      <div class="guide-grid">
+        {{ range $startPages }}
+          {{ partial "guide-card.html" . }}
+        {{ end }}
+      </div>
+      <div class="section-cta">
+        <a class="button button-secondary" href="{{ "/start-here/" | relURL }}">Browse all start-here guides</a>
       </div>
     </div>
   </section>
@@ -147,6 +140,24 @@
     </div>
   </section>
 
+  <section class="section section-contrast">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Free tools</p>
+        <h2>Templates and checklists you can use this week.</h2>
+        <p>Download practical tools for one-on-ones, difficult conversations, shift handoffs, and clearer change communication.</p>
+      </div>
+      <div class="tool-grid">
+        {{ range first 4 $tools }}
+          {{ partial "tool-card.html" . }}
+        {{ end }}
+      </div>
+      <div class="section-cta">
+        <a class="button button-secondary" href="{{ "/tools/" | relURL }}">Browse all tools</a>
+      </div>
+    </div>
+  </section>
+
   {{ if gt (len $posts) 0 }}
     {{ $featured := index $posts 0 }}
     <section class="section section-dark">
@@ -188,19 +199,19 @@
     <div class="shell offers-grid">
       <div class="section-heading reveal">
         <p class="eyebrow">Keep growing</p>
-        <h2>Use the site the way working leaders actually do.</h2>
+        <h2>Come back with the next real problem.</h2>
       </div>
       <article class="offer-card reveal">
-        <h3>Weekly leadership note</h3>
-        <p>One practical leadership lesson each week for plant managers, supervisors, and operations leaders.</p>
+        <h3>Start with one guide</h3>
+        <p>Use the start-here pages when you need help with accountability, employee retention, supervisor development, or calmer execution.</p>
       </article>
       <article class="offer-card reveal">
-        <h3>Free leadership assessments</h3>
-        <p>Use DISC, delegation, and change tools to spot blind spots before the next hard conversation.</p>
+        <h3>Use one practical tool</h3>
+        <p>Download a template or checklist when a one-on-one, handoff, or hard conversation needs more structure.</p>
       </article>
       <article class="offer-card reveal">
-        <h3>Article library for real problems</h3>
-        <p>Searchable writing on accountability, employee retention, meetings, communication, supervisor development, and calmer operations.</p>
+        <h3>Keep the weekly note</h3>
+        <p>Stay in the habit with one practical leadership idea each week instead of trying to relearn everything under pressure.</p>
       </article>
     </div>
   </section>

@@ -1,0 +1,53 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Free leadership tool</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="page-hero__panel reveal">
+        <p class="eyebrow">Download</p>
+        <p>{{ .Params.summary }}</p>
+        {{ with .Params.download_url }}
+          <a class="button button-primary" href="{{ . }}" download>{{ $.Params.download_label | default "Download tool" }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="shell guide-layout">
+      <div class="guide-main reveal">
+        <div class="prose">
+          {{ .Content }}
+        </div>
+        <div class="download-panel">
+          <p class="eyebrow">Need the quick version?</p>
+          <h2>Download the plain-text copy.</h2>
+          <p>Use it as-is, paste it into your own notes, or adapt it to your team rhythm.</p>
+          {{ with .Params.download_url }}
+            <a class="button button-secondary" href="{{ . }}" download>{{ $.Params.download_label | default "Download tool" }}</a>
+          {{ end }}
+        </div>
+      </div>
+      <aside class="guide-sidebar reveal">
+        <div class="sidebar-card">
+          <p class="eyebrow">Best paired with</p>
+          <h3>{{ .Params.related_guide.title }}</h3>
+          <p>{{ .Params.related_guide.description }}</p>
+          <a class="text-link" href="{{ .Params.related_guide.url }}">Open the guide</a>
+        </div>
+        <div class="sidebar-card">
+          <p class="eyebrow">Related reading</p>
+          <ul class="plain-list">
+            {{ range .Params.related_articles }}
+              <li><a href="{{ .url }}">{{ .title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+{{ end }}
