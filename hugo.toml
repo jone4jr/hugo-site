@@ -54,6 +54,7 @@ summaryLength = 28
   mainTopic = "Manufacturing Leadership"
   siteTopics = ["manufacturing leadership", "plant manager leadership", "supervisor leadership training", "operations leadership", "employee retention leadership", "accountability in the workplace", "leadership communication"]
   contactEmail = "hello@5amshift.com"
+  googleSiteVerification = "XRsg8z4wIMngioHdOADV91C8ps-pjw16kvkGBcDATq0"
 
   [params.newsletter]
     heading = "Get the Sunday leadership note"
@@ -66,6 +67,11 @@ summaryLength = 28
   name = "Home"
   url = "/"
   weight = 10
+
+[[menu.main]]
+  name = "Start Here"
+  url = "/start-here/"
+  weight = 15
 
 [[menu.main]]
   name = "Articles"
