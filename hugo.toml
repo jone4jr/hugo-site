@@ -57,11 +57,14 @@ summaryLength = 28
   googleSiteVerification = "XRsg8z4wIMngioHdOADV91C8ps-pjw16kvkGBcDATq0"
 
   [params.newsletter]
-    heading = "Get the Sunday leadership note"
-    blurb = "One sharp leadership lesson each week, plus access to the assessment library."
+    heading = "Join the 5AM Shift leadership list"
+    blurb = "Get practical leadership updates, new articles, and access to the assessment library."
     button = "Subscribe and unlock the DISC profile"
+    provider = "formsubmit"
+    recipient = "hello@5amshift.com"
     action = ""
-    success = "You are in. Your assessment library is now unlocked on this device."
+    subject = "New 5AM Shift subscriber"
+    success = "Thanks. Your assessment library is now unlocked on this device."
 
 [[menu.main]]
   name = "Home"
