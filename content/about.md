@@ -1,6 +1,7 @@
 ---
 title: "About Jared"
-description: "A grounded leadership perspective built in manufacturing, quality, and high-accountability operations."
+seo_title: "About Jared Jones | Manufacturing Leadership Perspective"
+description: "A grounded manufacturing leadership perspective built in plant leadership, quality, and high-accountability operations."
 ---
 
 ## Why this site exists
@@ -20,11 +21,11 @@ My background is in manufacturing leadership. Over more than 15 years, I have le
 
 ## What you will get here
 
-5AM Shift is designed to help leaders grow in three ways:
+This site helps leaders grow in three ways:
 
 - **Think clearly under pressure.** The site focuses on judgment, prioritization, communication, accountability, and execution.
 - **Lead people better.** You will find tools for feedback, coaching, delegation, difficult conversations, and trust.
-- **Build a durable leadership operating system.** The blog, assessments, and development pages work together so readers can move from insight to action.
+- **Build a durable leadership operating system.** The articles, assessments, and development pages give readers a practical path from insight to action.
 
 ## My point of view
 
@@ -40,6 +41,6 @@ If you are new here, start in three places:
 
 1. Read the featured articles in the blog.
 2. Take the DISC-style leadership profile and one of the other diagnostics.
-3. Subscribe to the weekly note so you build momentum over time instead of reading one article and moving on.
+3. Subscribe to the weekly note if you want a steadier leadership habit over time.
 
 If that sounds like your kind of leadership development, you are in the right place.
