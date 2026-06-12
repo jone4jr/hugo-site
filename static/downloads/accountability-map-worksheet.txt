@@ -1,0 +1,22 @@
+5AM Shift - Accountability Map Worksheet
+
+1. Outcome
+What result or standard needs to be true?
+
+2. Observable expectation
+What should someone be able to see or verify?
+
+3. Owner
+Who owns the next action? Avoid group ownership.
+
+4. Support
+What resources, decisions, or help does the owner need?
+
+5. Checkpoint
+When will progress be reviewed? What evidence will be checked?
+
+6. Consequence
+What happens if the commitment is met? What happens if it is missed?
+
+7. System review
+If it is missed, ask: Was the expectation clear? Did the owner have support? Was the checkpoint soon enough? Was the consequence known?

@@ -1,0 +1,24 @@
+5AM Shift - Meeting Health Scorecard
+
+Score each item 1 to 5.
+
+Purpose
+The meeting has a clear reason to exist.
+
+Signal quality
+The meeting uses current facts, visible signals, and real risks.
+
+Ownership
+Actions leave with one named owner, not general awareness.
+
+Escalation
+Blockers are raised early enough to act.
+
+Follow-through
+Old commitments are reviewed before new ones are added.
+
+Team clarity
+People can repeat the priority, decision, owner, and next checkpoint.
+
+Total score:
+One fix for next meeting:
