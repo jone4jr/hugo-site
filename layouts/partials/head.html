@@ -68,6 +68,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/patches.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/system-overrides.css" | relURL }}">
 {{ with .OutputFormats.Get "RSS" }}
   <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} RSS" href="{{ .RelPermalink }}">
 {{ end }}

@@ -1,0 +1,58 @@
+{{ define "main" }}
+  {{ $pages := sort .Pages "Weight" "asc" }}
+  <section class="page-hero page-hero--system">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Leadership Operating System</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+        <div class="signals-hero-actions">
+          <a class="button button-primary" href="#system-map">View the system map</a>
+          <a class="button button-secondary" href="{{ "/library/" | relURL }}">Open the library</a>
+        </div>
+      </div>
+      <aside class="signals-status-card reveal">
+        <p class="eyebrow">How to use it</p>
+        <h2>Pick one weak link.</h2>
+        <p>Choose the part of leadership that is creating friction this week, then move from page to article to assessment to tool.</p>
+        <div class="signals-meta-grid">
+          <div><span>System parts</span><strong>{{ len $pages }}</strong></div>
+          <div><span>Best cadence</span><strong>Weekly practice</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tight" id="system-map">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">System map</p>
+        <h2>The eight leadership parts that keep work from becoming chaos.</h2>
+        <p>Each part has a practical page, recommended readings, assessments, and tools so development turns into a repeatable operating rhythm.</p>
+      </div>
+      <div class="system-grid">
+        {{ range $pages }}
+          <a class="system-card reveal" href="{{ .RelPermalink }}">
+            <span>{{ .Params.problem }}</span>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.summary }}</p>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell system-rhythm-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Weekly rhythm</p>
+        <h2>Use the same development loop every week.</h2>
+        <p>The system works best when readers practice one behavior, review one signal, and keep one commitment visible at the point of work.</p>
+      </div>
+      <article class="system-rhythm-card reveal"><strong>1</strong><h3>Diagnose</h3><p>Name the issue clearly enough that the next action is obvious.</p></article>
+      <article class="system-rhythm-card reveal"><strong>2</strong><h3>Practice</h3><p>Choose one conversation, meeting, handoff, or coaching moment to improve.</p></article>
+      <article class="system-rhythm-card reveal"><strong>3</strong><h3>Review</h3><p>Look at what changed, what resisted, and what needs to stay visible next week.</p></article>
+    </div>
+  </section>
+{{ end }}

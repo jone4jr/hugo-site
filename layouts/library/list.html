@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
+  {{ $tools := sort (where .Site.RegularPages "Section" "tools") "Weight" "asc" }}
+  {{ $system := sort (where .Site.RegularPages "Section" "leadership-system") "Weight" "asc" }}
+  <section class="page-hero page-hero--library">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Subscriber library</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+      </div>
+      <aside class="hero-panel reveal">
+        {{ partial "newsletter-form.html" (dict
+          "heading" "Unlock the working library"
+          "copy" "Join the leadership list to keep assessments unlocked on this device and get new tools as they are added."
+          "button" "Subscribe and unlock"
+          "source" "library"
+          "success" .Site.Params.newsletter.success
+        ) }}
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="shell library-grid">
+      <div class="library-column reveal">
+        <p class="eyebrow">Assessments</p>
+        <h2>Diagnose the leadership pattern.</h2>
+        <div class="library-stack">
+          {{ range $assessments }}
+            <a class="result-link" href="{{ .RelPermalink }}"><span class="result-link__eyebrow">Assessment</span><strong>{{ .Title }}</strong><span>{{ .Params.summary }}</span></a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="library-column reveal">
+        <p class="eyebrow">Tools</p>
+        <h2>Put the habit into the week.</h2>
+        <div class="library-stack">
+          {{ range $tools }}
+            <a class="result-link" href="{{ .RelPermalink }}"><span class="result-link__eyebrow">Tool</span><strong>{{ .Title }}</strong><span>{{ .Params.summary }}</span></a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="library-column reveal">
+        <p class="eyebrow">System paths</p>
+        <h2>Keep growth connected.</h2>
+        <div class="library-stack">
+          {{ range $system }}
+            <a class="result-link" href="{{ .RelPermalink }}"><span class="result-link__eyebrow">System</span><strong>{{ .Title }}</strong><span>{{ .Params.summary }}</span></a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
