@@ -19,5 +19,8 @@
   {{ partial "footer.html" . }}
   <script src="{{ "js/site.js" | relURL }}" defer></script>
   <script src="{{ "js/assessments.js" | relURL }}" defer></script>
+  {{ if eq .Section "signals" }}
+    <script src="{{ "js/signals.js" | relURL }}" defer></script>
+  {{ end }}
 </body>
 </html>
