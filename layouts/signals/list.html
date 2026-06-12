@@ -1,0 +1,153 @@
+{{ define "main" }}
+  {{ $latestUrl := "data/signals/latest.json" | relURL }}
+  <section class="page-hero page-hero--signals">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Daily stock signals</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+        <div class="signals-hero-actions">
+          <a class="button button-primary" href="#latest-signals">View latest board</a>
+          <a class="button button-secondary" href="{{ "/signals/methodology/" | relURL }}">Read the methodology</a>
+        </div>
+      </div>
+      <aside class="signals-status-card reveal" data-signals-status>
+        <p class="eyebrow">System status</p>
+        <h2>Awaiting first automated run</h2>
+        <p>The dashboard is ready for the nightly JSON output, but no live signal run has been published yet.</p>
+        <div class="signals-meta-grid">
+          <div>
+            <span>Schedule</span>
+            <strong>Weekdays after close</strong>
+          </div>
+          <div>
+            <span>Universe</span>
+            <strong>S&P 500 + Nasdaq 100</strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tight" id="latest-signals" data-signals-dashboard data-latest-url="{{ $latestUrl }}">
+    <div class="shell">
+      <div class="signals-board-heading reveal">
+        <div>
+          <p class="eyebrow">Latest run</p>
+          <h2>Top 10 Buy and Sell setups</h2>
+          <p class="js-signals-as-of">Loading latest signal status...</p>
+        </div>
+        <a class="button button-secondary" href="{{ "/signals/archive/" | relURL }}">View archive</a>
+      </div>
+
+      <div class="signals-board-grid">
+        <article class="signals-board reveal">
+          <div class="signals-board__top">
+            <div>
+              <p class="eyebrow">Buy list</p>
+              <h3>Jones Long Rating</h3>
+            </div>
+            <span class="signals-badge signals-badge--buy">Long</span>
+          </div>
+          <div class="signals-table-wrap">
+            <table class="signals-table">
+              <thead>
+                <tr>
+                  <th>Ticker</th>
+                  <th>Rating</th>
+                  <th>Label</th>
+                  <th>Price</th>
+                  <th>Upside</th>
+                  <th>Entry</th>
+                  <th>Target</th>
+                  <th>Stop</th>
+                </tr>
+              </thead>
+              <tbody data-signal-list="buys">
+                <tr><td colspan="8">Loading latest run...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="signals-board reveal">
+          <div class="signals-board__top">
+            <div>
+              <p class="eyebrow">Sell list</p>
+              <h3>Jones Short Rating</h3>
+            </div>
+            <span class="signals-badge signals-badge--sell">Short</span>
+          </div>
+          <div class="signals-table-wrap">
+            <table class="signals-table">
+              <thead>
+                <tr>
+                  <th>Ticker</th>
+                  <th>Rating</th>
+                  <th>Label</th>
+                  <th>Price</th>
+                  <th>Downside</th>
+                  <th>Entry</th>
+                  <th>Target</th>
+                  <th>Stop</th>
+                </tr>
+              </thead>
+              <tbody data-signal-list="sells">
+                <tr><td colspan="8">Loading latest run...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contrast">
+    <div class="shell signals-method-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Rating model</p>
+        <h2>A transparent score instead of a black-box call.</h2>
+        <p>Every published pick will show the inputs behind the Jones Long Rating and Jones Short Rating so a reader can audit the setup, not just see a verdict.</p>
+      </div>
+      <article class="signals-method-card reveal">
+        <span>30%</span>
+        <h3>Weekly trend</h3>
+        <p>Weekly EMA, momentum, RSI, and 52-week range position.</p>
+      </article>
+      <article class="signals-method-card reveal">
+        <span>30%</span>
+        <h3>Technical setup</h3>
+        <p>Daily moving averages, support, resistance, RSI, ATR, and volume confirmation.</p>
+      </article>
+      <article class="signals-method-card reveal">
+        <span>25%</span>
+        <h3>Valuation</h3>
+        <p>Forward P/E, PEG, EV/EBITDA, history, sector context, and fair-value gap.</p>
+      </article>
+      <article class="signals-method-card reveal">
+        <span>15%</span>
+        <h3>News sentiment</h3>
+        <p>Recent headlines, tone, catalysts, and earnings-window caution flags.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell signals-operating-grid">
+      <div class="signals-operating-copy reveal">
+        <p class="eyebrow">Build path</p>
+        <h2>Designed for nightly automation and scorekeeping.</h2>
+        <p>The section is structured around dated JSON output in <code>/data/signals/</code>, so a future scheduled job can publish the latest lists, detail pages, archive records, and performance tracking without redesigning the front end.</p>
+      </div>
+      <div class="signals-step-stack reveal">
+        <div><strong>1</strong><span>Universe and daily price-history refresh</span></div>
+        <div><strong>2</strong><span>Weekly resampling, technical metrics, and valuation scoring</span></div>
+        <div><strong>3</strong><span>Pass-2 news sentiment for shortlisted candidates</span></div>
+        <div><strong>4</strong><span>Top 10 long and short lists with archive-ready records</span></div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "signals-disclaimer.html" . }}
+{{ end }}
