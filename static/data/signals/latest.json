@@ -1,0 +1,10 @@
+{
+  "status": "not_connected",
+  "message": "The 5amShift Screener dashboard is ready, but no automated stock signal run has been published yet.",
+  "as_of": null,
+  "market_date": null,
+  "data_freshness": "awaiting_first_run",
+  "source": "pending_scheduler",
+  "buys": [],
+  "sells": []
+}

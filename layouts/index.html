@@ -158,6 +158,22 @@
     </div>
   </section>
 
+  <section class="section section-dark">
+    <div class="shell story-feature signals-home-feature">
+      <div class="story-feature__meta reveal">
+        <p class="eyebrow">New section</p>
+        <span class="pill">5amShift Screener</span>
+        <h2>Daily stock signals, built like a scorecard.</h2>
+        <p>The Signals section is ready for nightly JSON output: Top 10 Buy setups, Top 10 Sell setups, Jones Ratings, methodology, and an archive that can track whether the picks worked.</p>
+        <a class="button button-primary" href="{{ "/signals/" | relURL }}">Open Signals</a>
+      </div>
+      <div class="story-feature__insight reveal">
+        <p class="quote-block">A research dashboard should show its work.</p>
+        <p>Each future run is structured around transparent scoring pillars, data freshness, entry zones, targets, stops, and a visible educational-use disclaimer.</p>
+      </div>
+    </div>
+  </section>
+
   {{ if gt (len $posts) 0 }}
     {{ $featured := index $posts 0 }}
     <section class="section section-dark">

@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <section class="page-hero page-hero--signals">
+    <div class="shell reveal">
+      {{ partial "breadcrumbs.html" . }}
+      <p class="eyebrow">Signals resource</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="shell signals-page-layout">
+      <div class="signals-page-main reveal">
+        <div class="prose">
+          {{ .Content }}
+        </div>
+        {{ if .Params.signals_archive }}
+          <div class="signals-archive-panel" data-signals-archive data-archive-url="{{ "data/signals/archive.json" | relURL }}">
+            <div class="signals-archive-panel__top">
+              <p class="eyebrow">Past runs</p>
+              <h2>Archive</h2>
+            </div>
+            <div class="signals-archive-list" data-signals-archive-list>
+              <p>Loading archive...</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <aside class="signals-sidebar reveal">
+        <div class="sidebar-card">
+          <p class="eyebrow">Signals</p>
+          <h3>Latest board</h3>
+          <p>Review the current status, long list, short list, and freshness banner.</p>
+          <a class="text-link" href="{{ "/signals/" | relURL }}">Open the dashboard</a>
+        </div>
+        <div class="sidebar-card">
+          <p class="eyebrow">Archive</p>
+          <h3>Track whether the picks worked.</h3>
+          <p>Each published run is designed to remain available for next-day and 3-day return tracking.</p>
+          <a class="text-link" href="{{ "/signals/archive/" | relURL }}">View archive</a>
+        </div>
+        <div class="sidebar-card">
+          <p class="eyebrow">Compliance</p>
+          <h3>Educational use only.</h3>
+          <p>Signals are automated research notes, not advice or a trading recommendation.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {{ partial "signals-disclaimer.html" . }}
+{{ end }}
