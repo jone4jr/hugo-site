@@ -77,6 +77,11 @@ summaryLength = 28
   weight = 15
 
 [[menu.main]]
+  name = "System"
+  url = "/leadership-system/"
+  weight = 18
+
+[[menu.main]]
   name = "Articles"
   url = "/posts/"
   weight = 20
@@ -87,14 +92,14 @@ summaryLength = 28
   weight = 30
 
 [[menu.main]]
+  name = "Library"
+  url = "/library/"
+  weight = 34
+
+[[menu.main]]
   name = "Signals"
   url = "/signals/"
   weight = 35
-
-[[menu.main]]
-  name = "Leadership Development"
-  url = "/leadership-development/"
-  weight = 40
 
 [[menu.main]]
   name = "About"

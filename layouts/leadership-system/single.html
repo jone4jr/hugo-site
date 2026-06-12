@@ -1,0 +1,75 @@
+{{ define "main" }}
+  <section class="page-hero page-hero--system">
+    <div class="shell page-hero__grid">
+      <div class="reveal">
+        {{ partial "breadcrumbs.html" . }}
+        <p class="eyebrow">Leadership system part</p>
+        <div class="article-meta"><span class="pill">{{ .Params.problem }}</span></div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-hero__lead">{{ . }}</p>{{ end }}
+      </div>
+      <aside class="page-hero__panel reveal">
+        <p class="eyebrow">This fixes</p>
+        <p>{{ .Params.summary }}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="shell guide-layout">
+      <div class="guide-main reveal">
+        <div class="resource-panel">
+          <p class="eyebrow">Practice this week</p>
+          <ul class="plain-list plain-list--spaced">
+            {{ range .Params.quick_wins }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        <div class="prose">{{ .Content }}</div>
+      </div>
+      <aside class="guide-sidebar reveal">
+        {{ with .Params.assessment }}
+          <div class="sidebar-card">
+            <p class="eyebrow">Assessment</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            <a class="text-link" href="{{ .url }}">Take the assessment</a>
+          </div>
+        {{ end }}
+        {{ with .Params.tool }}
+          <div class="sidebar-card">
+            <p class="eyebrow">Tool</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            <a class="text-link" href="{{ .url }}">Open the tool</a>
+          </div>
+        {{ end }}
+        <div class="sidebar-card">
+          <p class="eyebrow">Full system</p>
+          <h3>Keep the parts connected.</h3>
+          <p>One leadership habit improves faster when it is tied to the rest of the operating system.</p>
+          <a class="text-link" href="{{ "/leadership-system/" | relURL }}">Back to system map</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {{ with .Params.articles }}
+    <section class="section section-contrast">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Recommended reading</p>
+          <h2>Build the idea in sequence.</h2>
+        </div>
+        <div class="resource-stack">
+          {{ range . }}
+            <article class="resource-card reveal">
+              <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+              <p>{{ .description }}</p>
+              <a class="text-link" href="{{ .url }}">Read article</a>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

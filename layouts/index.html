@@ -2,6 +2,7 @@
   {{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
   {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
   {{ $startPages := sort (where .Site.RegularPages "Section" "start-here") "Weight" "asc" }}
+  {{ $systemPages := sort (where .Site.RegularPages "Section" "leadership-system") "Weight" "asc" }}
   {{ $tools := sort (where .Site.RegularPages "Section" "tools") "Weight" "asc" }}
   {{ $latest := first 6 $posts }}
   {{ $categoryTerms := .Site.Taxonomies.categories.Alphabetical }}
@@ -13,7 +14,7 @@
         <h1>{{ .Params.hero_title }}</h1>
         <p class="hero-lead">{{ .Params.hero_subtitle }}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="{{ "/posts/" | relURL }}">Explore articles</a>
+          <a class="button button-primary" href="{{ "/leadership-system/" | relURL }}">Build your leadership system</a>
           <a class="button button-secondary" href="{{ "/assessments/disc-profile/" | relURL }}">Take the free DISC leadership profile</a>
         </div>
         <div class="hero-proof">
@@ -26,15 +27,15 @@
             <span>inside large, multi-layer leadership environments</span>
           </div>
           <div>
-            <strong>Weekly growth loop</strong>
-            <span>articles, assessments, and practical development tools</span>
+            <strong>8-part system</strong>
+            <span>operating rhythm, standards, coaching, communication, and trust</span>
           </div>
         </div>
       </div>
       <div class="hero-panel reveal">
         {{ partial "newsletter-form.html" (dict
-          "heading" "Subscribe and unlock the assessment library"
-          "copy" "Start with the free DISC-style leadership profile, then use the diagnostics to sharpen delegation, communication, and change leadership."
+          "heading" "Subscribe and unlock the leadership library"
+          "copy" "Start with the free DISC-style leadership profile, then use the diagnostics, tools, and system guides to build a steadier leadership rhythm."
           "button" .Site.Params.newsletter.button
           "source" "hero"
           "class" "newsletter-form--hero"
@@ -80,6 +81,29 @@
     </div>
   </section>
 
+  <section class="section section-contrast">
+    <div class="shell system-feature">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Leadership Operating System</p>
+        <h2>Eight parts of leadership that make the week run calmer.</h2>
+        <p>The expanded system turns the site from a blog into a practical development path: rhythm, standards, supervisors, coaching, communication, retention, change, and improvement.</p>
+      </div>
+      <div class="system-grid system-grid--compact">
+        {{ range first 8 $systemPages }}
+          <a class="system-card reveal" href="{{ .RelPermalink }}">
+            <span>{{ .Params.problem }}</span>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.summary }}</p>
+          </a>
+        {{ end }}
+      </div>
+      <div class="section-cta">
+        <a class="button button-primary" href="{{ "/leadership-system/" | relURL }}">Explore the full system</a>
+        <a class="button button-secondary" href="{{ "/library/" | relURL }}">Open the subscriber library</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="shell">
       <div class="section-heading reveal">
@@ -117,8 +141,8 @@
             <span>Tools that help you reflect on your style, blind spots, and next step</span>
           </div>
           <div>
-            <strong>Ongoing growth</strong>
-            <span>A simple way to keep learning between shifts, meetings, and hard decisions</span>
+            <strong>Subscriber library</strong>
+            <span>A growing resource hub for guides, templates, scorecards, and diagnostics</span>
           </div>
         </div>
       </div>
@@ -130,12 +154,15 @@
       <div class="section-heading reveal">
         <p class="eyebrow">Leadership assessments</p>
         <h2>Free assessments to sharpen how you lead</h2>
-        <p>Start with the DISC-style profile, then use the other tools to think more clearly about delegation, communication, and leading change.</p>
+        <p>Start with the DISC-style profile, then use the other tools to think more clearly about accountability, delegation, meetings, retention, and change.</p>
       </div>
       <div class="assessment-grid">
-        {{ range $assessments }}
+        {{ range first 6 $assessments }}
           {{ partial "assessment-card.html" . }}
         {{ end }}
+      </div>
+      <div class="section-cta">
+        <a class="button button-secondary" href="{{ "/assessments/" | relURL }}">Browse all assessments</a>
       </div>
     </div>
   </section>
@@ -145,10 +172,10 @@
       <div class="section-heading reveal">
         <p class="eyebrow">Free tools</p>
         <h2>Templates and checklists you can use this week.</h2>
-        <p>Download practical tools for one-on-ones, difficult conversations, shift handoffs, and clearer change communication.</p>
+        <p>Download practical tools for one-on-ones, difficult conversations, shift handoffs, accountability, meetings, and clearer change communication.</p>
       </div>
       <div class="tool-grid">
-        {{ range first 4 $tools }}
+        {{ range first 6 $tools }}
           {{ partial "tool-card.html" . }}
         {{ end }}
       </div>
@@ -161,10 +188,10 @@
   <section class="section section-dark">
     <div class="shell story-feature signals-home-feature">
       <div class="story-feature__meta reveal">
-        <p class="eyebrow">New section</p>
+        <p class="eyebrow">Personal research lab</p>
         <span class="pill">5amShift Screener</span>
-        <h2>Daily stock signals, built like a scorecard.</h2>
-        <p>The Signals section is ready for nightly JSON output: Top 10 Buy setups, Top 10 Sell setups, Jones Ratings, methodology, and an archive that can track whether the picks worked.</p>
+        <h2>Daily stock signals, kept separate from leadership development.</h2>
+        <p>The Signals section remains a clearly labeled research dashboard for future nightly JSON output, methodology, and archive tracking.</p>
         <a class="button button-primary" href="{{ "/signals/" | relURL }}">Open Signals</a>
       </div>
       <div class="story-feature__insight reveal">
@@ -226,8 +253,8 @@
         <p>Download a template or checklist when a one-on-one, handoff, or hard conversation needs more structure.</p>
       </article>
       <article class="offer-card reveal">
-        <h3>Stay on the list</h3>
-        <p>Keep receiving practical updates, new articles, and useful leadership tools instead of trying to relearn everything under pressure.</p>
+        <h3>Build the full system</h3>
+        <p>Use the Leadership Operating System to connect articles, assessments, tools, and habits into one practical development rhythm.</p>
       </article>
     </div>
   </section>

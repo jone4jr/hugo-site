@@ -6,7 +6,11 @@
 .guide-grid,
 .tool-grid,
 .resource-stack,
-.result-links {
+.result-links,
+.system-grid,
+.system-rhythm-grid,
+.library-grid,
+.library-stack {
   display: grid;
   gap: 1.2rem;
 }
@@ -17,7 +21,8 @@
 }
 
 .resource-stack,
-.result-links {
+.result-links,
+.library-stack {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
@@ -30,7 +35,10 @@
 .signals-status-card,
 .signals-board,
 .signals-method-card,
-.signals-archive-panel {
+.signals-archive-panel,
+.system-card,
+.system-rhythm-card,
+.library-column {
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
   backdrop-filter: blur(12px);
@@ -46,7 +54,10 @@
 .signals-status-card,
 .signals-board,
 .signals-method-card,
-.signals-archive-panel {
+.signals-archive-panel,
+.system-card,
+.system-rhythm-card,
+.library-column {
   padding: 1.5rem;
 }
 
@@ -210,6 +221,60 @@
   max-width: 42rem;
   font-size: 1rem;
   margin-bottom: 0;
+}
+
+.system-feature {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.system-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.system-grid--compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.system-card {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.system-card span,
+.system-rhythm-card strong {
+  color: var(--clay-500);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.system-card h3,
+.system-rhythm-card h3 {
+  margin-bottom: 0.2rem;
+}
+
+.system-card:hover,
+.system-card:focus-visible,
+.result-link:hover,
+.result-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.system-rhythm-grid {
+  grid-template-columns: minmax(0, 1.1fr) repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.library-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.library-column {
+  display: grid;
+  gap: 1rem;
 }
 
 .signals-hero-actions,
@@ -452,12 +517,20 @@
 }
 
 @media (max-width: 1100px) {
-  .signals-method-grid {
+  .signals-method-grid,
+  .system-grid,
+  .system-grid--compact,
+  .library-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .signals-method-grid .section-heading {
+  .signals-method-grid .section-heading,
+  .system-rhythm-grid .section-heading {
     grid-column: 1 / -1;
+  }
+
+  .system-rhythm-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -470,7 +543,8 @@
 
   .guide-layout,
   .signals-operating-grid,
-  .signals-page-layout {
+  .signals-page-layout,
+  .system-rhythm-grid {
     grid-template-columns: 1fr;
   }
 
@@ -496,14 +570,21 @@
   .resource-stack,
   .result-links,
   .signals-meta-grid,
-  .signals-method-grid {
+  .signals-method-grid,
+  .system-grid,
+  .system-grid--compact,
+  .library-grid,
+  .library-stack {
     grid-template-columns: 1fr;
   }
 
   .signals-status-card,
   .signals-board,
   .signals-method-card,
-  .signals-archive-panel {
+  .signals-archive-panel,
+  .system-card,
+  .system-rhythm-card,
+  .library-column {
     padding: 1.15rem;
   }
 }
