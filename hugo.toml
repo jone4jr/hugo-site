@@ -87,6 +87,11 @@ summaryLength = 28
   weight = 30
 
 [[menu.main]]
+  name = "Signals"
+  url = "/signals/"
+  weight = 35
+
+[[menu.main]]
   name = "Leadership Development"
   url = "/leadership-development/"
   weight = 40
