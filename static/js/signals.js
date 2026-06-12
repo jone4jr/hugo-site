@@ -3,6 +3,15 @@
     return typeof value === "number" && isFinite(value);
   }
 
+  function pick() {
+    for (var index = 0; index < arguments.length; index += 1) {
+      if (arguments[index] !== null && arguments[index] !== undefined && arguments[index] !== "") {
+        return arguments[index];
+      }
+    }
+    return null;
+  }
+
   function display(value, fallback) {
     if (value === null || value === undefined || value === "") {
       return fallback || "N/A";
@@ -10,23 +19,38 @@
     return String(value);
   }
 
+  function numberValue(value) {
+    if (isNumber(value)) {
+      return value;
+    }
+    if (typeof value === "string" && value.trim() !== "") {
+      var parsed = Number(value);
+      if (isNumber(parsed)) {
+        return parsed;
+      }
+    }
+    return null;
+  }
+
   function formatMoney(value) {
-    if (!isNumber(value)) {
+    var number = numberValue(value);
+    if (number === null) {
       return display(value);
     }
-    return "$" + value.toFixed(2);
+    return "$" + number.toFixed(2);
   }
 
   function formatPercent(value) {
-    if (!isNumber(value)) {
+    var number = numberValue(value);
+    if (number === null) {
       return display(value);
     }
-    return value.toFixed(1) + "%";
+    return number.toFixed(1) + "%";
   }
 
   function formatZone(value) {
     if (Array.isArray(value) && value.length >= 2) {
-      return formatMoney(Number(value[0])) + " - " + formatMoney(Number(value[1]));
+      return formatMoney(value[0]) + " - " + formatMoney(value[1]);
     }
     return display(value);
   }
@@ -51,16 +75,16 @@
 
   function ratingFor(item, side) {
     if (side === "buys") {
-      return display(item.long_rating || item.rating);
+      return display(pick(item.long_rating, item.rating));
     }
-    return display(item.short_rating || item.rating);
+    return display(pick(item.short_rating, item.rating));
   }
 
   function labelFor(item, side) {
     if (side === "buys") {
-      return display(item.long_label || item.label);
+      return display(pick(item.long_label, item.label));
     }
-    return display(item.short_label || item.label);
+    return display(pick(item.short_label, item.label));
   }
 
   function detailUrlFor(item) {
@@ -113,6 +137,7 @@
       var tickerCell = document.createElement("td");
       var link = document.createElement("a");
       var company = document.createElement("span");
+      var tradePlan = item.trade_plan || {};
 
       link.className = "signals-ticker";
       link.href = detailUrlFor(item);
@@ -129,10 +154,10 @@
       appendCell(row, ratingFor(item, side), "signals-rating");
       appendCell(row, labelFor(item, side));
       appendCell(row, formatMoney(item.price));
-      appendCell(row, formatPercent(item.upside_pct || item.downside_pct));
-      appendCell(row, formatZone(item.entry_zone || (item.trade_plan && item.trade_plan.entry_zone)));
-      appendCell(row, formatMoney(item.target || (item.trade_plan && item.trade_plan.target)));
-      appendCell(row, formatMoney(item.stop || (item.trade_plan && item.trade_plan.stop)));
+      appendCell(row, formatPercent(pick(item.upside_pct, item.downside_pct)));
+      appendCell(row, formatZone(pick(item.entry_zone, tradePlan.entry_zone)));
+      appendCell(row, formatMoney(pick(item.target, tradePlan.target)));
+      appendCell(row, formatMoney(pick(item.stop, tradePlan.stop)));
       body.appendChild(row);
     });
   }
