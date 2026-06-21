@@ -1,7 +1,9 @@
 ---
 title: "5AM Shift"
-seo_title: "Best Stocks to Buy Now and Leadership Strategy Blog"
-description: "Weekly long-only stock watchlists, investment strategy notes, and practical leadership essays from 5AM Shift."
-hero_title: "Weekly stock watchlists, market strategy, and leadership notes for disciplined decision-makers."
-hero_subtitle: "Read long-only watchlists with buy zones and invalidation levels, then keep building better judgment with practical leadership essays for real operating environments."
+seo_title: "Best Stocks to Buy Now | Investment Strategy and Management Quality"
+description: "Weekly long-only stock watchlists and investment strategy notes that connect technical setups with management quality, execution discipline, and leadership."
+hero_title: "Best stocks to buy now, filtered through execution, leadership, and risk discipline."
+hero_subtitle: "Read long-only weekly watchlists with defined buy zones and invalidation levels, then use management-quality essays to understand why leadership, culture, and operating discipline can drive stronger long-term growth."
+image: "/images/investment-leadership-og.svg"
+image_alt: "Investment research dashboard showing watchlist rankings, management quality signals, and risk discipline."
 ---

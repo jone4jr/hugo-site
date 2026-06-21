@@ -1,12 +1,11 @@
 {{ $page := . }}
-{{ $category := .Params.category | default "Leadership" }}
+{{ $category := .Params.category | default "Investment Leadership" }}
 {{ $summary := .Params.summary | default .Summary }}
+{{ $image := .Params.image | default .Site.Params.defaultImage }}
 <article class="article-card reveal" data-category="{{ urlize $category }}">
-  {{ with .Params.image }}
-    <a class="article-card__media" href="{{ $page.RelPermalink }}">
-      <img src="{{ . }}" alt="{{ $page.Params.image_alt | default $page.Title }}" loading="lazy" decoding="async">
-    </a>
-  {{ end }}
+  <a class="article-card__media" href="{{ $page.RelPermalink }}">
+    <img src="{{ $image }}" alt="{{ $page.Params.image_alt | default $page.Title }}" loading="lazy" decoding="async">
+  </a>
   <div class="article-card__meta">
     <span>{{ $category }}</span>
     <span>{{ .ReadingTime }} min read</span>

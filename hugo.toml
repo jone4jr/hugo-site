@@ -47,18 +47,18 @@ summaryLength = 28
 
 [params]
   author = "Jared Jones"
-  description = "Weekly long-only stock watchlists, investment strategy notes, and practical leadership essays for operators who want disciplined decision-making."
-  tagline = "Weekly stock strategy and practical leadership essays."
+  description = "Weekly long-only stock watchlists and investment strategy notes through the lens of management quality, execution discipline, and leadership."
+  tagline = "Stock strategy through an operating leadership lens."
   city = "Dayton, OH"
   defaultImage = "/images/og-default.svg"
-  mainTopic = "Investment Strategy and Leadership"
-  siteTopics = ["best stocks to buy now", "weekly stock watchlist", "investment strategy", "stock market watchlist", "long-only stock ideas", "leadership blog", "operations leadership", "plant manager leadership"]
+  mainTopic = "Investment Strategy and Management Quality"
+  siteTopics = ["best stocks to buy now", "weekly stock watchlist", "investment strategy", "management quality", "leadership and stock performance", "operating leverage", "capital allocation", "long-only stock ideas"]
   contactEmail = "hello@5amshift.com"
   googleSiteVerification = "XRsg8z4wIMngioHdOADV91C8ps-pjw16kvkGBcDATq0"
 
   [params.newsletter]
     heading = "Join the 5AM Shift research list"
-    blurb = "Get weekly stock watchlists, investment strategy notes, leadership essays, and practical tools."
+    blurb = "Get weekly long-only watchlists, management-quality notes, and investment leadership essays."
     button = "Subscribe"
     provider = "formsubmit"
     recipient = "hello@5amshift.com"
@@ -77,7 +77,7 @@ summaryLength = 28
   weight = 15
 
 [[menu.main]]
-  name = "Leadership Blog"
+  name = "Investment Leadership Blog"
   url = "/posts/"
   weight = 20
 
@@ -87,7 +87,7 @@ summaryLength = 28
   weight = 30
 
 [[menu.main]]
-  name = "Leadership Development"
+  name = "Management Quality"
   url = "/leadership-development/"
   weight = 40
 
