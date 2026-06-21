@@ -14,7 +14,8 @@
       "upside": "9.0%",
       "entry": "$206-211",
       "target": "$216 / $222 / $230",
-      "stop": "$203"
+      "stop": "$203",
+      "url": "/stocks/nvda/"
     },
     {
       "ticker": "AVGO",
@@ -24,7 +25,8 @@
       "upside": "8.2%",
       "entry": "$401-412",
       "target": "$426 / $440 / $455",
-      "stop": "$397"
+      "stop": "$397",
+      "url": "/stocks/avgo/"
     },
     {
       "ticker": "AMD",
@@ -34,7 +36,8 @@
       "upside": "7.0%",
       "entry": "$525-538",
       "target": "$555 / $570 / $590",
-      "stop": "$517"
+      "stop": "$517",
+      "url": "/stocks/amd/"
     },
     {
       "ticker": "QCOM",
@@ -44,7 +47,8 @@
       "upside": "5.9%",
       "entry": "$218-226",
       "target": "$235 / $242 / $250",
-      "stop": "$213"
+      "stop": "$213",
+      "url": "/stocks/qcom/"
     },
     {
       "ticker": "MRVL",
@@ -54,7 +58,8 @@
       "upside": "6.2%",
       "entry": "$300-312",
       "target": "$325 / $340 / $355",
-      "stop": "$292"
+      "stop": "$292",
+      "url": "/stocks/mrvl/"
     },
     {
       "ticker": "TER",
@@ -64,7 +69,8 @@
       "upside": "5.2%",
       "entry": "$421-438",
       "target": "$452 / $465 / $480",
-      "stop": "$414"
+      "stop": "$414",
+      "url": "/stocks/ter/"
     },
     {
       "ticker": "AMAT",
@@ -74,7 +80,8 @@
       "upside": "3.4%",
       "entry": "$612-622",
       "target": "$638 / $655 / $675",
-      "stop": "$600"
+      "stop": "$600",
+      "url": "/stocks/amat/"
     },
     {
       "ticker": "LRCX",
@@ -84,7 +91,8 @@
       "upside": "3.4%",
       "entry": "$387-396",
       "target": "$405 / $418 / $430",
-      "stop": "$379"
+      "stop": "$379",
+      "url": "/stocks/lrcx/"
     },
     {
       "ticker": "AEIS",
@@ -94,7 +102,8 @@
       "upside": "5.6%",
       "entry": "$358-373",
       "target": "$386 / $397 / $410",
-      "stop": "$350"
+      "stop": "$350",
+      "url": "/stocks/aeis/"
     },
     {
       "ticker": "ALAB",
@@ -104,7 +113,8 @@
       "upside": "9.0%",
       "entry": "$384-405",
       "target": "$430 / $450 / $475",
-      "stop": "$372"
+      "stop": "$372",
+      "url": "/stocks/alab/"
     }
   ],
   "sells": []
