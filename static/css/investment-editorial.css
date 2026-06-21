@@ -46,15 +46,6 @@
   text-underline-offset: 3px;
 }
 
-.stock-table a[target="_blank"]::after,
-.prose a[target="_blank"]::after {
-  content: "↗";
-  display: inline-block;
-  margin-left: 0.2rem;
-  font-size: 0.78em;
-  line-height: 1;
-}
-
 .article-cover img[src$=".svg"],
 .article-card__media img[src$=".svg"],
 .feature-article__media img[src$=".svg"] {
