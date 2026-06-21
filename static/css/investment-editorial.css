@@ -46,6 +46,84 @@
   text-underline-offset: 3px;
 }
 
+.share-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.share-actions .eyebrow {
+  margin-bottom: 0;
+}
+
+.share-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink-950);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.share-button span:first-child {
+  display: inline-grid;
+  width: 1.25rem;
+  height: 1.25rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(var(--primary-rgb), 0.08);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.share-button:hover,
+.share-button:focus-visible {
+  border-color: rgba(var(--secondary-rgb), 0.34);
+  background: rgba(var(--secondary-rgb), 0.08);
+  color: #0b603a;
+}
+
+.share-button--facebook span:first-child {
+  background: #1877f2;
+  color: #fff;
+}
+
+.share-button--linkedin span:first-child {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.share-button--instagram span:first-child {
+  background: #111;
+  color: #fff;
+}
+
+.share-button--x span:first-child {
+  background: #000;
+  color: #fff;
+}
+
+.share-status {
+  margin: 0;
+  color: #0b603a;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .article-cover img[src$=".svg"],
 .article-card__media img[src$=".svg"],
 .feature-article__media img[src$=".svg"] {
@@ -59,5 +137,11 @@
 
   .feature-article__media img {
     min-height: 14rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .share-buttons {
+    grid-template-columns: 1fr;
   }
 }
