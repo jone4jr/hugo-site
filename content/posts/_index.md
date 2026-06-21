@@ -1,7 +1,9 @@
 ---
-title: "Leadership Articles"
-seo_title: "Leadership Articles for Plant Managers, Supervisors, and Operations Leaders"
-description: "Leadership articles for plant managers, supervisors, and operations leaders on accountability, employee retention, communication, supervisor development, and calmer operations."
+title: "Investment Leadership Blog"
+seo_title: "Investment Leadership Blog | Management Quality and Stock Research"
+description: "Essays on management quality, leadership discipline, operating leverage, retention, accountability, and execution signals that investors can use in stock research."
+image: "/images/investment-leadership-og.svg"
+image_alt: "Investment leadership research notes connecting operating discipline to stock research."
 ---
 
-Browse practical leadership writing for plant managers, supervisors, and operations leaders. Start with the newest pieces below or filter by the problem you are trying to solve: accountability, employee retention, meetings, communication, supervisor development, or plant culture.
+Browse essays that connect leadership behavior to investment judgment. The topics still come from real operating pressure: accountability, retention, meetings, execution, firefighting, and supervisor development. The lens is now sharper for investors: what do these behaviors reveal about management quality, operating leverage, margin durability, and growth execution?
