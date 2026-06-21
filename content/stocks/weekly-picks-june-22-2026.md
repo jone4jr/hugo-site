@@ -1,6 +1,6 @@
 ---
-title: "Weekly Stock Picks - Week of November 11, 2025"
-date: 2025-11-10T20:00:00-05:00
+title: "Weekly Stock Picks - Week of June 22, 2026"
+date: 2026-06-21T20:00:00-05:00
 description: "Top 10 technology stock picks for the week with technical analysis, price targets, and risk management levels"
 ---
 
