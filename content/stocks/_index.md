@@ -1,19 +1,8 @@
 ---
-title: "Stock Analysis"
-seo_title: "Weekly Stock Picks and Technical Analysis"
-description: "Weekly stock picks with technical analysis, entry zones, price targets, and risk management for active traders and investors"
+title: "Company Research Notes"
+seo_title: "Company Research Notes for Weekly Stock Watchlist"
+description: "Quick company research notes linked from the weekly 5AM Shift stock watchlist."
+robots: "index,follow,max-image-preview:large"
 ---
 
-## Weekly Stock Picks & Technical Analysis
-
-High-probability technical setups in technology and growth sectors. Each week features 10 ranked opportunities with specific entry zones, price targets, and stop levels for disciplined risk management.
-
-### What You'll Find Here
-
-- **Weekly Top 10 Rankings** - Best technical setups updated every week
-- **Detailed Company Analysis** - 500-word deep dives on each pick
-- **Clear Entry & Exit Levels** - Specific buy zones, targets, and stops
-- **Risk/Reward Ratios** - Quantified risk management for every trade
-- **Performance Tracking** - Historical results and win rates
-
-Browse the latest picks below or check the [signals dashboard](/signals/) for real-time updates.
+These company notes support the weekly 5AM Shift watchlist. They are not a standalone stock-picks navigation section; they exist so each ranked ticker can link to a focused writeup on why the company made the list, the entry zone, targets, stop level, and key risks.

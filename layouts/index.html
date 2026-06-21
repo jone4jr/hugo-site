@@ -1,261 +1,56 @@
 {{ define "main" }}
+  {{ $stockPages := sort (where .Site.RegularPages "Section" "best-stocks-to-buy-now") "Date" "desc" }}
+  {{ $latestStock := false }}{{ if gt (len $stockPages) 0 }}{{ $latestStock = index $stockPages 0 }}{{ end }}
   {{ $posts := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" }}
-  {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
+  {{ $latestPosts := first 6 $posts }}
   {{ $startPages := sort (where .Site.RegularPages "Section" "start-here") "Weight" "asc" }}
-  {{ $systemPages := sort (where .Site.RegularPages "Section" "leadership-system") "Weight" "asc" }}
-  {{ $tools := sort (where .Site.RegularPages "Section" "tools") "Weight" "asc" }}
-  {{ $latest := first 6 $posts }}
-  {{ $categoryTerms := .Site.Taxonomies.categories.Alphabetical }}
+  {{ $assessments := sort (where .Site.RegularPages "Section" "assessments") "Title" "asc" }}
 
   <section class="hero-section">
     <div class="shell hero-grid">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Leadership development for high-accountability environments</p>
+        <p class="eyebrow">Weekly stock strategy and leadership essays</p>
         <h1>{{ .Params.hero_title }}</h1>
         <p class="hero-lead">{{ .Params.hero_subtitle }}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="{{ "/leadership-system/" | relURL }}">Build your leadership system</a>
-          <a class="button button-secondary" href="{{ "/assessments/disc-profile/" | relURL }}">Take the free DISC leadership profile</a>
+          <a class="button button-primary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">Best stocks to buy now</a>
+          <a class="button button-secondary" href="{{ "/posts/" | relURL }}">Leadership blog</a>
         </div>
         <div class="hero-proof">
-          <div>
-            <strong>15+ years</strong>
-            <span>leading in manufacturing and operations</span>
-          </div>
-          <div>
-            <strong>950+ employees</strong>
-            <span>inside large, multi-layer leadership environments</span>
-          </div>
-          <div>
-            <strong>8-part system</strong>
-            <span>operating rhythm, standards, coaching, communication, and trust</span>
-          </div>
+          <div><strong>Long-only</strong><span>Weekly watchlists with entry zones and invalidation levels</span></div>
+          <div><strong>Risk first</strong><span>Pullbacks, retests, and consolidation before chasing strength</span></div>
+          <div><strong>Operator lens</strong><span>Leadership essays for better decisions under pressure</span></div>
         </div>
       </div>
-      <div class="hero-panel reveal">
-        {{ partial "newsletter-form.html" (dict
-          "heading" "Subscribe and unlock the leadership library"
-          "copy" "Start with the free DISC-style leadership profile, then use the diagnostics, tools, and system guides to build a steadier leadership rhythm."
-          "button" .Site.Params.newsletter.button
-          "source" "hero"
-          "class" "newsletter-form--hero"
-          "success" .Site.Params.newsletter.success
-        ) }}
-      </div>
+      {{ with $latestStock }}
+        <aside class="hero-panel market-brief reveal">
+          <div><p class="eyebrow">Latest watchlist</p><h2>{{ .Title }}</h2><p>{{ .Params.summary }}</p></div>
+          <ul class="market-brief__list">
+            {{ range first 4 .Params.top_picks }}
+              <li><span class="market-brief__rank">{{ .rank }}</span><span class="market-brief__ticker">{{ .ticker }} <small>{{ .focus }}</small></span><span class="market-brief__grade">{{ .grade }}</span></li>
+            {{ end }}
+          </ul>
+          <a class="button button-primary" href="{{ .RelPermalink }}">Read the weekly watchlist</a>
+        </aside>
+      {{ end }}
     </div>
   </section>
 
-  {{ if gt (len $categoryTerms) 0 }}
-    <section class="section section-tight">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Browse by problem</p>
-          <h2>Leadership topics plant leaders actually deal with.</h2>
-          <p>Start with the issue in front of you: accountability, communication, employee retention, supervisor development, plant leadership, or systems thinking.</p>
-        </div>
-        <div class="topic-grid">
-          {{ range $categoryTerms }}
-            <a class="topic-card reveal" href="{{ .Page.RelPermalink }}">
-              <span class="topic-card__count">{{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}</span>
-              <h3>{{ .Page.Title }}</h3>
-              <p>Explore writing connected to {{ lower .Page.Title }}.</p>
-            </a>
-          {{ end }}
-        </div>
-      </div>
-    </section>
+  {{ with $latestStock }}
+    <div class="market-strip"><div class="shell market-strip__inner"><span class="market-strip__label">Current top focus</span>{{ $stockURL := .RelPermalink }}{{ range .Params.top_picks }}<a class="ticker-pill" href="{{ $stockURL }}"><span>{{ .ticker }}</span><span>{{ .grade }}</span></a>{{ end }}</div></div>
   {{ end }}
 
-  <section class="signal-bar">
-    <div class="shell signal-grid">
-      <div class="signal-card reveal">
-        <p class="eyebrow">Built for real leaders</p>
-        <h2>Not leadership theater.</h2>
-        <p>This site is for people who need clear standards, honest feedback, better meetings, stronger supervisors, and a team that can perform under pressure.</p>
-      </div>
-      <div class="signal-card reveal">
-        <p class="eyebrow">Start here</p>
-        <h3>Read one article, take one assessment, practice one change.</h3>
-        <p>The goal is not more content. The goal is a better shift, a better meeting, and a better decision the next time pressure rises.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-contrast">
-    <div class="shell system-feature">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Leadership Operating System</p>
-        <h2>Eight parts of leadership that make the week run calmer.</h2>
-        <p>The expanded system turns the site from a blog into a practical development path: rhythm, standards, supervisors, coaching, communication, retention, change, and improvement.</p>
-      </div>
-      <div class="system-grid system-grid--compact">
-        {{ range first 8 $systemPages }}
-          <a class="system-card reveal" href="{{ .RelPermalink }}">
-            <span>{{ .Params.problem }}</span>
-            <h3>{{ .Title }}</h3>
-            <p>{{ .Params.summary }}</p>
-          </a>
-        {{ end }}
-      </div>
-      <div class="section-cta">
-        <a class="button button-primary" href="{{ "/leadership-system/" | relURL }}">Explore the full system</a>
-        <a class="button button-secondary" href="{{ "/library/" | relURL }}">Open the subscriber library</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Start here</p>
-        <h2>Choose the leadership problem in front of you.</h2>
-        <p>These guides are built for plant managers, supervisors, and operations leaders who want one clear next step on accountability, retention, firefighting, and supervisor development.</p>
-      </div>
-      <div class="guide-grid">
-        {{ range $startPages }}
-          {{ partial "guide-card.html" . }}
-        {{ end }}
-      </div>
-      <div class="section-cta">
-        <a class="button button-secondary" href="{{ "/start-here/" | relURL }}">Browse all start-here guides</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-contrast">
-    <div class="shell feature-band">
-      <div class="feature-band__copy reveal">
-        <p class="eyebrow">Leadership development</p>
-        <h2>Practical leadership development for real operating environments.</h2>
-        <p>Come here for practical leadership articles, useful reflection tools, and a steady development rhythm you can use in the middle of real work.</p>
-        <a class="button button-secondary" href="{{ "/leadership-development/" | relURL }}">Explore leadership development</a>
-      </div>
-      <div class="feature-band__panel reveal">
-        <div class="metric-stack">
-          <div>
-            <strong>Practical articles</strong>
-            <span>Clear writing on accountability, culture, communication, and operations</span>
-          </div>
-          <div>
-            <strong>Free assessments</strong>
-            <span>Tools that help you reflect on your style, blind spots, and next step</span>
-          </div>
-          <div>
-            <strong>Subscriber library</strong>
-            <span>A growing resource hub for guides, templates, scorecards, and diagnostics</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Leadership assessments</p>
-        <h2>Free assessments to sharpen how you lead</h2>
-        <p>Start with the DISC-style profile, then use the other tools to think more clearly about accountability, delegation, meetings, retention, and change.</p>
-      </div>
-      <div class="assessment-grid">
-        {{ range first 6 $assessments }}
-          {{ partial "assessment-card.html" . }}
-        {{ end }}
-      </div>
-      <div class="section-cta">
-        <a class="button button-secondary" href="{{ "/assessments/" | relURL }}">Browse all assessments</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-contrast">
-    <div class="shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Free tools</p>
-        <h2>Templates and checklists you can use this week.</h2>
-        <p>Download practical tools for one-on-ones, difficult conversations, shift handoffs, accountability, meetings, and clearer change communication.</p>
-      </div>
-      <div class="tool-grid">
-        {{ range first 6 $tools }}
-          {{ partial "tool-card.html" . }}
-        {{ end }}
-      </div>
-      <div class="section-cta">
-        <a class="button button-secondary" href="{{ "/tools/" | relURL }}">Browse all tools</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark">
-    <div class="shell story-feature signals-home-feature">
-      <div class="story-feature__meta reveal">
-        <p class="eyebrow">Personal research lab</p>
-        <span class="pill">5amShift Screener</span>
-        <h2>Daily stock signals, kept separate from leadership development.</h2>
-        <p>The Signals section remains a clearly labeled research dashboard for future nightly JSON output, methodology, and archive tracking.</p>
-        <a class="button button-primary" href="{{ "/signals/" | relURL }}">Open Signals</a>
-      </div>
-      <div class="story-feature__insight reveal">
-        <p class="quote-block">A research dashboard should show its work.</p>
-        <p>Each future run is structured around transparent scoring pillars, data freshness, entry zones, targets, stops, and a visible educational-use disclaimer.</p>
-      </div>
-    </div>
-  </section>
-
-  {{ if gt (len $posts) 0 }}
-    {{ $featured := index $posts 0 }}
-    <section class="section section-dark">
-      <div class="shell story-feature">
-        <div class="story-feature__meta reveal">
-          <p class="eyebrow">Featured article</p>
-          <span class="pill">{{ $featured.Params.category }}</span>
-          <h2>{{ $featured.Title }}</h2>
-          <p>{{ $featured.Params.summary }}</p>
-          <a class="button button-primary" href="{{ $featured.RelPermalink }}">Read the article</a>
-        </div>
-        <div class="story-feature__insight reveal">
-          <p class="quote-block">"{{ $featured.Params.subtitle }}"</p>
-          <p>Start here if you want a quick feel for the tone of the site: direct, practical, and built for leaders who need ideas they can use this week.</p>
-        </div>
-      </div>
-    </section>
+  {{ with $latestStock }}
+    <section class="section"><div class="shell research-board"><article class="research-board__main reveal"><p class="eyebrow">Best stocks to buy now</p><h2><a href="{{ .RelPermalink }}">This week's ranked long-only watchlist</a></h2><p>Each candidate links to a quick writeup explaining why the company made the list, where the cleaner entry lives, and what invalidates the setup.</p><div class="section-cta"><a class="button button-primary" href="{{ .RelPermalink }}">Open the full table</a><a class="button button-secondary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">View the archive</a></div></article><aside class="research-board__side reveal"><p class="eyebrow">Strategy notes</p><ul class="data-list"><li><span>Theme</span><strong>AI and semiconductors</strong></li><li><span>Best focus</span><strong>NVDA, AVGO, AMD, QCOM</strong></li><li><span>Execution</span><strong>Retests and consolidations</strong></li><li><span>Risk rule</span><strong>No gap chasing</strong></li></ul></aside></div></section>
   {{ end }}
 
-  <section class="section">
-    <div class="shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Latest articles</p>
-        <h2>Leadership articles you can use on your next shift, meeting, or coaching conversation</h2>
-        <p>Browse practical writing on plant leadership, supervisor development, accountability, employee retention, communication, change, and operating rhythm.</p>
-      </div>
-      <div class="articles-grid">
-        {{ range $latest }}
-          {{ partial "article-card.html" . }}
-        {{ end }}
-      </div>
-      <div class="section-cta">
-        <a class="button button-secondary" href="{{ "/posts/" | relURL }}">Browse the full library</a>
-      </div>
-    </div>
-  </section>
+  {{ if gt (len $latestPosts) 0 }}
+    <section class="section section-contrast"><div class="shell"><div class="section-heading reveal"><p class="eyebrow">Leadership blog</p><h2>Leadership essays for practical operators</h2><p>Clear writing on accountability, communication, plant leadership, retention, and how people actually behave under pressure.</p></div><div class="articles-grid">{{ range $latestPosts }}{{ partial "article-card.html" . }}{{ end }}</div></div></section>
+  {{ end }}
 
-  <section class="section section-contrast">
-    <div class="shell offers-grid">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Keep growing</p>
-        <h2>Come back with the next real problem.</h2>
-      </div>
-      <article class="offer-card reveal">
-        <h3>Start with one guide</h3>
-        <p>Use the start-here pages when you need help with accountability, employee retention, supervisor development, or calmer execution.</p>
-      </article>
-      <article class="offer-card reveal">
-        <h3>Use one practical tool</h3>
-        <p>Download a template or checklist when a one-on-one, handoff, or hard conversation needs more structure.</p>
-      </article>
-      <article class="offer-card reveal">
-        <h3>Build the full system</h3>
-        <p>Use the Leadership Operating System to connect articles, assessments, tools, and habits into one practical development rhythm.</p>
-      </article>
-    </div>
-  </section>
+  <section class="section"><div class="shell"><div class="section-heading reveal"><p class="eyebrow">Start here</p><h2>Choose the operating problem in front of you</h2><p>Use the guides when you need a practical next step on accountability, retention, supervisor development, or calmer execution.</p></div><div class="guide-grid">{{ range $startPages }}{{ partial "guide-card.html" . }}{{ end }}</div></div></section>
+
+  <section class="section section-contrast"><div class="shell research-board"><div class="research-board__main reveal"><p class="eyebrow">Leadership assessments</p><h2>Tools for better decisions and better conversations</h2><p>Assessments stay available for readers who want self-awareness alongside the market and leadership writing.</p><div class="section-cta"><a class="button button-secondary" href="{{ "/assessments/" | relURL }}">Browse assessments</a></div></div><div class="stock-grid">{{ range first 3 $assessments }}{{ partial "assessment-card.html" . }}{{ end }}</div></div></section>
+
+  <section class="section" id="subscribe"><div class="shell cta-band reveal"><div><p class="eyebrow">Stay current</p><h2>Get the next watchlist and the next leadership essay.</h2><p>Weekly stock research, practical strategy notes, and leadership writing in one list.</p></div><div class="cta-band__form">{{ partial "newsletter-form.html" (dict "heading" "" "copy" "" "button" "Subscribe" "source" "home" "note" "Long-only watchlists with defined risk levels." "success" .Site.Params.newsletter.success) }}</div></div></section>
 {{ end }}

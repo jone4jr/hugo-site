@@ -47,24 +47,24 @@ summaryLength = 28
 
 [params]
   author = "Jared Jones"
-  description = "Manufacturing leadership blog and leadership development resource for plant managers, supervisors, and operations leaders focused on accountability, employee retention, communication, and stronger teams."
-  tagline = "Leadership development from the floor to the front office."
+  description = "Weekly long-only stock watchlists, investment strategy notes, and practical leadership essays for operators who want disciplined decision-making."
+  tagline = "Weekly stock strategy and practical leadership essays."
   city = "Dayton, OH"
   defaultImage = "/images/og-default.svg"
-  mainTopic = "Manufacturing Leadership"
-  siteTopics = ["manufacturing leadership", "plant manager leadership", "supervisor leadership training", "operations leadership", "employee retention leadership", "accountability in the workplace", "leadership communication"]
+  mainTopic = "Investment Strategy and Leadership"
+  siteTopics = ["best stocks to buy now", "weekly stock watchlist", "investment strategy", "stock market watchlist", "long-only stock ideas", "leadership blog", "operations leadership", "plant manager leadership"]
   contactEmail = "hello@5amshift.com"
   googleSiteVerification = "XRsg8z4wIMngioHdOADV91C8ps-pjw16kvkGBcDATq0"
 
   [params.newsletter]
-    heading = "Join the 5AM Shift leadership list"
-    blurb = "Get practical leadership updates, new articles, and access to the assessment library."
-    button = "Subscribe and unlock the library"
+    heading = "Join the 5AM Shift research list"
+    blurb = "Get weekly stock watchlists, investment strategy notes, leadership essays, and practical tools."
+    button = "Subscribe"
     provider = "formsubmit"
     recipient = "hello@5amshift.com"
     action = ""
     subject = "New 5AM Shift subscriber"
-    success = "Thanks. Your assessment library is now unlocked on this device."
+    success = "Thanks. You are on the 5AM Shift list."
 
 [[menu.main]]
   name = "Home"
@@ -72,49 +72,29 @@ summaryLength = 28
   weight = 10
 
 [[menu.main]]
-  name = "Start Here"
-  url = "/start-here/"
+  name = "Best Stocks to Buy Now"
+  url = "/best-stocks-to-buy-now/"
   weight = 15
 
 [[menu.main]]
-  name = "System"
-  url = "/leadership-system/"
-  weight = 18
-
-[[menu.main]]
-  name = "Articles"
+  name = "Leadership Blog"
   url = "/posts/"
   weight = 20
 
 [[menu.main]]
-  name = "Assessments"
-  url = "/assessments/"
+  name = "Start Here"
+  url = "/start-here/"
   weight = 30
 
 [[menu.main]]
-  name = "Library"
-  url = "/library/"
-  weight = 34
+  name = "Leadership Development"
+  url = "/leadership-development/"
+  weight = 40
 
 [[menu.main]]
-  name = "Signals"
-  url = "/signals/"
-  weight = 35
-
-[[menu.main]]
-  name = "Stock Picks"
-  url = "/stocks/"
-  weight = 36
-
-[[menu.main]]
-  name = "Portfolio"
-  url = "/portfolio/"
-  weight = 37
-
-[[menu.main]]
-  name = "Insights"
-  url = "/insights/"
-  weight = 38
+  name = "Assessments"
+  url = "/assessments/"
+  weight = 45
 
 [[menu.main]]
   name = "About"

@@ -1,7 +1,7 @@
 ---
 title: "5AM Shift"
-seo_title: "Manufacturing Leadership Blog for Plant Managers and Supervisors"
-description: "Manufacturing leadership blog with practical advice for plant managers, supervisors, and operations leaders on accountability, employee retention, communication, and stronger teams."
-hero_title: "Practical leadership advice for plant managers, supervisors, and operations leaders."
-hero_subtitle: "Articles, free leadership assessments, and field-tested ideas for accountability, employee retention, communication, supervisor development, and running calmer operations."
+seo_title: "Best Stocks to Buy Now and Leadership Strategy Blog"
+description: "Weekly long-only stock watchlists, investment strategy notes, and practical leadership essays from 5AM Shift."
+hero_title: "Weekly stock watchlists, market strategy, and leadership notes for disciplined decision-makers."
+hero_subtitle: "Read long-only watchlists with buy zones and invalidation levels, then keep building better judgment with practical leadership essays for real operating environments."
 ---
