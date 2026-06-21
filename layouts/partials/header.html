@@ -6,7 +6,7 @@
     <span class="brand-mark">5AM</span>
     <span class="brand-copy">
       <strong>Shift</strong>
-      <span>Markets and leadership</span>
+      <span>Investment strategy</span>
     </span>
   </a>
   <button class="nav-toggle js-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
@@ -20,41 +20,40 @@
       <span class="brand-mark">5AM</span>
       <span class="brand-copy">
         <strong>Shift</strong>
-        <span>Weekly stock strategy and leadership essays.</span>
+        <span>Stock strategy through an operating leadership lens.</span>
       </span>
     </a>
     <nav class="site-nav js-site-nav" id="site-nav" aria-label="Main navigation">
       <details class="nav-group" open>
-        <summary>Markets</summary>
+        <summary>Research</summary>
         <ul>
           <li><a href="{{ $stockSection }}" class="{{ if eq .Section "best-stocks-to-buy-now" }}is-active{{ end }}">Best Stocks to Buy Now</a></li>
           <li><a href="{{ $weeklyPick }}">Latest Weekly Watchlist</a></li>
-          <li><a href="{{ "/posts/" | relURL }}">Investment Strategy Blog</a></li>
+          <li><a href="{{ "/posts/" | relURL }}" class="{{ if eq .Section "posts" }}is-active{{ end }}">Investment Leadership Blog</a></li>
         </ul>
       </details>
       <details class="nav-group" open>
-        <summary>Leadership</summary>
+        <summary>Management Quality</summary>
         <ul>
-          <li><a href="{{ "/posts/" | relURL }}" class="{{ if eq .Section "posts" }}is-active{{ end }}">Leadership Blog</a></li>
-          <li><a href="{{ "/start-here/" | relURL }}" class="{{ if eq .Section "start-here" }}is-active{{ end }}">Start Here</a></li>
-          <li><a href="{{ "/leadership-development/" | relURL }}">Leadership Development</a></li>
+          <li><a href="{{ "/leadership-development/" | relURL }}">Management Quality Framework</a></li>
+          <li><a href="{{ "/start-here/" | relURL }}" class="{{ if eq .Section "start-here" }}is-active{{ end }}">Operating Signals</a></li>
+          <li><a href="{{ "/assessments/" | relURL }}" class="{{ if eq .Section "assessments" }}is-active{{ end }}">Leadership Assessments</a></li>
         </ul>
       </details>
       <details class="nav-group">
         <summary>Tools</summary>
         <ul>
-          <li><a href="{{ "/assessments/" | relURL }}" class="{{ if eq .Section "assessments" }}is-active{{ end }}">Assessments</a></li>
           <li><a href="{{ "/tools/" | relURL }}" class="{{ if eq .Section "tools" }}is-active{{ end }}">Templates Library</a></li>
+          <li><a href="{{ "/about/" | relURL }}">About 5AM Shift</a></li>
         </ul>
       </details>
       <details class="nav-group">
-        <summary>About</summary>
+        <summary>Subscribe</summary>
         <ul>
-          <li><a href="{{ "/about/" | relURL }}">About 5AM Shift</a></li>
-          <li><a href="{{ "/#subscribe" | relURL }}">Subscribe</a></li>
+          <li><a href="{{ "/#subscribe" | relURL }}">Join the Research List</a></li>
         </ul>
       </details>
     </nav>
-    <div class="sidebar-note"><span>Long-only watchlists</span><strong>Defined entries, targets, and risk levels.</strong></div>
+    <div class="sidebar-note"><span>Long-only research</span><strong>Watchlists with defined entries, targets, and invalidation levels.</strong></div>
   </div>
 </aside>
