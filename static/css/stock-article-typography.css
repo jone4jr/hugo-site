@@ -1,0 +1,53 @@
+/* Scoped editorial type scale for weekly stock watchlist articles. */
+.stock-article-layout .article-hero__copy h1 {
+  font-size: 3.1rem;
+  line-height: 1.06;
+  margin-top: 0.55rem;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.stock-article-layout .article-hero__copy .page-hero__lead,
+.stock-article-layout .article-hero__copy > p {
+  max-width: 46rem;
+}
+
+.stock-article-layout .prose h2 {
+  font-size: 2.2rem;
+  line-height: 1.14;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.stock-article-layout .prose h2:first-child {
+  margin-top: 0;
+}
+
+.stock-article-layout .prose h3 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 900px) {
+  .stock-article-layout .article-hero__copy h1 {
+    font-size: 2.55rem;
+  }
+
+  .stock-article-layout .prose h2 {
+    font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .stock-article-layout .article-hero__copy h1 {
+    font-size: 2.12rem;
+    line-height: 1.1;
+  }
+
+  .stock-article-layout .prose h2 {
+    font-size: 1.65rem;
+    line-height: 1.18;
+    margin-top: 2.35rem;
+  }
+}
