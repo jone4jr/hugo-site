@@ -1,5 +1,13 @@
 {{ $rawTitle := .Title }}
-{{ with .Params.seo_title }}{{ $rawTitle = . }}{{ end }}
+{{ if .Params.seo_title }}
+  {{ $rawTitle = .Params.seo_title }}
+{{ else if and .IsPage (eq .Section "posts") }}
+  {{ $rawTitle = printf "%s | Management Quality and Investment Strategy" .Title }}
+{{ else if and .IsPage (eq .Section "best-stocks-to-buy-now") }}
+  {{ $rawTitle = printf "%s | Weekly Stock Watchlist" .Title }}
+{{ else if and .IsPage (or (eq .Section "start-here") (eq .Section "tools") (eq .Section "assessments")) }}
+  {{ $rawTitle = printf "%s | Management Quality Tools" .Title }}
+{{ end }}
 {{ $pageTitle := .Site.Title }}
 {{ if .IsHome }}{{ with .Params.seo_title }}{{ $pageTitle = printf "%s | %s" . $.Site.Title }}{{ end }}{{ else }}{{ $pageTitle = printf "%s | %s" $rawTitle .Site.Title }}{{ end }}
 {{ $pageDescription := .Site.Params.description }}
@@ -47,5 +55,6 @@
 <link rel="stylesheet" href="{{ "css/system-overrides.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/finance-redesign.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/stock-article-typography.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/investment-editorial.css" | relURL }}">
 {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} RSS" href="{{ .RelPermalink }}">{{ end }}
 {{ partial "seo-schema.html" . }}
