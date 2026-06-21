@@ -5,12 +5,12 @@
       <div class="shell page-hero__grid">
         <div class="reveal">
           {{ partial "breadcrumbs.html" . }}
-          <p class="eyebrow">Leadership article library</p>
+          <p class="eyebrow">Investment leadership research</p>
           <h1>{{ .Title }}</h1>
           <p>{{ .Description }}</p>
         </div>
         <div class="page-hero__panel reveal">
-          <p class="eyebrow">Popular themes</p>
+          <p class="eyebrow">Research themes</p>
           <div class="filter-bar js-filter-bar" data-target=".article-card">
             <button class="is-active" type="button" data-filter="all">All</button>
             {{ range .Site.Taxonomies.categories.Alphabetical }}
@@ -23,10 +23,11 @@
 
     {{ if gt (len $posts) 0 }}
       {{ $lead := index $posts 0 }}
+      {{ $leadImage := $lead.Params.image | default .Site.Params.defaultImage }}
       <section class="section">
-        <div class="shell feature-article reveal">
+        <div class="shell feature-article feature-article--with-media reveal">
           <div class="feature-article__copy">
-            <p class="eyebrow">Newest article</p>
+            <p class="eyebrow">Newest research note</p>
             <h2><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
             <p>{{ $lead.Params.summary }}</p>
             <div class="feature-article__meta">
@@ -35,6 +36,9 @@
               <span>{{ $lead.Date.Format "January 2, 2006" }}</span>
             </div>
           </div>
+          <a class="feature-article__media" href="{{ $lead.RelPermalink }}">
+            <img src="{{ $leadImage }}" alt="{{ $lead.Params.image_alt | default $lead.Title }}" loading="lazy" decoding="async">
+          </a>
         </div>
       </section>
     {{ end }}
@@ -52,7 +56,7 @@
     <section class="page-hero">
       <div class="shell reveal">
         {{ partial "breadcrumbs.html" . }}
-        <p class="eyebrow">Resource page</p>
+        <p class="eyebrow">Investment resource page</p>
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </div>
