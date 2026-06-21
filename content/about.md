@@ -2,35 +2,81 @@
 title: "About"
 ---
 
-# Hi, I'm Jared
+## Independent Value Investing Research
 
-I've spent over 15 years in manufacturing leadership, from supervising production lines to serving as Plant Manager for facilities with nearly 1,000 employees. Along the way, I've learned that leadership isn't something you find in a textbook—it's forged through real experiences on the shop floor.
+5AM Shift provides independent research and analysis for value investors who want to understand companies at a fundamental level. We combine rigorous financial analysis with operational insight gained from actually running businesses.
 
-## My Background
+## The Operator's Edge
 
-- **Current Role**: Plant Manager at Creative Foam, Dayton, OH
-- **Previous Experience**: Manufacturing leadership at Adient managing facilities with 950+ employees
-- **Certifications**: Six Sigma Black Belt, IATF 16949 Lead Auditor, Quality One Lean Manufacturing
+With 15+ years managing manufacturing operations—from production supervisor to Plant Manager of facilities with 950+ employees—I understand how businesses actually work, not just how they look on paper.
+
+### My Background
+
+- **Current**: Plant Manager at Creative Foam, Dayton, OH
+- **Previous**: Manufacturing leadership at Adient (950+ employee facilities)
+- **Certifications**: Six Sigma Black Belt, IATF 16949 Lead Auditor, Lean Manufacturing
 - **Education**: Master of Finance (in progress), University of Cincinnati
 
-## Why This Blog?
+This operational background shapes every investment analysis:
 
-This blog exists because I wished someone had shared these lessons with me when I was starting out. Leadership in manufacturing comes with unique challenges—managing diverse teams, navigating union dynamics, implementing quality systems, driving continuous improvement, and making tough decisions under pressure.
+- I read 10-Ks like production reports
+- I evaluate management teams like I evaluate my supervisors
+- I assess competitive moats like I assess manufacturing processes  
+- I understand the difference between accounting profits and real cash flow
 
-Every post here comes from real experience. The successes, the failures, and everything in between. My goal is simple: help other leaders navigate the challenges I've faced and share what actually works in the real world of manufacturing operations.
+## Investment Philosophy
+
+**Value + Quality + Operational Understanding**
+
+I look for businesses with:
+- Strong competitive positions (real moats, not accounting fiction)
+- Durable cash flow generation (not just GAAP earnings)
+- Quality management teams (execution capability matters)
+- Significant margin of safety (30-50%+ discount to intrinsic value)
+
+**Concentrated Portfolio**
+- 10-15 positions maximum
+- 3-5 year holding periods
+- Focus on industrial, manufacturing, and business services
+- No speculative plays or turnarounds without strong catalysts
 
 ## What You'll Find Here
 
-- **Leadership Lessons**: Real stories from managing teams and operations
-- **Operational Excellence**: Practical approaches to Lean, Six Sigma, and continuous improvement
-- **Quality Systems**: Insights from implementing IATF 16949 and managing audits
-- **Problem Solving**: How to tackle the tough challenges that come with manufacturing leadership
-- **Career Growth**: Navigating your path in manufacturing management
+### Stock Analysis
+Deep-dive research on individual companies with detailed financial analysis, competitive assessment, and honest valuation work.
 
-## Let's Connect
+### Investment Insights
+Market commentary, investing principles, and lessons learned from studying businesses and deploying capital.
 
-Have questions or want to discuss a leadership challenge? Reach out—I'm always happy to connect with fellow leaders in manufacturing.
+### Portfolio Tracking
+Full transparency on holdings, performance, wins, losses, and the reasoning behind each decision.
 
-Thanks for reading!
+### Leadership Content
+Operational lessons from managing manufacturing businesses - understanding operations creates an investing edge.
 
-— Jared
+## Why This Approach Works
+
+The best investors understand businesses deeply. Charlie Munger studied multiple disciplines. Buffett understood insurance operations. Lynch visited retail stores.
+
+My advantage: I've run the types of businesses I invest in. I know:
+- What "operational excellence" actually means vs. management speak
+- How quality systems work (or don't)
+- What creates sustainable competitive advantages in manufacturing
+- When capex is maintenance vs. growth
+- How to spot good operators from poor ones
+
+## Disclaimer
+
+This site is for educational and informational purposes only. Nothing here constitutes investment advice or a recommendation to buy or sell any security. All investments carry risk of loss.
+
+Do your own research. Make your own decisions. Invest at your own risk.
+
+## Contact
+
+Questions about an analysis? Want to discuss an investment idea?
+
+Email: [Your contact information]
+
+---
+
+*New research published weekly. Portfolio positions disclosed monthly. Analysis always independent.*

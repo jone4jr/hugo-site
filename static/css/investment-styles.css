@@ -1,0 +1,449 @@
+/* Investment-Focused Styles */
+
+/* Hero CTA Buttons */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.hero-cta .btn-primary,
+.hero-cta .btn-secondary {
+    padding: 0.875rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Market Ticker */
+.market-ticker {
+    background: var(--color-secondary);
+    padding: 1rem 0;
+    color: var(--color-white);
+}
+
+.ticker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ticker-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+}
+
+.ticker-items {
+    display: flex;
+    gap: 3rem;
+    flex: 1;
+}
+
+.ticker-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.ticker-symbol {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.ticker-value {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--color-white);
+}
+
+/* Stock Cards */
+.stocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stock-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stock-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.stock-symbol {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    color: var(--color-primary);
+}
+
+.stock-rating {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rating-BUY {
+    background: #10B981;
+    color: white;
+}
+
+.rating-HOLD {
+    background: #F59E0B;
+    color: white;
+}
+
+.rating-SELL {
+    background: #EF4444;
+    color: white;
+}
+
+.rating-STRONG-BUY {
+    background: #059669;
+    color: white;
+}
+
+.stock-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stock-sector {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.stock-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.metric.upside .metric-value {
+    color: #10B981;
+}
+
+.stock-thesis {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+/* Insights Grid */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.insight-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Portfolio Stats */
+.portfolio-preview {
+    background: var(--color-background-alt);
+    padding: 3rem 0;
+    margin: 3rem 0;
+}
+
+.portfolio-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: 'Courier New', monospace;
+}
+
+/* Section Titles */
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.125rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+/* Leadership Section (Secondary) */
+.leadership-section {
+    background: var(--color-background-alt);
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+/* Stock Analysis Page */
+.stock-analysis {
+    background: var(--color-background);
+}
+
+.stock-header-full {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    padding: 3rem 0;
+}
+
+.stock-title-section {
+    color: var(--color-white);
+}
+
+.stock-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stock-ticker-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+}
+
+.stock-sector-tag {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stock-title-main {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.stock-metrics-bar {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 1rem;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-item .metric-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metric-item .metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.upside-value {
+    color: #10B981 !important;
+}
+
+.stock-content {
+    padding: 3rem 0;
+}
+
+.stock-content h2 {
+    color: var(--color-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.stock-content h3 {
+    color: var(--color-secondary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.stock-content ul,
+.stock-content ol {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.stock-footer {
+    background: var(--color-background-alt);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.disclaimer {
+    background: #FEF3C7;
+    border-left: 4px solid #F59E0B;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.disclaimer p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #78350F;
+    line-height: 1.6;
+}
+
+.stock-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.stock-nav-link {
+    flex: 1;
+    padding: 1rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stock-nav-link:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.stock-nav-link.prev {
+    text-align: left;
+}
+
+.stock-nav-link.next {
+    text-align: right;
+}
+
+/* Responsive Updates for Investment Features */
+@media (max-width: 768px) {
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .ticker-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ticker-items {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .stocks-grid,
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stock-metrics {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .stock-metrics-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stock-ticker-large {
+        font-size: 2rem;
+    }
+
+    .stock-title-main {
+        font-size: 1.75rem;
+    }
+
+    .stock-navigation {
+        flex-direction: column;
+    }
+
+    .portfolio-stats {
+        grid-template-columns: 1fr;
+    }
+}

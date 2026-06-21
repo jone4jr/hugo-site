@@ -1,6 +1,6 @@
 baseURL = 'https://5amshift.com/'
 languageCode = 'en-us'
-title = 'Leadership Lessons from the Shop Floor'
+title = '5AM Shift - Value Investing Research'
 
 enableRobotsTXT = true
 disableKinds = []
@@ -9,12 +9,15 @@ disableKinds = []
   pagerSize = 6
 
 [params]
-  description = "Real leadership experiences and learnings from 15+ years managing manufacturing operations"
+  description = "Independent value investing research, stock analysis, and company fundamentals. Built by operators who understand business."
   author = "Jared Jones"
+  tagline = "Value Investing Research & Analysis"
 
 [taxonomies]
   category = "categories"
   tag = "tags"
+  sector = "sectors"
+  rating = "ratings"
 
 [markup]
   [markup.goldmark]

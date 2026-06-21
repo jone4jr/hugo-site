@@ -1,0 +1,82 @@
+{{ define "main" }}
+<article class="stock-analysis">
+    <header class="stock-header-full">
+        <div class="container-narrow">
+            <div class="stock-title-section">
+                <div class="stock-meta-top">
+                    <span class="stock-ticker-large">{{ .Params.ticker }}</span>
+                    {{ if .Params.sector }}
+                    <span class="stock-sector-tag">{{ .Params.sector }}</span>
+                    {{ end }}
+                </div>
+                <h1 class="stock-title-main">{{ .Title }}</h1>
+
+                <div class="stock-metrics-bar">
+                    {{ if .Params.rating }}
+                    <div class="metric-item rating">
+                        <span class="metric-label">Rating</span>
+                        <span class="metric-value rating-{{ .Params.rating }}">{{ .Params.rating }}</span>
+                    </div>
+                    {{ end }}
+
+                    {{ if .Params.price }}
+                    <div class="metric-item">
+                        <span class="metric-label">Price</span>
+                        <span class="metric-value">${{ .Params.price }}</span>
+                    </div>
+                    {{ end }}
+
+                    {{ if .Params.target }}
+                    <div class="metric-item">
+                        <span class="metric-label">Target</span>
+                        <span class="metric-value">${{ .Params.target }}</span>
+                    </div>
+                    {{ end }}
+
+                    {{ if .Params.upside }}
+                    <div class="metric-item upside">
+                        <span class="metric-label">Upside</span>
+                        <span class="metric-value upside-value">+{{ .Params.upside }}%</span>
+                    </div>
+                    {{ end }}
+                </div>
+
+                <div class="post-meta">
+                    <span class="post-date">Analysis Date: {{ .Date.Format "January 2, 2006" }}</span>
+                    {{ if .Params.updated }}
+                    <span class="post-updated">Updated: {{ .Params.updated }}</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="stock-content">
+        <div class="container-narrow">
+            {{ .Content }}
+        </div>
+    </div>
+
+    <footer class="stock-footer">
+        <div class="container-narrow">
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> This analysis is for informational and educational purposes only. It is not investment advice. Always conduct your own research and consult with a financial advisor before making investment decisions. Past performance does not guarantee future results.</p>
+            </div>
+
+            <div class="stock-navigation">
+                {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="stock-nav-link prev">
+                    ← {{ .Params.ticker }}: {{ .Title }}
+                </a>
+                {{ end }}
+
+                {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="stock-nav-link next">
+                    {{ .Params.ticker }}: {{ .Title }} →
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </footer>
+</article>
+{{ end }}

@@ -1,24 +1,144 @@
 {{ define "main" }}
 <section class="hero">
     <div class="container">
-        <h1 class="hero-title">Leadership Lessons from the Shop Floor</h1>
-        <p class="hero-subtitle">Real experiences and insights from 15+ years managing manufacturing operations. Learn from successes, failures, and everything in between.</p>
+        <h1 class="hero-title">Value Investing Research</h1>
+        <p class="hero-subtitle">Independent stock analysis and company fundamentals research. Built by operators who understand business from the inside out.</p>
+        <div class="hero-cta">
+            <a href="/portfolio/" class="btn-primary">View Portfolio</a>
+            <a href="/analysis/" class="btn-secondary">Latest Analysis</a>
+        </div>
     </div>
 </section>
 
-<section class="featured-posts">
+<!-- Stock Ticker -->
+<section class="market-ticker">
     <div class="container">
-        <h2 class="section-title">Latest Posts</h2>
-        <div class="posts-grid">
-            {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
-            <article class="post-card">
-                {{ if .Params.image }}
-                <div class="post-image">
-                    <a href="{{ .Permalink }}">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                    </a>
+        <div class="ticker-wrapper">
+            <div class="ticker-label">Market Watch</div>
+            <div class="ticker-items">
+                <div class="ticker-item">
+                    <span class="ticker-symbol">S&P 500</span>
+                    <span class="ticker-value">—</span>
                 </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">DOW</span>
+                    <span class="ticker-value">—</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">NASDAQ</span>
+                    <span class="ticker-value">—</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Stock Picks -->
+<section class="featured-stocks">
+    <div class="container">
+        <h2 class="section-title">Current Recommendations</h2>
+        <p class="section-subtitle">High-conviction value opportunities with strong fundamentals</p>
+        <div class="stocks-grid">
+            {{ range first 4 (where .Site.RegularPages "Section" "stocks") }}
+            <article class="stock-card">
+                <div class="stock-header">
+                    <div class="stock-symbol">{{ .Params.ticker }}</div>
+                    {{ if .Params.rating }}
+                    <div class="stock-rating rating-{{ .Params.rating }}">{{ .Params.rating }}</div>
+                    {{ end }}
+                </div>
+                <h3 class="stock-name">{{ .Title }}</h3>
+                {{ if .Params.sector }}
+                <div class="stock-sector">{{ .Params.sector }}</div>
                 {{ end }}
+                <div class="stock-metrics">
+                    {{ if .Params.price }}
+                    <div class="metric">
+                        <span class="metric-label">Price</span>
+                        <span class="metric-value">${{ .Params.price }}</span>
+                    </div>
+                    {{ end }}
+                    {{ if .Params.target }}
+                    <div class="metric">
+                        <span class="metric-label">Target</span>
+                        <span class="metric-value">${{ .Params.target }}</span>
+                    </div>
+                    {{ end }}
+                    {{ if .Params.upside }}
+                    <div class="metric upside">
+                        <span class="metric-label">Upside</span>
+                        <span class="metric-value">+{{ .Params.upside }}%</span>
+                    </div>
+                    {{ end }}
+                </div>
+                <p class="stock-thesis">{{ .Summary }}</p>
+                <a href="{{ .Permalink }}" class="read-more">Full Analysis →</a>
+            </article>
+            {{ end }}
+        </div>
+        <div class="view-all">
+            <a href="/stocks/" class="btn-primary">All Stock Coverage</a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Investment Insights -->
+<section class="latest-insights">
+    <div class="container">
+        <h2 class="section-title">Investment Insights</h2>
+        <div class="insights-grid">
+            {{ range first 3 (where .Site.RegularPages "Section" "insights") }}
+            <article class="insight-card">
+                <div class="post-meta">
+                    <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                    {{ if .Params.category }}
+                    <span class="post-category">{{ .Params.category }}</span>
+                    {{ end }}
+                </div>
+                <h3 class="post-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h3>
+                <p class="post-excerpt">{{ .Summary }}</p>
+                <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+            </article>
+            {{ end }}
+        </div>
+        <div class="view-all">
+            <a href="/insights/" class="btn-secondary">All Insights</a>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Performance -->
+<section class="portfolio-preview">
+    <div class="container">
+        <h2 class="section-title">Portfolio Performance</h2>
+        <div class="portfolio-stats">
+            <div class="stat-card">
+                <div class="stat-label">Total Return</div>
+                <div class="stat-value">—</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Holdings</div>
+                <div class="stat-value">—</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Win Rate</div>
+                <div class="stat-value">—</div>
+            </div>
+        </div>
+        <a href="/portfolio/" class="btn-primary">View Full Portfolio</a>
+    </div>
+</section>
+
+<!-- Leadership Section (Secondary) -->
+<section class="leadership-section">
+    <div class="container">
+        <h2 class="section-title">Leadership Insights</h2>
+        <p class="section-subtitle">Operational lessons from 15+ years managing manufacturing businesses</p>
+        <div class="posts-grid">
+            {{ range first 3 (where .Site.RegularPages "Section" "leadership") }}
+            <article class="post-card">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
@@ -36,18 +156,7 @@
             {{ end }}
         </div>
         <div class="view-all">
-            <a href="/posts/" class="btn-primary">View All Posts</a>
-        </div>
-    </div>
-</section>
-
-<section class="about-preview">
-    <div class="container">
-        <div class="about-content">
-            <h2>About This Blog</h2>
-            <p>Welcome! I'm Jared, and I've spent over 15 years in manufacturing leadership roles, from managing production lines to serving as Plant Manager for facilities with hundreds of employees. This blog is where I share real leadership lessons—the wins, the losses, and the lessons learned along the way.</p>
-            <p>Whether you're a new supervisor, an experienced manager, or aspiring to leadership, you'll find practical insights drawn from the realities of manufacturing operations.</p>
-            <a href="/about/" class="btn-secondary">Learn More About Me</a>
+            <a href="/leadership/" class="btn-secondary">All Leadership Posts</a>
         </div>
     </div>
 </section>
