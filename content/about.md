@@ -1,16 +1,28 @@
 ---
 title: "About Jared"
-seo_title: "About Jared Jones | Manufacturing Leadership Perspective"
-description: "A grounded manufacturing leadership perspective built in plant leadership, quality, and high-accountability operations."
+seo_title: "About Jared Jones | Manufacturing Leadership & Stock Analysis"
+description: "Manufacturing leadership insights and technical stock analysis. Operational discipline meets investment strategy."
 ---
 
 ## Why this site exists
 
+5AM Shift serves two communities: **manufacturing leaders** who need practical operational guidance, and **active investors** who want disciplined technical analysis.
+
+### For Leaders
+
 Most leadership advice sounds polished in a conference room and falls apart by Monday morning.
 
-I built 5AM Shift for leaders who have to earn trust in real time. The kind of leaders who walk into difficult handoffs, customer pressure, staffing gaps, quality risk, and a team that can tell in five minutes whether the person in charge is serious or not.
+I built the leadership side of 5AM Shift for leaders who have to earn trust in real time. The kind of leaders who walk into difficult handoffs, customer pressure, staffing gaps, quality risk, and a team that can tell in five minutes whether the person in charge is serious or not.
 
-My background is in manufacturing leadership. Over more than 15 years, I have led in three-shift environments, supported large teams, worked inside high-accountability systems, and learned what leadership looks like when results are visible every day.
+### For Investors
+
+The same operational discipline that works on the manufacturing floor applies to markets. Weekly stock picks, technical analysis, and risk management - all approached with the same rigor learned from 15+ years managing high-accountability operations.
+
+## My background
+
+**Manufacturing Leadership:** Over more than 15 years, I have led in three-shift environments, supported large teams, worked inside high-accountability systems, and learned what leadership looks like when results are visible every day.
+
+**Stock Analysis:** Active trader and investor applying systematic technical analysis to growth stocks and semiconductors. Weekly screening, ranking, and tracking with transparent performance metrics.
 
 ## What shaped my perspective
 
@@ -21,11 +33,23 @@ My background is in manufacturing leadership. Over more than 15 years, I have le
 
 ## What you will get here
 
+### Leadership Development
+
 This site helps leaders grow in three ways:
 
 - **Think clearly under pressure.** The site focuses on judgment, prioritization, communication, accountability, and execution.
 - **Lead people better.** You will find tools for feedback, coaching, delegation, difficult conversations, and trust.
 - **Build a durable leadership operating system.** The articles, assessments, and development pages give readers a practical path from insight to action.
+
+### Stock Analysis & Investing
+
+For investors and active traders:
+
+- **Weekly Stock Picks** - Top 10 ranked technical setups updated every week with specific entry zones, targets, and stops
+- **Technical Analysis** - Chart patterns, support/resistance levels, momentum signals
+- **Risk Management** - Position sizing, stop placement, portfolio heat management
+- **Performance Tracking** - Transparent results with win rates and R/R metrics
+- **Market Insights** - Sector analysis, trend commentary, trading psychology
 
 ## My point of view
 
@@ -37,10 +61,18 @@ That is why this site is practical on purpose. I care about frameworks, but only
 
 ## How to use this site
 
-If you are new here, start in three places:
+**If you're here for leadership:**
 
-1. Read the featured articles in the blog.
-2. Take the DISC-style leadership profile and one of the other diagnostics.
-3. Join the leadership list if you want practical updates and a steadier leadership habit over time.
+1. Read the featured [articles](/posts/) in the blog
+2. Take the DISC-style [leadership profile](/assessments/) and other diagnostics
+3. Explore the [Leadership System](/leadership-system/) framework
+4. Join the leadership list for practical updates
 
-If that sounds like your kind of leadership development, you are in the right place.
+**If you're here for stock picks:**
+
+1. Check the [Signals Dashboard](/signals/) for current top 10 buy setups
+2. Read the latest [weekly stock picks](/stocks/) with full analysis
+3. Review [portfolio](/portfolio/) performance and position tracking
+4. Browse [investment insights](/insights/) for market commentary
+
+**If you want both:** You're in the right place. Operational discipline and investment discipline come from the same source.

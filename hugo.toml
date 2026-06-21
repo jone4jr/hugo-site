@@ -102,6 +102,21 @@ summaryLength = 28
   weight = 35
 
 [[menu.main]]
+  name = "Stock Picks"
+  url = "/stocks/"
+  weight = 36
+
+[[menu.main]]
+  name = "Portfolio"
+  url = "/portfolio/"
+  weight = 37
+
+[[menu.main]]
+  name = "Insights"
+  url = "/insights/"
+  weight = 38
+
+[[menu.main]]
   name = "About"
   url = "/about/"
   weight = 50
