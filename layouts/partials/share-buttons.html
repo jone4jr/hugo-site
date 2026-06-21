@@ -1,14 +1,17 @@
 {{ $url := .Permalink }}
 {{ $encodedUrl := $url | urlquery }}
-{{ $encodedTitle := .Title | urlquery }}
+{{ $encodedTitle := replace (.Title | urlquery) "+" "%20" }}
+{{ $facebookUrl := printf "https://www.facebook.com/sharer/sharer.php?u=%s" $encodedUrl | safeURL }}
+{{ $linkedinUrl := printf "https://www.linkedin.com/sharing/share-offsite/?url=%s" $encodedUrl | safeURL }}
+{{ $xUrl := printf "https://twitter.com/intent/tweet?text=%s&url=%s" $encodedTitle $encodedUrl | safeURL }}
 <div class="share-actions" aria-label="Share this article">
   <p class="eyebrow">Share</p>
   <div class="share-buttons">
-    <a class="share-button share-button--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on Facebook">
+    <a class="share-button share-button--facebook" href="{{ $facebookUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on Facebook">
       <span aria-hidden="true">f</span>
       <span>Facebook</span>
     </a>
-    <a class="share-button share-button--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on LinkedIn">
+    <a class="share-button share-button--linkedin" href="{{ $linkedinUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on LinkedIn">
       <span aria-hidden="true">in</span>
       <span>LinkedIn</span>
     </a>
@@ -16,7 +19,7 @@
       <span aria-hidden="true">ig</span>
       <span>Instagram</span>
     </button>
-    <a class="share-button share-button--x" href="https://twitter.com/intent/tweet?url={{ $encodedUrl }}&text={{ $encodedTitle }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on X">
+    <a class="share-button share-button--x" href="{{ $xUrl }}" target="_blank" rel="noopener noreferrer" aria-label="Share {{ .Title }} on X">
       <span aria-hidden="true">x</span>
       <span>X</span>
     </a>
