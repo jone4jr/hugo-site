@@ -1,13 +1,14 @@
 {{ define "main" }}
   {{ if eq .Section "posts" }}
     {{ $related := first 3 (.Site.RegularPages.Related .) }}
-    <article class="article-layout">
+    {{ $coverImage := .Params.image | default .Site.Params.defaultImage }}
+    <article class="article-layout investment-article-layout">
       <section class="page-hero page-hero--article">
         <div class="shell article-hero">
           <div class="article-hero__copy reveal">
             {{ partial "breadcrumbs.html" . }}
             <div class="article-meta">
-              <span class="pill">{{ .Params.category }}</span>
+              <span class="pill">{{ .Params.category | default "Investment Leadership" }}</span>
               <span>{{ .ReadingTime }} min read</span>
               <span>{{ .Date.Format "January 2, 2006" }}</span>
             </div>
@@ -17,38 +18,37 @@
           </div>
           <aside class="article-hero__aside reveal">
             {{ partial "newsletter-form.html" (dict
-              "heading" "Keep growing weekly"
-              "copy" "Subscribe for practical leadership writing and unlock the free leadership assessments."
+              "heading" "Get the next watchlist"
+              "copy" "Subscribe for weekly long-only stock research and management-quality essays."
               "button" "Subscribe"
               "source" "article"
+              "note" "Investment strategy through an operating leadership lens."
               "success" .Site.Params.newsletter.success
             ) }}
           </aside>
         </div>
       </section>
 
-      {{ with .Params.image }}
-        <section class="section section-tight article-cover-section">
-          <div class="shell">
-            <figure class="article-cover reveal">
-              <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="eager" decoding="async">
-              {{ if or $.Params.image_credit_name $.Params.image_credit_url }}
-                <figcaption>
-                  Photo by
-                  {{ with $.Params.image_credit_url }}
-                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
-                      {{ $.Params.image_credit_name | default "Pexels contributor" }}
-                    </a>
-                  {{ else }}
-                    {{ $.Params.image_credit_name }}
-                  {{ end }}
-                  on Pexels
-                </figcaption>
-              {{ end }}
-            </figure>
-          </div>
-        </section>
-      {{ end }}
+      <section class="section section-tight article-cover-section">
+        <div class="shell">
+          <figure class="article-cover reveal">
+            <img src="{{ $coverImage }}" alt="{{ .Params.image_alt | default .Title }}" loading="eager" decoding="async">
+            {{ if or .Params.image_credit_name .Params.image_credit_url }}
+              <figcaption>
+                Photo by
+                {{ with .Params.image_credit_url }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                    {{ $.Params.image_credit_name | default "Pexels contributor" }}
+                  </a>
+                {{ else }}
+                  {{ .Params.image_credit_name }}
+                {{ end }}
+                on Pexels
+              </figcaption>
+            {{ end }}
+          </figure>
+        </div>
+      </section>
 
       <section class="section section-tight">
         <div class="shell article-body">
@@ -69,22 +69,22 @@
                 <div class="toc">{{ . }}</div>
               </div>
             {{ end }}
-            <div class="sidebar-card">
-              <p class="eyebrow">Next step</p>
-              <h3>Take a leadership assessment</h3>
-              <p>Move from reading to self-awareness with the free DISC-style profile and other diagnostics.</p>
-              <a class="text-link" href="{{ "/assessments/" | relURL }}">Browse the free assessments</a>
+            <div class="sidebar-card investor-lens-card">
+              <p class="eyebrow">Investor lens</p>
+              <h3>Leadership shows up in the numbers.</h3>
+              <p>Read this article as a management-quality signal: execution discipline, retention, accountability, operating leverage, and whether growth can compound under pressure.</p>
+              <a class="text-link" href="{{ "/leadership-development/" | relURL }}">Open the management-quality framework</a>
             </div>
             <div class="sidebar-card">
-              <p class="eyebrow">Start with a guide</p>
-              <h3>Work from the problem you are actually facing.</h3>
-              <p>Use the start-here guides when you need help with accountability, employee retention, supervisor development, or calmer operations.</p>
-              <a class="text-link" href="{{ "/start-here/" | relURL }}">Open the start-here section</a>
+              <p class="eyebrow">Current watchlist</p>
+              <h3>Pair the idea with risk discipline.</h3>
+              <p>Use the weekly long-only watchlist for defined buy zones, targets, invalidation levels, and risk/reward context.</p>
+              <a class="text-link" href="{{ "/best-stocks-to-buy-now/" | relURL }}">View best stocks to buy now</a>
             </div>
             <div class="sidebar-card">
               <p class="eyebrow">Author</p>
               <h3>Jared Jones</h3>
-              <p>Manufacturing and plant leadership writer focused on practical leadership development, operational clarity, and building stronger supervisors.</p>
+              <p>Investment strategy and operating leadership writer focused on management quality, execution discipline, and practical risk control.</p>
             </div>
           </aside>
         </div>
@@ -93,9 +93,9 @@
         <section class="section section-contrast">
           <div class="shell">
             <div class="section-heading reveal">
-              <p class="eyebrow">Related reading</p>
-              <h2>Keep building the idea.</h2>
-              <p>These articles connect to the same leadership themes so readers can go deeper instead of bouncing away.</p>
+              <p class="eyebrow">Related research</p>
+              <h2>Keep building the management-quality lens.</h2>
+              <p>These articles connect leadership behavior to the operating signals investors should care about.</p>
             </div>
             <div class="articles-grid">
               {{ range $related }}
@@ -110,11 +110,20 @@
     <section class="page-hero">
       <div class="shell reveal">
         {{ partial "breadcrumbs.html" . }}
-        <p class="eyebrow">Leadership resource</p>
+        <p class="eyebrow">Investment leadership resource</p>
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </div>
     </section>
+    {{ with .Params.image }}
+      <section class="section section-tight article-cover-section">
+        <div class="shell">
+          <figure class="article-cover reveal">
+            <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="eager" decoding="async">
+          </figure>
+        </div>
+      </section>
+    {{ end }}
     <section class="section">
       <div class="shell prose reveal">
         {{ .Content }}
@@ -123,8 +132,8 @@
     <section class="section section-contrast">
       <div class="shell cta-band reveal">
         <div>
-          <p class="eyebrow">Keep learning</p>
-          <h2>Get practical leadership updates and new tools.</h2>
+          <p class="eyebrow">Keep researching</p>
+          <h2>Get weekly watchlists and management-quality notes.</h2>
         </div>
         <div class="cta-band__form">
           {{ partial "newsletter-form.html" (dict
