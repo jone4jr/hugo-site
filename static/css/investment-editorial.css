@@ -285,3 +285,197 @@
     justify-self: start;
   }
 }
+
+/* Brand refresh: matches the new 5AM Shift logo palette. */
+:root {
+  --primary: #07081f;
+  --primary-rgb: 7, 8, 31;
+  --secondary: #18d8de;
+  --secondary-rgb: 24, 216, 222;
+  --accent: #aeda00;
+  --accent-rgb: 174, 218, 0;
+  --brand-gold: #f3ad14;
+  --brand-cream: #f8f6dc;
+  --background: #f4f7f8;
+  --surface: #ffffff;
+  --ink-950: #090b1f;
+  --ink-900: #11162a;
+}
+
+body {
+  background: var(--background);
+}
+
+.mobile-topbar {
+  background: rgba(7, 8, 31, 0.97);
+  border-bottom-color: rgba(24, 216, 222, 0.18);
+  color: var(--brand-cream);
+}
+
+.mobile-topbar .brand-copy strong {
+  color: var(--brand-cream);
+}
+
+.mobile-topbar .brand-copy span {
+  color: rgba(248, 246, 220, 0.72);
+}
+
+.nav-toggle {
+  background: #11162a;
+  border-color: rgba(24, 216, 222, 0.26);
+}
+
+.nav-toggle span {
+  background: var(--secondary);
+}
+
+.brand-logo {
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.brand-logo--mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(24, 216, 222, 0.18);
+}
+
+.brand--sidebar.brand--logo {
+  display: grid;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.site-sidebar .brand-logo--full {
+  width: 100%;
+  max-width: 14.5rem;
+  height: auto;
+  border: 1px solid rgba(24, 216, 222, 0.22);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+.footer-logo {
+  width: min(18rem, 100%);
+  height: auto;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(24, 216, 222, 0.22);
+  border-radius: 8px;
+}
+
+.site-sidebar,
+.site-sidebar .sidebar-inner,
+.site-footer,
+.hero-panel,
+.market-strip,
+.stock-table-wrap {
+  background: #07081f;
+}
+
+.site-sidebar {
+  border-right-color: rgba(24, 216, 222, 0.14);
+}
+
+.site-sidebar .brand--sidebar {
+  border-bottom-color: rgba(24, 216, 222, 0.16);
+}
+
+.site-sidebar .brand-copy span,
+.site-footer p,
+.site-footer li,
+.market-brief p,
+.market-brief__ticker small {
+  color: rgba(248, 246, 220, 0.72);
+}
+
+.site-sidebar .nav-group {
+  background: #10142a;
+  border-color: rgba(24, 216, 222, 0.18);
+}
+
+.site-sidebar .nav-group summary::after {
+  color: var(--accent);
+}
+
+.site-sidebar .site-nav a:hover,
+.site-sidebar .site-nav a:focus-visible,
+.site-sidebar .site-nav a.is-active {
+  background: rgba(24, 216, 222, 0.14);
+  color: var(--brand-cream);
+}
+
+.site-sidebar .sidebar-note {
+  border-color: rgba(174, 218, 0, 0.32);
+  background: rgba(174, 218, 0, 0.1);
+}
+
+.site-sidebar .sidebar-note span,
+.eyebrow,
+.hero-copy .eyebrow,
+.investor-lens-card .eyebrow,
+.prose a[href^="http"],
+.share-status {
+  color: #0faeb8;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #07081f, #11162a);
+  border-color: rgba(24, 216, 222, 0.24);
+  color: #fff;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: linear-gradient(135deg, #11162a, #17203a);
+}
+
+.button-secondary,
+.share-button:hover,
+.share-button:focus-visible {
+  border-color: rgba(24, 216, 222, 0.34);
+  background: rgba(24, 216, 222, 0.08);
+  color: #0a7f8a;
+}
+
+.market-brief .eyebrow,
+.market-strip__label,
+.market-brief__grade {
+  color: var(--brand-gold);
+}
+
+.ticker-pill span:last-child,
+.stock-card__grade,
+.site-sidebar .sidebar-note span {
+  color: var(--accent);
+}
+
+.market-brief .button-primary {
+  background: var(--brand-cream);
+  border-color: var(--brand-cream);
+  color: #07081f;
+}
+
+.investor-lens-card,
+.feature-article,
+.article-card,
+.subscribe-card {
+  border-color: rgba(24, 216, 222, 0.2);
+}
+
+.investor-lens-card {
+  background: linear-gradient(180deg, rgba(24, 216, 222, 0.08), #fff);
+}
+
+.article-card__category,
+.feature-article__category {
+  color: #0faeb8;
+}
+
+@media (max-width: 900px) {
+  .brand-logo--mark {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
