@@ -130,6 +130,125 @@
   background: #f5f6f8;
 }
 
+.site-sidebar {
+  background: #0d0d0d;
+  border-right-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.site-sidebar .sidebar-inner {
+  background: #0d0d0d;
+}
+
+.site-sidebar .brand--sidebar {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.site-sidebar .brand-mark {
+  background: #fff;
+  color: #111;
+}
+
+.site-sidebar .brand-copy strong {
+  color: #fff;
+}
+
+.site-sidebar .brand-copy span {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.site-sidebar .nav-group {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #161616;
+}
+
+.site-sidebar .nav-group summary {
+  color: #fff;
+}
+
+.site-sidebar .nav-group summary::after {
+  color: #74d6a3;
+}
+
+.site-sidebar .site-nav a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.site-sidebar .site-nav a:hover,
+.site-sidebar .site-nav a:focus-visible,
+.site-sidebar .site-nav a.is-active {
+  background: rgba(116, 214, 163, 0.13);
+  color: #fff;
+}
+
+.site-sidebar .sidebar-note {
+  border-color: rgba(116, 214, 163, 0.28);
+  background: rgba(116, 214, 163, 0.1);
+}
+
+.site-sidebar .sidebar-note span {
+  color: #74d6a3;
+}
+
+.site-sidebar .sidebar-note strong {
+  color: #fff;
+}
+
+.hero-panel.market-brief {
+  overflow: hidden;
+}
+
+.market-brief > * {
+  min-width: 0;
+}
+
+.market-brief h2 {
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.18;
+}
+
+.market-brief p {
+  overflow-wrap: anywhere;
+}
+
+.market-brief__list li {
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr) max-content;
+}
+
+.market-brief__ticker {
+  display: grid;
+  min-width: 0;
+  gap: 0.08rem;
+  line-height: 1.25;
+}
+
+.market-brief__ticker small {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.market-brief__grade {
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.market-brief .button {
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
+  text-align: center;
+}
+
+.market-brief .button-primary {
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+}
+
 @media (max-width: 900px) {
   .feature-article--with-media {
     grid-template-columns: 1fr;
@@ -140,8 +259,29 @@
   }
 }
 
+@media (max-width: 640px) {
+  .market-brief__list li {
+    grid-template-columns: auto minmax(0, 1fr) max-content;
+  }
+
+  .market-brief__grade {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 520px) {
   .share-buttons {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .market-brief__list li {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .market-brief__grade {
+    grid-column: 2;
+    justify-self: start;
   }
 }
