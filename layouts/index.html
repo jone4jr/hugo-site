@@ -13,7 +13,11 @@
         <h1>{{ .Params.hero_title }}</h1>
         <p class="hero-lead">{{ .Params.hero_subtitle }}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">Best stocks to buy now</a>
+          {{ with $latestStock }}
+            <a class="button button-primary" href="{{ .RelPermalink }}">Latest stock picks</a>
+          {{ else }}
+            <a class="button button-primary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">Best stocks to buy now</a>
+          {{ end }}
           <a class="button button-secondary" href="{{ "/posts/" | relURL }}">Leadership blog</a>
         </div>
         <div class="hero-proof">
@@ -24,24 +28,24 @@
       </div>
       {{ with $latestStock }}
         <aside class="hero-panel market-brief reveal">
-          <div><p class="eyebrow">Latest watchlist</p><h2>{{ .Title }}</h2><p>{{ .Params.summary }}</p></div>
+          <div><p class="eyebrow">Latest stock picks</p><h2>{{ .Title }}</h2><p>{{ .Params.summary }}</p></div>
           <ul class="market-brief__list">
             {{ range first 4 .Params.top_picks }}
               <li><span class="market-brief__rank">{{ .rank }}</span><span class="market-brief__ticker">{{ .ticker }} <small>{{ .focus }}</small></span><span class="market-brief__grade">{{ .grade }}</span></li>
             {{ end }}
           </ul>
-          <a class="button button-primary" href="{{ .RelPermalink }}">Read the weekly watchlist</a>
+          <a class="button button-primary" href="{{ .RelPermalink }}">Read latest stock picks</a>
         </aside>
       {{ end }}
     </div>
   </section>
 
   {{ with $latestStock }}
-    <div class="market-strip"><div class="shell market-strip__inner"><span class="market-strip__label">Current top focus</span>{{ $stockURL := .RelPermalink }}{{ range .Params.top_picks }}<a class="ticker-pill" href="{{ $stockURL }}"><span>{{ .ticker }}</span><span>{{ .grade }}</span></a>{{ end }}</div></div>
+    <div class="market-strip"><div class="shell market-strip__inner"><span class="market-strip__label">Latest stock picks</span>{{ $stockURL := .RelPermalink }}{{ range .Params.top_picks }}<a class="ticker-pill" href="{{ $stockURL }}"><span>{{ .ticker }}</span><span>{{ .grade }}</span></a>{{ end }}</div></div>
   {{ end }}
 
   {{ with $latestStock }}
-    <section class="section"><div class="shell research-board"><article class="research-board__main reveal"><p class="eyebrow">Best stocks to buy now</p><h2><a href="{{ .RelPermalink }}">This week's ranked long-only watchlist</a></h2><p>Each candidate links to a quick writeup explaining why the company made the list, where the cleaner entry lives, and what invalidates the setup.</p><div class="section-cta"><a class="button button-primary" href="{{ .RelPermalink }}">Open the full table</a><a class="button button-secondary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">View the archive</a></div></article><aside class="research-board__side reveal"><p class="eyebrow">Strategy notes</p><ul class="data-list"><li><span>Theme</span><strong>AI and semiconductors</strong></li><li><span>Best focus</span><strong>NVDA, AVGO, AMD, QCOM</strong></li><li><span>Execution</span><strong>Retests and consolidations</strong></li><li><span>Risk rule</span><strong>No gap chasing</strong></li></ul></aside></div></section>
+    <section class="section"><div class="shell research-board"><article class="research-board__main reveal"><p class="eyebrow">Best stocks to buy now</p><h2><a href="{{ .RelPermalink }}">Latest stock picks from this week's watchlist</a></h2><p>Each candidate links to a quick writeup explaining why the company made the list, where the cleaner entry lives, and what invalidates the setup.</p><div class="section-cta"><a class="button button-primary" href="{{ .RelPermalink }}">Open the full table</a><a class="button button-secondary" href="{{ "/best-stocks-to-buy-now/" | relURL }}">View the archive</a></div></article><aside class="research-board__side reveal"><p class="eyebrow">Strategy notes</p><ul class="data-list"><li><span>Theme</span><strong>AI and semiconductors</strong></li><li><span>Best focus</span><strong>NVDA, AVGO, AMD, QCOM</strong></li><li><span>Execution</span><strong>Retests and consolidations</strong></li><li><span>Risk rule</span><strong>No gap chasing</strong></li></ul></aside></div></section>
   {{ end }}
 
   {{ if gt (len $latestPosts) 0 }}
