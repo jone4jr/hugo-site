@@ -33,7 +33,9 @@
 <meta name="robots" content="{{ $robots }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 {{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
-<meta name="theme-color" content="#111111">
+<meta name="theme-color" content="#07081f">
+<link rel="icon" type="image/png" href="{{ "/images/5amshift-logo-mark.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "/images/5amshift-logo-mark.png" | relURL }}">
 <title>{{ $pageTitle }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
