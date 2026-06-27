@@ -1,5 +1,7 @@
 {{ $stockSection := "/best-stocks-to-buy-now/" | relURL }}
-{{ $weeklyPick := "/best-stocks-to-buy-now/weekly-semiconductor-stock-picks-june-2026/" | relURL }}
+{{ $stockPages := sort (where .Site.RegularPages "Section" "best-stocks-to-buy-now") "Date" "desc" }}
+{{ $weeklyPick := $stockSection }}
+{{ if gt (len $stockPages) 0 }}{{ $weeklyPick = (index $stockPages 0).RelPermalink }}{{ end }}
 
 <header class="mobile-topbar">
   <a class="brand brand--compact" href="{{ "/" | relURL }}" aria-label="5AM Shift home">
