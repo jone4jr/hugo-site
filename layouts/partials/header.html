@@ -1,5 +1,7 @@
 {{ $stockSection := "/best-stocks-to-buy-now/" | relURL }}
-{{ $weeklyPick := "/best-stocks-to-buy-now/weekly-semiconductor-stock-picks-june-2026/" | relURL }}
+{{ $stockPages := sort (where .Site.RegularPages "Section" "best-stocks-to-buy-now") "Date" "desc" }}
+{{ $weeklyPick := $stockSection }}
+{{ if gt (len $stockPages) 0 }}{{ $weeklyPick = (index $stockPages 0).RelPermalink }}{{ end }}
 
 <header class="mobile-topbar">
   <a class="brand brand--compact" href="{{ "/" | relURL }}" aria-label="5AM Shift home">
@@ -17,7 +19,7 @@
 <aside class="site-sidebar" aria-label="Primary navigation">
   <div class="sidebar-inner">
     <a class="brand brand--sidebar brand--logo" href="{{ "/" | relURL }}" aria-label="5AM Shift home">
-      <img class="brand-logo brand-logo--full" src="{{ "/images/5amshift-logo.jpg" | relURL }}" alt="5AM Shift logo" width="420" height="264">
+      <img class="brand-logo brand-logo--full" src="{{ "/images/5amshift-logo.svg" | relURL }}" alt="5AM Shift logo" width="420" height="264">
       <span class="brand-copy">
         <span>Stock strategy through an operating leadership lens.</span>
       </span>

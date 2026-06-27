@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">5AM Shift next week stock watchlist</title>
+  <desc id="desc">A dark navy investment research graphic showing HD, PHM, MGA, RMD, CSX, COF, HRL, BAX, DAL, and UNH.</desc>
+  <rect width="1200" height="630" fill="#07081f"/>
+  <g opacity="0.24" stroke="#18d8de" stroke-width="1">
+    <path d="M0 110H1200M0 210H1200M0 310H1200M0 410H1200M0 510H1200"/>
+    <path d="M140 0V630M280 0V630M420 0V630M560 0V630M700 0V630M840 0V630M980 0V630M1120 0V630"/>
+  </g>
+  <path d="M80 455C175 382 222 405 292 330C360 258 414 236 492 292C565 345 620 350 706 252C774 175 842 176 920 226C996 275 1065 236 1140 150" fill="none" stroke="#18d8de" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+  <path d="M80 455C175 382 222 405 292 330C360 258 414 236 492 292C565 345 620 350 706 252C774 175 842 176 920 226C996 275 1065 236 1140 150" fill="none" stroke="#aeda00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <g fill="#f3ad14" opacity="0.92">
+    <rect x="180" y="358" width="34" height="112" rx="6"/>
+    <rect x="362" y="276" width="34" height="138" rx="6"/>
+    <rect x="548" y="318" width="34" height="118" rx="6"/>
+    <rect x="734" y="226" width="34" height="150" rx="6"/>
+    <rect x="920" y="246" width="34" height="118" rx="6"/>
+  </g>
+  <g stroke="#18d8de" stroke-width="5" opacity="0.8">
+    <path d="M197 326V494M379 240V444M565 282V466M751 190V408M937 214V396"/>
+  </g>
+  <g transform="translate(76 76)">
+    <text x="0" y="0" fill="#18d8de" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3">5AM SHIFT WATCHLIST</text>
+    <text x="0" y="70" fill="#f8f6dc" font-family="Manrope, Arial, sans-serif" font-size="68" font-weight="800">Best Stocks to Buy Now</text>
+    <text x="0" y="122" fill="#f8f6dc" opacity="0.78" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="600">Next week: reversal setups, pullbacks, and defined risk zones</text>
+  </g>
+  <g transform="translate(76 492)" font-family="Manrope, Arial, sans-serif" font-weight="800" font-size="32">
+    <rect x="0" y="-48" width="1048" height="92" rx="14" fill="#10142a" stroke="#18d8de" stroke-opacity="0.28"/>
+    <text x="32" y="10" fill="#f8f6dc">HD</text>
+    <text x="142" y="10" fill="#f3ad14">PHM</text>
+    <text x="272" y="10" fill="#aeda00">MGA</text>
+    <text x="410" y="10" fill="#f8f6dc">RMD</text>
+    <text x="548" y="10" fill="#18d8de">CSX</text>
+    <text x="672" y="10" fill="#f8f6dc">COF</text>
+    <text x="798" y="10" fill="#f3ad14">HRL</text>
+    <text x="920" y="10" fill="#aeda00">BAX</text>
+  </g>
+  <text x="76" y="588" fill="#f8f6dc" opacity="0.72" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="700">Long-only research. Pullbacks and triggers before entries.</text>
+</svg>

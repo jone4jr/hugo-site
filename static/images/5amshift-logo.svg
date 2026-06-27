@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="264" viewBox="0 0 420 264" role="img" aria-labelledby="title desc">
+  <title id="title">5AM Shift logo</title>
+  <desc id="desc">5AM Shift investment strategy logo with market-chart colors.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07081f"/>
+      <stop offset="1" stop-color="#182018"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="264" rx="10" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#18d8de" stroke-width="1">
+    <path d="M0 42H420M0 84H420M0 126H420M0 168H420M0 210H420"/>
+    <path d="M52 0V264M104 0V264M156 0V264M208 0V264M260 0V264M312 0V264M364 0V264"/>
+  </g>
+  <path d="M146 115h38l19-22 18 28 28-48 28 34 34-52" fill="none" stroke="#18d8de" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <g opacity="0.42">
+    <rect x="236" y="124" width="15" height="54" rx="3" fill="#f3ad14"/>
+    <rect x="283" y="104" width="15" height="76" rx="3" fill="#18d8de"/>
+    <rect x="329" y="132" width="15" height="48" rx="3" fill="#aeda00"/>
+  </g>
+  <image href="data:image/png;base64,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" x="22" y="26" width="118" height="118"/>
+  <text x="38" y="202" fill="#f8f6dc" font-family="Manrope, Arial, sans-serif" font-size="44" font-weight="800">5amshift.com</text>
+  <text x="42" y="232" fill="#18d8de" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2">LONG-ONLY RESEARCH</text>
+</svg>
