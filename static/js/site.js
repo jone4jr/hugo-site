@@ -68,7 +68,7 @@
         message.textContent = form.getAttribute("data-success") || "You are subscribed.";
       }
       if (button) {
-        button.textContent = "Unlocked";
+        button.textContent = "Subscribed";
         button.disabled = true;
       }
       if (input) {
