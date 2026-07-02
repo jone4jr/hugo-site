@@ -1,0 +1,53 @@
+.newsletter-panel.newsletter-form--dark {
+  background: #ffffff;
+  border-color: rgba(7, 8, 31, 0.12);
+  box-shadow: 0 20px 56px rgba(7, 8, 31, 0.16);
+  color: var(--ink-950);
+}
+
+.newsletter-panel.newsletter-form--dark h3,
+.newsletter-panel.newsletter-form--dark p {
+  color: var(--ink-900);
+}
+
+.newsletter-panel.newsletter-form--dark .newsletter-note,
+.newsletter-panel.newsletter-form--dark .form-message {
+  color: var(--text-soft);
+}
+
+.newsletter-panel.newsletter-form--dark .newsletter-form input {
+  background: #ffffff;
+  border-color: rgba(7, 8, 31, 0.14);
+  color: #07081f;
+}
+
+.newsletter-panel.newsletter-form--dark .newsletter-form input::placeholder {
+  color: rgba(7, 8, 31, 0.44);
+}
+
+.newsletter-panel.newsletter-form--dark .newsletter-form input:focus {
+  border-color: rgba(24, 216, 222, 0.7);
+  box-shadow: 0 0 0 4px rgba(24, 216, 222, 0.16);
+}
+
+.newsletter-panel.newsletter-form--dark .newsletter-form input[readonly] {
+  background: #f8fafc;
+  color: #07081f;
+}
+
+.newsletter-panel.newsletter-form--dark .button-primary {
+  background: #07081f;
+  border-color: rgba(24, 216, 222, 0.2);
+  color: #ffffff;
+}
+
+.newsletter-panel.newsletter-form--dark .button-primary:hover:not(:disabled),
+.newsletter-panel.newsletter-form--dark .button-primary:focus-visible:not(:disabled) {
+  background: #11142f;
+  border-color: rgba(24, 216, 222, 0.45);
+}
+
+.newsletter-panel.newsletter-form--dark .button-primary:disabled {
+  cursor: default;
+  opacity: 1;
+}
