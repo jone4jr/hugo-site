@@ -10,6 +10,17 @@
     }
   }
 
+  function decodeProtectedValue(value) {
+    if (!value || !window.atob) {
+      return "";
+    }
+    try {
+      return window.atob(value);
+    } catch (error) {
+      return "";
+    }
+  }
+
   function getSubscriber() {
     if (!window.localStorage) {
       return null;
@@ -68,7 +79,7 @@
         message.textContent = form.getAttribute("data-success") || "You are subscribed.";
       }
       if (button) {
-        button.textContent = "Unlocked";
+        button.textContent = "Subscribed";
         button.disabled = true;
       }
       if (input) {
@@ -84,7 +95,8 @@
     }
 
     var provider = form.getAttribute("data-newsletter-provider") || document.body.getAttribute("data-newsletter-provider");
-    var recipient = document.body.getAttribute("data-newsletter-recipient");
+    var recipientKey = form.getAttribute("data-newsletter-recipient-key") || document.body.getAttribute("data-newsletter-recipient-key");
+    var recipient = decodeProtectedValue(recipientKey);
     if (provider === "formsubmit" && recipient) {
       return "https://formsubmit.co/" + recipient;
     }
@@ -181,6 +193,22 @@
     });
   }
 
+  function initProtectedEmailLinks(scope) {
+    var root = scope || document;
+    var links = root.querySelectorAll(".js-email-link[data-contact-key]");
+    links.forEach(function (link) {
+      var email = decodeProtectedValue(link.getAttribute("data-contact-key"));
+      if (!email) {
+        return;
+      }
+      link.setAttribute("href", "mailto:" + email);
+      link.setAttribute("rel", "nofollow noopener");
+      if (!link.getAttribute("aria-label")) {
+        link.setAttribute("aria-label", "Email Jared Jones");
+      }
+    });
+  }
+
   function initNav() {
     var toggle = document.querySelector(".js-nav-toggle");
     var nav = document.querySelector(".js-site-nav");
@@ -264,6 +292,7 @@
   };
 
   hydrateSubscriberFromReturn();
+  initProtectedEmailLinks(document);
   bindNewsletterForms(document);
   syncSubscriberUi(document);
   initNav();
