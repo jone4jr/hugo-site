@@ -113,7 +113,7 @@
     <section class="page-hero">
       <div class="shell reveal">
         {{ partial "breadcrumbs.html" . }}
-        <p class="eyebrow">Investment leadership resource</p>
+        <p class="eyebrow">{{ .Params.eyebrow | default "Investment leadership resource" }}</p>
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </div>
@@ -132,22 +132,24 @@
         {{ .Content }}
       </div>
     </section>
-    <section class="section section-contrast">
-      <div class="shell cta-band reveal">
-        <div>
-          <p class="eyebrow">Keep researching</p>
-          <h2>Get weekly watchlists and management-quality notes.</h2>
+    {{ if not .Params.hide_newsletter_cta }}
+      <section class="section section-contrast">
+        <div class="shell cta-band reveal">
+          <div>
+            <p class="eyebrow">Keep researching</p>
+            <h2>Get weekly watchlists and management-quality notes.</h2>
+          </div>
+          <div class="cta-band__form">
+            {{ partial "newsletter-form.html" (dict
+              "heading" ""
+              "copy" ""
+              "button" "Subscribe"
+              "source" "page"
+              "success" .Site.Params.newsletter.success
+            ) }}
+          </div>
         </div>
-        <div class="cta-band__form">
-          {{ partial "newsletter-form.html" (dict
-            "heading" ""
-            "copy" ""
-            "button" "Subscribe"
-            "source" "page"
-            "success" .Site.Params.newsletter.success
-          ) }}
-        </div>
-      </div>
-    </section>
+      </section>
+    {{ end }}
   {{ end }}
 {{ end }}
