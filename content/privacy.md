@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-seo_title: "Privacy Policy | 5AM Shift"
+seo_title: "Privacy Policy"
 description: "Privacy policy for 5AM Shift and the Capital Guard Swing Trader private GPT, including newsletter, analytics, Schwab OAuth, and market-data use."
 date: 2026-07-02
 lastmod: 2026-07-02
