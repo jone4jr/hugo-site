@@ -31,7 +31,7 @@ This may include:
 
 ## Newsletter and form submissions
 
-The newsletter form is used to receive voluntary email subscriptions for weekly long-only watchlists, management-quality notes, and investment leadership essays. Form submissions may be routed through FormSubmit and sent to Jared Jones at Jared.r.jones@Outlook.com.
+The newsletter form is used to receive voluntary email subscriptions for weekly long-only watchlists, management-quality notes, and investment leadership essays. Form submissions may be routed through FormSubmit and sent to Jared Jones through a protected email route.
 
 Email addresses are used to manage the research list and respond to subscription-related requests. 5AM Shift does not sell newsletter subscriber information.
 
@@ -97,4 +97,4 @@ This Privacy Policy may be updated as the website, newsletter tools, analytics s
 
 ## Contact
 
-For privacy questions, contact Jared Jones at Jared.r.jones@Outlook.com.
+For privacy questions, <a id="contact" class="js-email-link" href="#contact" data-contact-key="SmFyZWQuci5qb25lc0BPdXRsb29rLmNvbQ==" rel="nofollow">email Jared Jones</a>.

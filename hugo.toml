@@ -61,7 +61,7 @@ summaryLength = 28
     blurb = "Get weekly long-only watchlists, management-quality notes, and investment leadership essays."
     button = "Subscribe"
     provider = "formsubmit"
-    recipient = "Jared.r.jones@Outlook.com"
+    recipientEncoded = "SmFyZWQuci5qb25lc0BPdXRsb29rLmNvbQ=="
     action = ""
     subject = "New 5AM Shift subscriber"
     success = "Thanks. You are on the 5AM Shift list."
